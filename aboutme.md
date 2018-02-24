@@ -1,17 +1,13 @@
 ---
 layout: page
 title: About me
-subtitle: Who am I , this is the question that has troubled many in the past and still continues to trouble many!
+subtitle: Why you'd want to go on a date with me
 ---
 
-Strictly speaking from a philosophical standpoint , 
+My name is Inigo Montoya. I have the following qualities:
 
-- I am a human being 
-- I am an spiritual being 
-
-Chris is the name i have been given for the avatar i have been give . 
-
-
+- I rock a great mustache
+- I'm extremely loyal to my family
 
 What else do you need?
 
