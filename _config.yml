@@ -5,7 +5,7 @@
 
 # If you are building a simple GitHub user page (http://username.github.io) then use these settings:
 url: "http://chrissunny94.github.io"
-baseurl: ""
+baseurl: "chrissunny94.net"
 
 # If you are building a GitHub project page then use these settings:
 #url: "http://username.github.io/projectname"
@@ -232,5 +232,5 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
 
-Beautiful Jekyll / Dean Attali
+#Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
