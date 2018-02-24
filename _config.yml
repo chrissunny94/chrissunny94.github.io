@@ -5,7 +5,7 @@
 
 # If you are building a simple GitHub user page (http://username.github.io) then use these settings:
 url: "http://chrissunny94.github.io"
-baseurl: "chrissunny94.net"
+baseurl: ""
 
 # If you are building a GitHub project page then use these settings:
 #url: "http://username.github.io/projectname"
@@ -17,13 +17,13 @@ baseurl: "chrissunny94.net"
 title: Chris Sunny Thaliyath
 
 # Short description of your site
-description: A virtual proof that name is awesome! 
+description: A virtual proof that name is awesome!
 
 # --- Navigation bar options --- #
 
 # List of links in the navigation bar
 navbar-links:
-  About Me: "aboutme"
+  About Me: "whoami"
   Resources:
     - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
     - Learn markdown: "http://www.markdowntutorial.com/"
@@ -64,7 +64,7 @@ page-img: "/img/bgimage.png"
 # Change all these values or delete the ones you don't want.
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
-  name: Chris Sunny
+  name: Chris sunny thaliyath
 
 # Select your active Social Network Links.
 # Uncomment the links you want to show in the footer and add your information to each link.
@@ -72,7 +72,7 @@ author:
 # If you want to add a new link that isn't here, you'll need to also edit the file _data/SocialNetworks.yml
 social-network-links:
   rss: true
-  email: "chrissunny94@gmail.com"
+  email: "someone@example.com"
   facebook: daattali
   github: daattali
   twitter: daattali
@@ -99,7 +99,7 @@ share-links-active:
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "chrissunny94.github.io"  # eg. "deanattali.com/beautiful-jekyll"
+url-pretty: "MyWebsite.com"  # eg. "deanattali.com/beautiful-jekyll"
 
 # --- Web Statistics Section --- #
 
@@ -232,5 +232,6 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
 
-#Beautiful Jekyll / Dean Attali
+# Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
+
