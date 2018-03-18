@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
+subtitle: Hey there , greetings from a higher dimension .
 ---
 
 My name is Chris Sunny Thaliyath. I have the following qualities:
