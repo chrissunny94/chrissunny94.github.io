@@ -1,15 +1,13 @@
 ---
 layout: page
 title: About me
-subtitle: Hey there , greetings from a higher dimension .
+subtitle: Why you'd want to go on a date with me
 ---
 
-My name is Chris Sunny Thaliyath. I have the following qualities:
+My name is Inigo Montoya. I have the following qualities:
 
-- Faith
-- I'm extremely loyal to the one who deserves it
-- blaah
-
+- I rock a great mustache
+- I'm extremely loyal to my family
 
 What else do you need?
 
