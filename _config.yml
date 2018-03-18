@@ -23,7 +23,7 @@ description: A virtual proof that name is awesome!
 
 # List of links in the navigation bar
 navbar-links:
-  About Me: "Hello world!"
+  About Me: "aboutme"
   Resources:
     - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
     - Learn markdown: "http://www.markdowntutorial.com/"
@@ -74,9 +74,9 @@ author:
 social-network-links:
   rss: true
   email: "chrissunny94@gmail.com"
-  facebook: 
-  github: 
-  twitter: 
+  facebook: daattali
+  github: chrissunny94
+  twitter: daattali
 #  reddit: yourname
 #  google-plus: +DeanAttali
 #  linkedin: daattali
