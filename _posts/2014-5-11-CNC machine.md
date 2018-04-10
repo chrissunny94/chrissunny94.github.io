@@ -2,7 +2,8 @@
 layout: post
 title: CNC machine @ kerala 
 subtitle: Home made CNC machine
-bigimg: /img/IMG_20171110_103620.jpg
+image: /img/CNC.jpg
+bigimg: /img/Shapeoko.jpg
 tags: [arduino,reprap , nema17, shapeoko , CNC , gcode]
 ---
 

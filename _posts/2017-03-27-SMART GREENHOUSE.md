@@ -3,6 +3,7 @@ layout: post
 title: GreenHouse
 subtitle: This is a Smart Greenhouse , Web based UI for controlling and viewing all sensors/actuators , Optimized for growth
 image: /img/greenhouse1.jpg
+bigimg: /img/greenhouse1.jpg
 tags: [arduino,raspberry_pi , Opencv , LAMP server , PHP , mysql ,HTML ,CSS , WebUI , IOT]
 ---
 
