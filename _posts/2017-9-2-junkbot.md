@@ -2,7 +2,7 @@
 layout: post
 title: Junkbot
 subtitle: Awesome yet functional robot
-bigimg: /img/junkbot.jpg
+image: /img/junkbot.jpg
 tags: [Ros, arduino,raspberry_pi , Opencv]
 ---
 
