@@ -24,7 +24,7 @@ description: A virtual proof that i am awesome!
 # List of links in the navigation bar
 navbar-links:
   About Me: "aboutme"
-  Resources:
+  InvolvedIn:
     - AdvancedCV: "https://advancedcv.github.io/"
     - Advancedwebdevelopment: "https://advancedwebdevelopment.github.io/"
     - scavengerbots: "https://scavengerbots.github.io/"
