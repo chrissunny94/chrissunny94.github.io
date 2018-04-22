@@ -24,7 +24,7 @@ description: A virtual proof that i am awesome!
 # List of links in the navigation bar
 navbar-links:
   About Me: "aboutme"
-  Resources:
+  I_am_involved_in:
     - AdvancedCV: "https://advancedcv.github.io/"
     - Advancedwebdevelopment: "https://advancedwebdevelopment.github.io/"
     - scavengerbots: "https://scavengerbots.github.io/"
@@ -32,11 +32,11 @@ navbar-links:
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
-avatar: "/img/chris.jpg"
+#avatar: "/img/chris.jpg"
 
 # If you want to have an image logo in the top-left corner instead of the title text,
 # then specify the following parameter
-# title-img: /path/to/image
+ title-img: /img/chris.jpg
 
 # --- Background colour/image options --- #
 
