@@ -30,7 +30,7 @@ navbar-links:
     - AdvancedCV: "http://advancedcv.github.io"
     - AdvancedWebDevelopment: "http://www.markdowntutorial.com/"
     - Lillycorp : "https://lillycorp.github.io/"
-    - Scavengerbot: ""
+    - Scavengerbot: "https://scavengerbots.github.io/"
   Author's home: "http://deanattali.com"
 
 # Image to show in the navigation bar - image must be a square (width = height)
