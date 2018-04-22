@@ -25,9 +25,9 @@ description: A virtual proof that i am awesome!
 navbar-links:
   About Me: "aboutme"
   Resources:
-    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
-    - Learn markdown: "http://www.markdowntutorial.com/"
-    - GitHub Pages: "https://pages.github.com/"
+    - AdvancedCV: "https://advancedcv.github.io/"
+    - Advancedwebdevelopment: "https://advancedwebdevelopment.github.io/"
+    - scavengerbots: "https://scavengerbots.github.io/"
   Author's home: "http://deanattali.com"
 
 # Image to show in the navigation bar - image must be a square (width = height)
