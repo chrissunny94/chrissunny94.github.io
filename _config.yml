@@ -24,9 +24,6 @@ description: A virtual proof that i am awesome!
 # List of links in the navigation bar
 navbar-links:
   About Me: "aboutme"
-  Resources:
-    -
-
   I am involved in:
     - AdvancedCV: "http://advancedcv.github.io"
     - AdvancedWebDevelopment: "http://www.markdowntutorial.com/"
