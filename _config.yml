@@ -25,6 +25,7 @@ description: A virtual proof that i am awesome!
 navbar-links:
   About Me: "aboutme"
   Resources:
+    -
 
   Project I am involved in:
     - AdvancedCV: "http://advancedcv.github.io"
@@ -67,7 +68,7 @@ footer-link-col: "#404040"
 # Change all these values or delete the ones you don't want.
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
-  name: Some Person
+  name: Chris Thaliyath
 
 # Select your active Social Network Links.
 # Uncomment the links you want to show in the footer and add your information to each link.
@@ -86,7 +87,7 @@ social-network-links:
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
 #  instagram: deanat78
-#  youtube: user/deanat78
+   youtube: user/chrissunny94/videos	
 #  spotify: yourname
 #  telephone: +14159998888
 #  steam: deanat78
@@ -102,7 +103,7 @@ share-links-active:
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "MyWebsite.com"  # eg. "deanattali.com/beautiful-jekyll"
+url-pretty: "chrissunny94.github.io"  # eg. "deanattali.com/beautiful-jekyll"
 
 # --- Web Statistics Section --- #
 
