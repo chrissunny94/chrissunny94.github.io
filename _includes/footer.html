@@ -1,51 +1,18 @@
 <footer>
-  <div class="container beautiful-jekyll-footer">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <ul class="list-inline text-center footer-links">
-          {%- for link in site.social-network-links -%}
-            {%- assign curkey = link[0] -%}
-            {%- assign element = site.data.SocialNetworks[curkey] -%}
-            <li>
-            {%- if curkey == 'rss' -%}
-              <a href="{{ '/feed.xml' | prepend: site.baseurl }}" title="{{ element.name }}">
-            {%- elsif curkey == 'yelp' -%}
-              <a href="https://{{ site.social-network-links[curkey] }}.yelp.com" title="{{ element.name }}">
-            {%- else -%}
-              <a href="{{element.baseURL}}{{ site.social-network-links[curkey] }}" title="{{ element.name }}">
-            {%- endif -%}
-                <span class="fa-stack fa-lg" aria-hidden="true">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa {{ element.icon }} fa-stack-1x fa-inverse"></i>
-                </span>
-                <span class="sr-only">{{ element.name }}</span>
-              </a>
-            </li>
-          {%- endfor -%}
-        </ul>
-      <p class="copyright text-muted">
-      {{ site.author.name }}
-      &nbsp;&bull;&nbsp;
-      {{ site.time | date: '%Y' }}
-
-      {% if site.url-pretty %}
-      &nbsp;&bull;&nbsp;
-      <a href="{{ site.url }}">{{ site.url-pretty }}</a>
-      {% endif %}
-
-      {% if site.matomo %}
-        {% if site.matomo.opt-out %}
-          &nbsp;&bull;&nbsp;
-          <a href="http://{{- site.matomo.uri -}}/index.php?module=CoreAdminHome&action=optOut" target="_blank" class="text_muted">Do-not-Track</a>
-        {% endif %}
-      {% endif%}
-      </p>
-          <!-- Please don't remove this, keep my open source work credited :) -->
-    <p class="theme-by text-muted">
-      Theme by
-      <a href="http://deanattali.com/beautiful-jekyll/">beautiful-jekyll</a>
-    </p>
-      </div>
+    <div class="content">
+        <span>&copy; gridster</span>
+        <span class="backtotop">back to top</span>
     </div>
-  </div>
 </footer>
+<script src="{{ site.baseurl | replace: '//', '/' }}/js/build/global.min.js"></script>
+<!-- analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-50358022-5', 'auto');
+  ga('send', 'pageview');
+
+</script>
