@@ -1,5 +1,5 @@
 ---
-layout: post-material-sidebar-right
+layout: RPV1
 author: person
 type: vimeo
 vimeo-embed: <iframe src="https://player.vimeo.com/video/107591790" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
