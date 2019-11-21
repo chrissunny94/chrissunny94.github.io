@@ -1,6 +1,6 @@
 ---
 layout: page-classic-sidebar-right
-title: Typography
+title: Tutorials
 ---
 ###### headings
 
