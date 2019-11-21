@@ -1,7 +1,7 @@
 ---
 author: person
 layout: post-full
-title: Full Width Post
+title: Sensor fusion
 featimg: 2.jpg
 tags: [text]
 category: [standard]

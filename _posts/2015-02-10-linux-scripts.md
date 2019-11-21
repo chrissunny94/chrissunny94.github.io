@@ -1,9 +1,9 @@
 ---
-layout: RPV1
+layout: post-full
 author: person
 type: vimeo
 vimeo-embed: <iframe src="https://player.vimeo.com/video/107591790" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-title: Vimeo
+title: Useful linux scripts
 homedisplay: iframe
 tags: [video, iframe]
 category: [video]

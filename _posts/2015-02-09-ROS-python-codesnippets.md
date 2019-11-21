@@ -3,7 +3,7 @@ author: someone
 type: youtube
 yt-video-id: JUT-3jGyjoM
 homedisplay: iframe
-title: YouTube
+title: ROS Python code snippets
 tags: [video, iframe]
 category: [video]
 layout: post-classic-sidebar-left

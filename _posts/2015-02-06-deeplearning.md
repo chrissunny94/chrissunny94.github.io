@@ -2,7 +2,7 @@
 author: someone
 type: gallery
 featimg: gallery-5.jpg
-title: Gallery
+title: Deeplearning
 tags: [gallery, image]
 category: [image]
 gallery:

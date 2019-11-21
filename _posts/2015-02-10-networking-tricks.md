@@ -1,6 +1,6 @@
 ---
 author: someone
-title: Standard Post
+title: Networking tricks
 featimg: 1.jpg
 tags: [text]
 category: [standard]

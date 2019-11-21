@@ -4,7 +4,7 @@ layout: post-full
 type: youtube
 yt-video-id: E802ZnXbnFY
 homedisplay: iframe
-title: YouTube full
+title: Gazebo simulation
 tags: [video, iframe]
 category: [video]
 ---

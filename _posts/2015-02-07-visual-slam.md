@@ -2,7 +2,7 @@
 author: someone
 type: image
 featimg: 3.jpg
-title: Image
+title: Visual slam
 tags: [image]
 category: [image]
 layout: post-material-sidebar-right
