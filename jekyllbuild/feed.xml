@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<channel>
+		<title>Chris Sunny Thaliyath</title>
+		<description>My work</description>
+		<link>http://localhost:4000</link>
+		<atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+		
+			<item>
+				<title>PS$ controller + Xbee + Arduino</title>
+				
+				
+					<description>&lt;p&gt;In this tutorial, I’ll show you how to control an Arduino-based robot  via the official PS4 Bluetooth-based DualShock joystick controller by using USB host, Arduino, and a USB Bluetooth Dongle. Before diving into this project, collect the necessary hardware.
+image
+Collect the Hardware&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Tue, 10 Feb 2015 00:00:00 +0530</pubDate>
+				<link>http://localhost:4000/tracktor/</link>
+				<guid isPermaLink="true">http://localhost:4000/tracktor/</guid>
+			</item>
+		
+			<item>
+				<title>Networking tricks</title>
+				
+				
+					<description>&lt;p&gt;Here you can see the basic post. No fancy type, no setting and the featured image is just embedded into the content.&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Tue, 10 Feb 2015 00:00:00 +0530</pubDate>
+				<link>http://localhost:4000/networking-tricks/</link>
+				<guid isPermaLink="true">http://localhost:4000/networking-tricks/</guid>
+			</item>
+		
+			<item>
+				<title>Useful linux scripts</title>
+				
+				
+					<description>&lt;p&gt;this is a video post using the vimeo format.&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Tue, 10 Feb 2015 00:00:00 +0530</pubDate>
+				<link>http://localhost:4000/linux-scripts/</link>
+				<guid isPermaLink="true">http://localhost:4000/linux-scripts/</guid>
+			</item>
+		
+			<item>
+				<title>ROS c++</title>
+				
+				
+					<description>&lt;p&gt;this is a video post using the vimeo format.&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Tue, 10 Feb 2015 00:00:00 +0530</pubDate>
+				<link>http://localhost:4000/ROS-C++/</link>
+				<guid isPermaLink="true">http://localhost:4000/ROS-C++/</guid>
+			</item>
+		
+			<item>
+				<title>ROS Python code snippets</title>
+				
+				
+					<description>&lt;p&gt;This is a youtube post type video.&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Mon, 09 Feb 2015 00:00:00 +0530</pubDate>
+				<link>http://localhost:4000/ROS-python-codesnippets/</link>
+				<guid isPermaLink="true">http://localhost:4000/ROS-python-codesnippets/</guid>
+			</item>
+		
+			<item>
+				<title>CUDA accelerated computing</title>
+				
+				
+					<description>&lt;p&gt;This audio post is displays without a material-sidebar and has the iframe set for the index pages, instead of a featured image.&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Sun, 08 Feb 2015 00:00:00 +0530</pubDate>
+				<link>http://localhost:4000/CUDA-accelerated-computing/</link>
+				<guid isPermaLink="true">http://localhost:4000/CUDA-accelerated-computing/</guid>
+			</item>
+		
+			<item>
+				<title>Visual slam</title>
+				
+				
+					<description>&lt;p&gt;Here you see an image post in the standard layout, with material-sidebar.&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Sat, 07 Feb 2015 00:00:00 +0530</pubDate>
+				<link>http://localhost:4000/visual-slam/</link>
+				<guid isPermaLink="true">http://localhost:4000/visual-slam/</guid>
+			</item>
+		
+			<item>
+				<title>Deeplearning</title>
+				
+				
+					<description>&lt;p&gt;Here you’ll find a simple gallery, that just adds all of the images at full-width directly in the post content.&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Fri, 06 Feb 2015 00:00:00 +0530</pubDate>
+				<link>http://localhost:4000/deeplearning/</link>
+				<guid isPermaLink="true">http://localhost:4000/deeplearning/</guid>
+			</item>
+		
+			<item>
+				<title>Sensor fusion</title>
+				
+				
+					<description>&lt;p&gt;a standard post displayed at full-width, only requires a layout, variable.
+The featured image will be added at the beginning of the content, but not above it, as in an image post.&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Thu, 05 Feb 2015 00:00:00 +0530</pubDate>
+				<link>http://localhost:4000/sensor_fusion/</link>
+				<guid isPermaLink="true">http://localhost:4000/sensor_fusion/</guid>
+			</item>
+		
+			<item>
+				<title>Gazebo simulation</title>
+				
+				
+					<description>&lt;p&gt;This youtube video uses the iframe instead of the thumbnail image on the index pages.&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Wed, 04 Feb 2015 00:00:00 +0530</pubDate>
+				<link>http://localhost:4000/gazebo-simulation/</link>
+				<guid isPermaLink="true">http://localhost:4000/gazebo-simulation/</guid>
+			</item>
+		
+			<item>
+				<title>Junkbot at vanorarobots</title>
+				
+				
+					<description>&lt;p&gt;This audio post is displays without a material-sidebar and has a featured image set for the index pages.&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Tue, 03 Feb 2015 00:00:00 +0530</pubDate>
+				<link>http://localhost:4000/junkbot/</link>
+				<guid isPermaLink="true">http://localhost:4000/junkbot/</guid>
+			</item>
+		
+			<item>
+				<title>Magni Robot from Ubiquity Robotics</title>
+				
+				
+					<description>&lt;p&gt;Here you see an image post with a full-width layout.&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Mon, 02 Feb 2015 00:00:00 +0530</pubDate>
+				<link>http://localhost:4000/magni/</link>
+				<guid isPermaLink="true">http://localhost:4000/magni/</guid>
+			</item>
+		
+			<item>
+				<title>RPV1 from vanorarobots</title>
+				
+				
+					<description>&lt;p&gt;At vanora robots , manglore . We build a 4x4 differential drive robot which was ROS enabled out of the box .&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Sun, 01 Feb 2015 00:00:00 +0530</pubDate>
+				<link>http://localhost:4000/RPV1/</link>
+				<guid isPermaLink="true">http://localhost:4000/RPV1/</guid>
+			</item>
+		
+	</channel>
+</rss>

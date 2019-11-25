@@ -17,5 +17,6 @@
     "grunt-responsive-images": "^0.1.6",
     "grunt-sass": "^0.14.2",
     "grunt-shell": "^1.1.1"
-  }
+  },
+  "dependencies": {}
 }
