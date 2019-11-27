@@ -25,9 +25,6 @@
                     <a class="homelink" href="/">Home</a>
                 </li>
                 <li>
-                    <a href="/archive">Archive</a>
-                </li>
-                <li>
                     <a href="/CV">CV</a>
                 </li>
                 <li>
@@ -36,67 +33,25 @@
                 <li>
                     <a href="/tutorials">Tutorials</a>
                 </li>
-                <li><a class="dropdown-button" href="#" data-activates='drop-example'>Page Layouts&nbsp;&nbsp;<i class="fa fa-caret-down"></i></a>
-                </li>
-                <div id="drop-example" class="dropdown-content">
-                    <li>
-                        <a href="/page-full">page-full</a>
-                    </li>
-                    <li>
-                        <a href="/page-classic-sidebar-right">page classic sidebar right</a>
-                    </li>
-                    <li>
-                        <a href="/page-classic-sidebar-left">page classic sidebar left</a>
-                    </li>
-                    <li>
-                        <a href="/page-material-sidebar-right">page material sidebar right</a>
-                    </li>
-                    <li>
-                        <a href="/page-material-sidebar-left">page material sidebar left</a>
-                    </li>
-                </div>
+                
                 <li>
-                    <a href="#colorswitch" class="modal-trigger">Change Colors <i class="fa fa-cog"></i></a>
+                    <a href="/archive">Archive</a>
                 </li>
+               
+                
             </ul>
         </nav>
         <nav class="iconnav">
             <ul>
-                <li class="sicon">
-                    <a href='#search'><i class='fa fa-search'></i></a>
-                </li>
                 
                 <li class="social">
-                    <a href="#" class="tumblr"><i class="fa fa-tumblr"></i></a>
+                    <a href="#" class="youtube"><i class="fa fa-youtube fa-2x"></i></a>
                 </li>
                  
                 <li class="social">
-                    <a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a>
+                    <a href="#" class="vimeo"><i class="fa fa-vimeo-square fa-2x"></i></a>
                 </li>
-                 
-                <li class="social">
-                    <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-                </li>
-                 
-                <li class="social">
-                    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                </li>
-                 
-                <li class="social">
-                    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                </li>
-                 
-                <li class="social">
-                    <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
-                </li>
-                 
-                <li class="social">
-                    <a href="#" class="vimeo"><i class="fa fa-vimeo-square"></i></a>
-                </li>
-                 
-                <li class="social">
-                    <a href="#" class="soundcloud"><i class="fa fa-soundcloud"></i></a>
-                </li>
+                
                 
             </ul>
         </nav>
@@ -155,13 +110,111 @@
                         </div>
                         
                             
-                                <img class="featimg" src="/media/compressed/1.jpg" alt="1.jpg">
+                                <img class="featimg" src="/media/compressed/networking.jpg" alt="networking.jpg">
                             
                         
                         <div class="post-content">
-                            <p>Here you can see the basic post. No fancy type, no setting and the featured image is just embedded into the content.</p>
+                            <h1 id="basic-tools">Basic Tools</h1>
 
-<p>The front matter for that basic post just consists of the basic tags, author, title, featimg, tags and category.</p>
+<h2 id="address-resolution-protocol">Address Resolution Protocol</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>arp
+</code></pre></div></div>
+
+<p>It should output the following</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Address                  HWtype  HWaddress           Flags Mask            Iface
+192.168.43.1             ether   BB:DD:99:WW:GG:AA   C                     wlo1
+</code></pre></div></div>
+
+<p>In the above case what i am seeing is the IP address of the host machine to which i am connected .</p>
+
+<p>The host wifi has</p>
+
+<ul>
+  <li>IP Address : 192.168.43.1</li>
+  <li>Mac address: BB:DD:99:WW:GG:AA</li>
+</ul>
+
+<h2 id="ifconfig">ifconfig</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ifconfig
+</code></pre></div></div>
+
+<p>When you execute the above command you should see something like this</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>eno1      Link encap:Ethernet  HWaddr AA:BB:CC:DD:EE:FF  
+        UP BROADCAST MULTICAST  MTU:1500  Metric:1
+        RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+        TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+        collisions:0 txqueuelen:1000 
+        RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+lo        Link encap:Local Loopback  
+        inet addr:127.0.0.1  Mask:255.0.0.0
+        inet6 addr: ::1/128 Scope:Host
+        UP LOOPBACK RUNNING  MTU:65536  Metric:1
+        RX packets:4919 errors:0 dropped:0 overruns:0 frame:0
+        TX packets:4919 errors:0 dropped:0 overruns:0 carrier:0
+        collisions:0 txqueuelen:1000 
+        RX bytes:9781094 (9.7 MB)  TX bytes:9781094 (9.7 MB)
+
+wlo1      Link encap:Ethernet  HWaddr AA:BB:CC:11:22:33  
+        inet addr:192.168.43.192  Bcast:192.168.43.255  Mask:255.255.255.0
+        inet6 addr: 2401:4900:33b0:5b59:39fc:a946:4ddb:3e8c/64 Scope:Global
+        inet6 addr: fe80::7fa8:c0ef:6c60:7ffa/64 Scope:Link
+        inet6 addr: 2401:4900:33b0:5b59:ccaf:9989:9106:f491/64 Scope:Global
+        UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+        RX packets:10955 errors:0 dropped:0 overruns:0 frame:0
+        TX packets:8751 errors:0 dropped:0 overruns:0 carrier:0
+        collisions:0 txqueuelen:1000 
+        RX bytes:7476638 (7.4 MB)  TX bytes:1438531 (1.4 MB)
+</code></pre></div></div>
+
+<p>Basically the above output gives us</p>
+
+<ul>
+  <li>Interface number
+    <ul>
+      <li>eno1</li>
+      <li>lo</li>
+      <li>wlo1</li>
+    </ul>
+  </li>
+  <li>Ip address
+    <ul>
+      <li>eno1 (Not connected)</li>
+      <li>lo (Loop back)</li>
+      <li>wlo1 (192.168.43.192 , this is the IP address of my system currently)</li>
+    </ul>
+  </li>
+  <li>mac address
+    <ul>
+      <li>AA:BB:CC:DD:EE:FF</li>
+      <li>AA:BB:CC:11:22:33</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="arp-scan">arp-scan</h2>
+
+<p>Arp doesnt list down all the ip address of the devices on the same network if those devices havent pinged with your machine . In such cases , its usefull to use <strong>arp-scan</strong></p>
+
+<h5 id="install-arp-scan">Install arp-scan</h5>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo arp-scan --interface wlo1 -localnet
+</code></pre></div></div>
+
+<p>This should output the following</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Interface: wlo1, datalink type: EN10MB (Ethernet)
+Starting arp-scan 1.8.1 with 256 hosts (http://www.nta-monitor.com/tools/arp-scan/)
+192.168.43.1	d8:32:e3:f2:dc:9e	(Unknown)
+
+1 packets received by filter, 0 packets dropped by kernel
+Ending arp-scan 1.8.1: 256 hosts scanned in 1.404 seconds (182.34 hosts/sec). 1 responded
+</code></pre></div></div>
+
 
                         </div>
                         
@@ -169,7 +222,7 @@
                             
                             <span class="category">
                                 <span class="name">categories:</span>
-                                standard
+                                networking
                             </span>
                             
                             
@@ -257,6 +310,8 @@
             <li><a href="/category/video">video</a></li>
         
             <li><a href="/category/standard">standard</a></li>
+        
+            <li><a href="/category/networking">networking</a></li>
         
     
     

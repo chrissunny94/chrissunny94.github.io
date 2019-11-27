@@ -1,0 +1,22 @@
+ <li><a class="dropdown-button" href="#" data-activates='drop-example'>Page Layouts&nbsp;&nbsp;<i class="fa fa-caret-down"></i></a>
+                </li>
+                <div id="drop-example" class="dropdown-content">
+                    <li>
+                        <a href="/page-full">page-full</a>
+                    </li>
+                    <li>
+                        <a href="/page-classic-sidebar-right">page classic sidebar right</a>
+                    </li>
+                    <li>
+                        <a href="/page-classic-sidebar-left">page classic sidebar left</a>
+                    </li>
+                    <li>
+                        <a href="/page-material-sidebar-right">page material sidebar right</a>
+                    </li>
+                    <li>
+                        <a href="/page-material-sidebar-left">page material sidebar left</a>
+                    </li>
+                </div>
+                <li>
+                    <a href="#colorswitch" class="modal-trigger">Change Colors <i class="fa fa-cog"></i></a>
+                </li>
