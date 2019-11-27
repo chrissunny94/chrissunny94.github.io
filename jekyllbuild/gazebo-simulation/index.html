@@ -134,7 +134,7 @@
                         
                             
                                 <div class="video-container">
-                                    <iframe src="https://www.youtube.com/embed/E802ZnXbnFY?feature=player_detailpage" allowfullscreen></iframe>
+                                    <iframe src="https://www.youtube.com/embed/-_WT1Vd2T18?feature=player_detailpage" allowfullscreen></iframe>
                                 </div>
                             
                         
@@ -157,17 +157,58 @@
                         </div>
                         
                         <div class="post-content">
-                            <p>This youtube video uses the iframe instead of the thumbnail image on the index pages.</p>
+                            <p>This is a large map of the gazebo simulation that i made.</p>
 
-<p>For a YouTube video, no embedding code is required, it all works through the video ID.</p>
+<p><a href="https://github.com/chrissunny94/husky">Github Link of the project</a></p>
 
-<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
-<span class="na">layout</span><span class="pi">:</span> <span class="s">post-full</span>
-<span class="na">type</span><span class="pi">:</span> <span class="s">youtube</span>
-<span class="na">yt-video-id</span><span class="pi">:</span> <span class="s">E802ZnXbnFY</span>
-<span class="na">homedisplay</span><span class="pi">:</span> <span class="s">iframe</span>
-<span class="nn">---</span>
+<h2 id="large-map-on-gazebo">Large map on Gazebo</h2>
+
+<h4 id="instructions">Instructions</h4>
+<p>============</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>roslaunch husky_gazebo husky_playpen.launch
 </code></pre></div></div>
+
+<p>For Husky instructions and tutorials, please see  <a href="http://wiki.ros.org/Robots/Husky">http://wiki.ros.org/Robots/Husky</a></p>
+
+<h4 id="to-launch-fiducial_slam">To launch fiducial_slam</h4>
+<p>============================</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>roslaunch fiducial_slam aurco.launch
+</code></pre></div></div>
+
+<p>This will also launch the robot_localization and config is included with this .</p>
+
+<p>Let me try to break down the packages within a ROS simulation which is capable of S.L.A.M .</p>
+
+<ul>
+  <li>
+    <p><strong>description</strong></p>
+
+    <p>This package contains the URDF model of the robot</p>
+  </li>
+  <li>
+    <p><strong>control</strong></p>
+
+    <p>This package generally pertains to Joint Publishers and Other Joint controllers</p>
+  </li>
+  <li>
+    <p><strong>navigation</strong></p>
+
+    <p>This package contains basic slam such as Gmapping , AMCL ,Hector SLAM etc</p>
+  </li>
+  <li>
+    <p><strong>viz</strong></p>
+
+    <p>This package deals with launchin the RVIZ configurations</p>
+  </li>
+  <li>
+    <p><strong>gazebo</strong></p>
+
+    <p>This package deals witch spawning the robot_description and linking it with the gazebo world model</p>
+  </li>
+</ul>
+
 
                         </div>
                         
@@ -188,6 +229,14 @@
                                     <a href="/tag/video">video</a>
                                 
                                     <a href="/tag/iframe">iframe</a>
+                                
+                                    <a href="/tag/gazebo">gazebo</a>
+                                
+                                    <a href="/tag/ros">ros</a>
+                                
+                                    <a href="/tag/simulation">simulation</a>
+                                
+                                    <a href="/tag/large_map">large_map</a>
                                 
                             </span>
                             
