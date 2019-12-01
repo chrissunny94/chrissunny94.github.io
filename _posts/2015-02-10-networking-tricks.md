@@ -3,7 +3,7 @@ author: Chris Sunny Thaliyath
 title: Networking tricks
 featimg: networking.jpg
 tags: [text]
-category: [networking]
+category: [networking,ifconfig,arp,arp-scan]
 ---
 
 # Basic Tools
@@ -99,4 +99,4 @@ This should output the following
     Ending arp-scan 1.8.1: 256 hosts scanned in 1.404 seconds (182.34 hosts/sec). 1 responded
 
 
-
+#####  /etc/network/interfaces

@@ -1,7 +1,7 @@
 ---
 author: someone
 type: image
-featimg: 3.jpg
+featimg: visual-slam.jpg
 title: Visual slam
 tags: [image]
 category: [image]
@@ -11,9 +11,3 @@ Here you see an image post in the standard layout, with material-sidebar.
 
 The Front Matter for that looks like this:
 
-```yml
----
-type: image
-featimg: 5.jpg
----
-```

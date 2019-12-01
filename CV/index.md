@@ -17,21 +17,35 @@ Phone:+918130324904
 
 #### About 
 
-Energetic , enthusiastic individual with a flair for technology and engineering . I am interested and involved in technologies such as 
+I am someone with about 1.5 years of experience in the Automotive industry dealing with problems such as SLAM and Drive Assist technologies .
+Prior to this i was working in robotics  for about 1.5 years , primarily dealing with  autonomous UGV development . 
+*(I find UGV's to be the most practical and sinsible addition to the work force ! )*
+
+ I am interested and involved in the folliwng technologies  
 
 - deep learning
 - computer vision
 - SLAM
 
-I also have experience with *ROS* .
+I also have experience with *ROS* as a build enviormnet , middleware , ecosystem . ROS is one platform that has absolutely revolutionized the way i think about programming and software development . 
 
 C++ and Python are my favorite languages , in which i have 1.5+ years of experinece in both .
 
 *(More for python as i used it throuhg out my UG years )*
 
-I am facinated with SLAM as a technology and the challenges we face to deploy a SLAM enabled robot . 
 
-Visual slam is my favorite domain within the world of classical computing . 
+
+I am facinated with SLAM as a technology and the challenges we face to deploy a SLAM enabled robot .
+
+
+**Visual slam** is my favorite domain within the world of classical computing , 
+
+my inpiration come from the fact that all autonomous animals (*like us humans , cats , dogs...*) 
+
+they all navigate just using a pair of eyes (**stereo cameras**) , despite not having a spining lidar or Radar or Ultrasonic senosrs or GPS or any other fansy tech. 
+
+
+Thus i belive that the humble camera is a supirior sensor .
 
 
 ##### EXPERIENCE
