@@ -1,7 +1,7 @@
 ---
 author: Chris Sunny Thaliyath
 title: LSAD (Low Speed Autonomous Shuttle @ RBEI)
-featimg: DBC.png
+featimg: LSAD.jpg
 tags: [text]
 category: [DBC,ROS,C++,Python]
 ---
