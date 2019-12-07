@@ -22,17 +22,16 @@ In this tutorial, I’ll show you how to control an Arduino-based robot  via the
 image
 Collect the Hardware
 
-    Arduino Pro Mini
-    PS4 Bluetooth Controller
-    USB Host Shield Mini
-    FT232RL
-    Arduino Robot Kit
+- Arduino Pro Mini
+- PS4 Bluetooth Controller
+- USB Host Shield Mini
+- FT232RL
+- Arduino Robot Kit
     
 
-image
-
 The necessary hardware.
-## Arduino Pro Mini
+
+#### Arduino Pro Mini
 
 If we talk about Arduino Mini, it’s basically an Arduino controller without the programming chip installed on it. The reason why Arduino removed the programming chip is simply to reduce the size and cost of PRO Mini. Also once you have one programming device, it can then be reused for other PRO Mini projects, which is quite common.
 image
@@ -40,7 +39,7 @@ image
 Arduino Pro Mini
 
 
-## What is USB host?
+#### What is USB host?
 
 USB Host is an adapter for USB devices. You can use it to connect an Arduino board to a USB device, such as a USB joystick, a mouse, or a thumb drive. 
 
@@ -52,17 +51,17 @@ image
 The USB host shield.
 Features
 
-    USB 2.0 Full Speed compatible
-    3.3/5V operation level compatible
-    All GPIOx pins break-out
-    USB Host 5V/500mA supply for USB protocol
+- USB 2.0 Full Speed compatible
+- 3.3/5V operation level compatible
+- All GPIOx pins break-out
+- USB Host 5V/500mA supply for USB protocol
 
 Specifications 
 
-    Operating Voltage: 5V/3V
-    Max Current: 500mA only when Arduino is connected with a good power supply
-    Max Current: 400mA only when Arduino is powered from its USB port
-    USB Controller: MAX3421E
+- Operating Voltage: 5V/3V
+- Max Current: 500mA only when Arduino is connected with a good power supply
+- Max Current: 400mA only when Arduino is powered from its USB port
+- USB Controller: MAX3421E
 
 To get this project working, you will need the USB Host Shield for the Arduino and a Bluetooth dongle. I used the USB host shield from Arduino but it’s now discontinued. You can utilize Sparkfun’s USB shield instead.
 
@@ -115,24 +114,11 @@ Arduino Pro --> FTDI
     RXD --> TXD
     DTR --> DTR
 
-image
 
-Or you can simply add a female header to the Arduino Pro Mini and plug the FTDI module into the female headers as I did in the image below.
-image
-image
-image
 
-Upload the source code to your Arduino Pro Mini with the following steps. You can find the full source code at the bottom of this page.
-image
-image
-image
-image
-image
 
-After uploading the source code just insert the Bluetooth dongle into the USB host shield and start pairing with your PS4 controller.
-image
 
-Attach the dongle to you completed build.
+### Attach the dongle to you completed build.
 Pairing the PS4 Controller
 
 In order to pair the Bluetooth based PS4 controller with Arduino. Set the gamepad controller into pairing mode by pressing and holding the “PlayStation button” and ”Share button” at the same time. Hold these two buttons until the light on the PS4 controller starts flashing rapidly. Now the Arduino should automatically detect your PS4 controller.
