@@ -22,6 +22,32 @@ Collect the Hardware&lt;/p&gt;
 			</item>
 		
 			<item>
+				<title>Using DBC file on ROS with CAN</title>
+				
+				
+					<description>&lt;p&gt;DBC file is a proprietary format that describes the data over a CAN bus. In this article, you will learn the basic syntax of a DBC file that defines up to 8 bytes of CAN message data. A lot of CAN bus related tools can read the DBC file and display values next to each “signal” that you define in the DBC file.&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Sun, 10 Nov 2019 00:00:00 +0530</pubDate>
+				<link>http://localhost:4000/USING-DBC-file-on-ROS/</link>
+				<guid isPermaLink="true">http://localhost:4000/USING-DBC-file-on-ROS/</guid>
+			</item>
+		
+			<item>
+				<title>LSAD (Low Speed Autonomous Shuttle @ RBEI)</title>
+				
+				
+					<description>&lt;p&gt;&lt;a href=&quot;https://imgur.com/4pPvIxZ&quot;&gt;&lt;img src=&quot;https://i.imgur.com/4pPvIxZ.jpg&quot; title=&quot;source: imgur.com&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Sun, 10 Nov 2019 00:00:00 +0530</pubDate>
+				<link>http://localhost:4000/LSAD_Project_At_RBEI/</link>
+				<guid isPermaLink="true">http://localhost:4000/LSAD_Project_At_RBEI/</guid>
+			</item>
+		
+			<item>
 				<title>CUDA accelerated computing</title>
 				
 				
