@@ -9,10 +9,31 @@ title: CV
 
 
 ### Chris Sunny thaliyath 
+-----------------------------------------------------------------------------------------------------------
 
-Email:[chrissunny94@gmail.com](mailto:chrissunny94@gmail.com) 
 
-Phone:+918130324904
+Banglore                         
+KA,India                                                    
++918*********************  
+
+[chrissunny94@gmail.com](mailto:chrissunny94@gmail.com)
+
+
+##### SKILLS
+----------------------------------------------------------
+- Linux shell scripting - Advanced level
+- ROS - Advanced level
+- OpenCv - Advanced  level
+- CUDA for deep learning and vision -beginner level 
+
+##### Programming languages
+--------------------------------------
+
+- C++ (8/10) - 100000+lines of experience
+- Python (9/10)-
+- 100000+lines of code written
+- C (9/10)-
+- 30000+ lines of code written 
 
 
 #### About 
@@ -48,12 +69,19 @@ they all navigate just using a pair of eyes (**stereo cameras**) , despite not h
 Thus i belive that the humble camera is a supirior sensor .
 
 
-##### EXPERIENCE
 
+
+
+<br/>
+
+##### EXPERIENCE
+----------------
+=====================================================================================================
 
 <a href=""><img src="https://connectedautomateddriving.eu/wp-content/uploads/2018/11/bosch-logo-300x300.jpg" align="center" width="190"></a>
 
 ###### Robert bosch engineering and business solutions,  Software Engineer
+--------------------------------------------------------------------------
 **Aug  2018 -  present**
 
  Working as a ROS developer,  with a focus on Visual SLAM and Navigation. 
@@ -87,6 +115,7 @@ Other minor experiences include
 <a href=""><img src="https://ubiquityrobotics.com/wp-content/uploads/2019/05/logo.png" align="center" width="350"></a>
 
 ###### UbiquityRobotics, Private Contractors — Software Engineer
+--------------------------------------------------------------------
 **April  2018 - August 2018**
 
  I was involved in the work of Magni robot here , mostly with the improvement of the navigation stack .
@@ -99,6 +128,7 @@ EKF fusion of 3 sources of odometry
 - Visual Odometry
 
 ###### VanoraRobots, Mangalore — Software Engineer
+---------------------------------------------------
 **JULY  2017 - MARCH 2018**
 <a href=""><img src="https://res-1.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco/v1452007384/oqf0lyaeqsafbnprxhno.png" align="center" width="190"></a>
 
@@ -125,8 +155,7 @@ The work related to this can be viewed on my youtube-channel
 
 
 ##### Internships 
-
-
+===========================================================================
 
 
 
@@ -134,6 +163,7 @@ The work related to this can be viewed on my youtube-channel
 <a href=""><img src="https://www.ecomm.in/images/logo.png" align="center" width="190"></a>
 
 ###### Ecomm India Cloud IT, Hyderbad — Devops Intern
+----------------------------------------------------------
 *MAY 2016 - JULY  2016*
 
 - Payment gateway integration on a web app
@@ -144,6 +174,7 @@ The work related to this can be viewed on my youtube-channel
 
 
 ##### EDUCATION
+=========================================================================================
 
 ***Shiv Nadar University (SNU) , Greater Noida — Bachelor's degree in Computer Science***
 

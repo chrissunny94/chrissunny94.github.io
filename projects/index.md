@@ -60,21 +60,6 @@ NodeMCU robot
 
 
 
-SKILLS
-----------------------------------------------------------
-	Linux shell scripting - Advanced level
-	ROS - Advanced level
-	OpenCv - Advanced  level
-	CUDA for deep learning and vision -beginner level 
-
-Programming languages
---------------------------------------
-
-- C++ (8/10) - 100000+lines of experience
-- Python (9/10)-
-- 100000+lines of code written
-- C (9/10)-
-- 30000+ lines of code written 
 
 AWARDS
 ------------------------------------------------	
