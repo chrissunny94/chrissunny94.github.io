@@ -4,27 +4,29 @@ title: CV
 ---
 
 
-#### PROJECTS (Mostly personal projects)
+#### PROJECTS done while at Vanora Robots
 
 
 Completed  robots with
 
-	ROS
-	Kinect
-	USB camera
-	Odometry
-	IMU
-	Differential drive 4WD
-	Sabertooth 2x32 Motor controller with Ebike motors (later we used high torque encoder based motors)
-	Raspberry pi + Nvidia Jetson
-	OpenMP and CUDA enabled to optimize the code
-	Opencv
-	SLAM
-	Gmapping
-	Hector slam
-	Octo Mapping
-	RTABmap
-	ORB-SLAM
+- ROS
+- Kinect
+- USB camera
+- SB camera
+- Odometry
+- IMU
+- Differential drive 4WD
+- Sabertooth 2x32 Motor controller with Ebike motors (later we used high torque encoder based motors)
+- Raspberry pi + Nvidia Jetson
+- OpenMP and CUDA enabled to optimize the code
+- Opencv
+- SLAM
+- Gmapping
+- Hector slam
+- Octo Mapping
+- RTABmap
+- ORB-SLAM
+- Vins
 
 NodeMCU robot
 
@@ -37,59 +39,63 @@ NodeMCU robot
 
 
 
-Projects done while interning at ecomm india cloud IT
+#### Projects done while interning at ecomm india cloud IT
 
- 	Payment gateway integration with a ecommerce website framework(WooCommerce on Wordpress) 
-	Native Android APP development to work with Woocommerce frame work.
-	Dash board for monitoring AWS instance 
+- Payment gateway integration with a ecommerce website framework(WooCommerce on Wordpress) 
+- Native Android APP development to work with Woocommerce frame work.
+- Dash board for monitoring AWS instance 
 
-Projects done during the undergraduate years
+#### Projects done during the undergraduate years
 
-	Line follower with PID algorithm , 
-	Self balancing robot
-	Quadcopter
-	CNC
-	Audio Fingerprinting using FFT 
-	Solar system physics simulation
-	Raspberry pi controlled remote surveillance robot
-	Smart Greenhouse for farming
-	URC (University Rover challenge participant 2017)
+- Line follower with PID algorithm , 
+- Self balancing robot
+- Quadcopter
+- CNC
+- Audio Fingerprinting using FFT 
+- Solar system physics simulation
+- Raspberry pi controlled remote surveillance robot
+- Smart Greenhouse for farming
+- URC (University Rover challenge participant 2017)
 
 
 
 
 SKILLS
+----------------------------------------------------------
 	Linux shell scripting - Advanced level
 	ROS - Advanced level
 	OpenCv - Advanced  level
 	CUDA for deep learning and vision -beginner level 
 
 Programming languages
-	
-	C++ (8/10) - 100000+lines of experience
-	Python (9/10)-
-	100000+lines of code written
-	C (9/10)-
-	30000+ lines of code written 
+--------------------------------------
+
+- C++ (8/10) - 100000+lines of experience
+- Python (9/10)-
+- 100000+lines of code written
+- C (9/10)-
+- 30000+ lines of code written 
 
 AWARDS
-	
-	First prize in Line follower competition at galgotias university 
+------------------------------------------------	
+
+	First prize in Line follower competition at Galgotias university 
 
 LANGUAGES
+-------------------------------------------------
 	
-	English
-	Malayalam
-	Hindi
-	Tamil
+- English
+- Malayalam
+- Hindi
+- Tamil
 
 OTHER INTERESTS 
 	
-	Physics
-	Cosmology
-	AI
-	Theology
-	History
-	Cycling 
+- Physics
+- Cosmology
+- AI
+- Theology
+- History
+- Cycling 
 
 
