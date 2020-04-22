@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-<title>Chris Sunny Thaliyath - Posts Tagged: text </title>
+<title>Chris Sunny Thaliyath - Gazebo simulation </title>
 
 <meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport'/>
 <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:500,600' rel='stylesheet' type='text/css'>
@@ -13,9 +13,9 @@
 
     </head>
 
-    <body class="index has-classic-sidebar-right">
-       <header class="head">
-           <div class="row">
+    <body>
+        <header class="head">
+            <div class="row">
     <a href="/" class="logo noline">
         <!-- full logo version with slogan, icon and text, add the class .ts-full if you want to work with some of the existing CSS -->
    <svg version="1.1" viewBox="0 0 677.61096 179.54858" class="ts-full">
@@ -56,7 +56,7 @@
     </a>
 </div>
 
-           <!-- menu, we did go with a static one, you can build a dynamic one, just google a little around -->
+            <!-- menu, we did go with a static one, you can build a dynamic one, just google a little around -->
 <div class="main-menu">
     <div class="content">
         <nav id="menu">
@@ -128,108 +128,126 @@
 </div>
 
         <div class="margin">
-            <div class="content">
-                <div class="switch">
-                    <div id="grid"><span></span></div>
-                    <div id="classic"><span></span></div>
+            <div class="content full">
+                <div class="content-container">
+                    <article>
+                        
+                            
+                                <div class="video-container">
+                                    <iframe src="https://www.youtube.com/embed/-_WT1Vd2T18?feature=player_detailpage" allowfullscreen></iframe>
+                                </div>
+                            
+                        
+
+                        <h1 class="post-title">
+                            Gazebo simulation
+                        </h1>
+                        <div class="meta">
+                            
+
+    <span class="author">Posted by
+        
+        
+    </span>
+
+ &bull;
+                            <span class="date">
+                                Published on 
+                            </span>
+                        </div>
+                        
+                        <div class="post-content">
+                            <p>This is a large map of the gazebo simulation that i made.</p>
+
+<p><a href="https://github.com/chrissunny94/husky">Github Link of the project</a></p>
+
+<h2 id="large-map-on-gazebo">Large map on Gazebo</h2>
+
+<h4 id="instructions">Instructions</h4>
+<p>============</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>roslaunch husky_gazebo husky_playpen.launch
+</code></pre></div></div>
+
+<p>For Husky instructions and tutorials, please see  <a href="http://wiki.ros.org/Robots/Husky">http://wiki.ros.org/Robots/Husky</a></p>
+
+<h4 id="to-launch-fiducial_slam">To launch fiducial_slam</h4>
+<p>============================</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>roslaunch fiducial_slam aurco.launch
+</code></pre></div></div>
+
+<p>This will also launch the robot_localization and config is included with this .</p>
+
+<p>Let me try to break down the packages within a ROS simulation which is capable of S.L.A.M .</p>
+
+<ul>
+  <li>
+    <p><strong>description</strong></p>
+
+    <p>This package contains the URDF model of the robot</p>
+  </li>
+  <li>
+    <p><strong>control</strong></p>
+
+    <p>This package generally pertains to Joint Publishers and Other Joint controllers</p>
+  </li>
+  <li>
+    <p><strong>navigation</strong></p>
+
+    <p>This package contains basic slam such as Gmapping , AMCL ,Hector SLAM etc</p>
+  </li>
+  <li>
+    <p><strong>viz</strong></p>
+
+    <p>This package deals with launchin the RVIZ configurations</p>
+  </li>
+  <li>
+    <p><strong>gazebo</strong></p>
+
+    <p>This package deals witch spawning the robot_description and linking it with the gazebo world model</p>
+  </li>
+</ul>
+
+
+                        </div>
+                        
+                        <div class="catsandtags">
+                            
+                            <span class="category">
+                                <span class="name">categories:</span>
+                                
+                            </span>
+                            
+                            
+                                &bull;
+                            
+                            
+                            <span class="tags">
+                                <span class="name">tags:</span>
+                                
+                                    <a href="/tag/video">video</a>
+                                
+                                    <a href="/tag/iframe">iframe</a>
+                                
+                                    <a href="/tag/gazebo">gazebo</a>
+                                
+                                    <a href="/tag/ros">ros</a>
+                                
+                                    <a href="/tag/simulation">simulation</a>
+                                
+                                    <a href="/tag/large_map">large_map</a>
+                                
+                            </span>
+                            
+                        </div>
+                        
+                    </article>
+                    <div class="post-nav">
+                        
+                        
+                    </div>
                 </div>
-                <h1 class="title">Posts Tagged: text</h1>
-                <div class="articles">
-                    
-    
-        
-            <!-- 
-    this is the complete index for articles, as you can see it on the index page.
-    Every Post type get's their own little settings.
--->
-<article>
-    
-        
-                <a href="/LSAD_Project_At_RBEI/" class="noline">
-                    
-                    
-                        <img src="/media/compressed/crops/450x253/LSAD-450x253.jpg" alt="LSAD">
-                    
-                </a>
-        
-    
-    <span class="date">November 10, 2019</span>
-    <a href="/LSAD_Project_At_RBEI/">
-        <h1>LSAD (Low Speed Autonomous Shuttle) @ RBEI ,Banglore</h1>
-    </a>
-    <p class="post-content">## Sensors #### USS , Ultrasonic sensors #### Mynt Passive Stereo camera #### MRR (Midrange...</p>
-    <p class="actions">
-        <a href="/LSAD_Project_At_RBEI/">Read More</a>
-    </p>
-</article>
-
-        
-    
-
-
-                </div>
-                <div class="sidebar classic-sidebar">
-   
-    <div class="widget">
-        <h3 class="title">Categories</h3>
-        <ul class="category-list">
-    
-    
-        
-            <li><a href="/category/DBC">DBC</a></li>
-        
-            <li><a href="/category/ROS">ROS</a></li>
-        
-            <li><a href="/category/C++">C++</a></li>
-        
-            <li><a href="/category/Python">Python</a></li>
-        
-    
-    
-</ul>
-
-    </div>
-   
-    <div class="widget">
-        <h3 class="title">Tags</h3>
-        <ul class="tag-list">
-    
-    
-        
-            <li><a href="/tag/text">text</a></li>
-        
-    
-    
-</ul>
-
-    </div>
-
-    <div class="widget">
-        <h3 class="title">Authors</h3>
-        <ul class="author-list">
-    
-        <li>
-            <a href="/author/chris">
-                
-                    Chris sunny thaliyath
-                
-            </a>
-        </li>
-    
-        <li>
-            <a href="/author/person">
-                
-                    person
-                
-            </a>
-        </li>
-    
-</ul>
-
-    </div>    
-
-</div>
-
             </div>
         </div>
         <footer>
@@ -250,8 +268,6 @@
   ga('send', 'pageview');
 
 </script>
-        
-            <script src="/js/build/infinite.min.js"></script>
         
     </body>
 </html>

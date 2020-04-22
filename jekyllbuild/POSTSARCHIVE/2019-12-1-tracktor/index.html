@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+<title>Chris Sunny Thaliyath - PS$ controller + Xbee + Arduino </title>
+
+<meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport'/>
+<link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:500,600' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" id="color-change" href="">
+<link rel="stylesheet" id="switch-style" href="/css/grid.css">
+<link rel="alternate" type="application/rss+xml" title="Chris Sunny Thaliyath" href="http:/localhost:4000/feed.xml">
+
+    </head>
+
+    <body>
+        <header class="head">
+            <div class="row">
+    <a href="/" class="logo noline">
+        <!-- full logo version with slogan, icon and text, add the class .ts-full if you want to work with some of the existing CSS -->
+   <svg version="1.1" viewBox="0 0 677.61096 179.54858" class="ts-full">
+    <g transform="translate(-49.00717,-350.11674)">
+        <g transform="matrix(0.65068572,0,0,0.65068572,11.104727,118.00494)" class="icon">
+            <path d="m 101.39622,391.43518 191.99569,0 c 5.04555,0 9.10749,46.87698 9.10749,105.10533 0,58.22836 -4.06194,105.10533 -9.10749,105.10533 l -191.99569,0 c -5.045545,0 -9.107486,-46.87697 -9.107486,-105.10533 0,-58.22835 4.061941,-105.10533 9.107486,-105.10533 z" class="rectangle" />
+            <path d="m 165.8125,358.21875 -5.1875,99.21875 -100.875,0 0,7.625 100.46875,0 -3.28125,62.59375 -97.1875,0 0,7.59375 96.78125,0 -5,95.5 7.625,0.40625 5.03125,-95.90625 62.5625,0 -5,95.5 7.59375,0.40625 5.03125,-95.90625 98.28125,0 0,-7.59375 -97.875,0 3.28125,-62.59375 94.59375,0 0,-7.625 -94.1875,0 5.15625,-98.84375 -7.59375,-0.375 -5.1875,99.21875 -62.5625,0 5.15625,-98.84375 -7.625,-0.375 z m 2.0625,106.84375 62.5625,0 -3.28125,62.59375 -62.5625,0 3.28125,-62.59375 z" class="lines" />
+        </g>
+        <text x="235.15662" y="477.12143" class="gridster">
+            <tspan x="235.15662" y="477.12143">CT</tspan>
+        </text>
+        <text x="304.80173" y="512.31683" class="slogan">
+            <tspan x="304.80173" y="512.31683">Genuine magic is science . </tspan>
+        </text>
+    </g>
+</svg>
+        <!-- logo version without slogan, add the class .ts-no-slogan if you want to work with some of the existing CSS -->
+<svg version="1.1" viewBox="0 0 677.61096 179.54858" class="ts-no-slogan">
+    <g transform="translate(-49.00717,-350.11674)">
+        <g transform="matrix(0.65068572,0,0,0.65068572,11.104727,118.00494)" class="icon">
+            <path d="m 101.39622,391.43518 191.99569,0 c 5.04555,0 9.10749,46.87698 9.10749,105.10533 0,58.22836 -4.06194,105.10533 -9.10749,105.10533 l -191.99569,0 c -5.045545,0 -9.107486,-46.87697 -9.107486,-105.10533 0,-58.22835 4.061941,-105.10533 9.107486,-105.10533 z" class="rectangle" />
+            <path d="m 165.8125,358.21875 -5.1875,99.21875 -100.875,0 0,7.625 100.46875,0 -3.28125,62.59375 -97.1875,0 0,7.59375 96.78125,0 -5,95.5 7.625,0.40625 5.03125,-95.90625 62.5625,0 -5,95.5 7.59375,0.40625 5.03125,-95.90625 98.28125,0 0,-7.59375 -97.875,0 3.28125,-62.59375 94.59375,0 0,-7.625 -94.1875,0 5.15625,-98.84375 -7.59375,-0.375 -5.1875,99.21875 -62.5625,0 5.15625,-98.84375 -7.625,-0.375 z m 2.0625,106.84375 62.5625,0 -3.28125,62.59375 -62.5625,0 3.28125,-62.59375 z" class="lines" />
+        </g>
+        <text x="235.15662" y="477.12143" class="gridster">
+            <tspan x="235.15662" y="477.12143">Gridster</tspan>
+        </text>
+    </g>
+</svg>
+        <!-- icon logo version, add the class .ts-icon if you want to work with some of the existing CSS -->
+<svg version="1.1" viewBox="0 0 179.52826 179.54858" class="ts-icon">
+    <g transform="translate(-49.00717,-350.11674)">
+        <g transform="matrix(0.65068572,0,0,0.65068572,11.104727,118.00494)" class="icon">
+            <path d="m 101.39622,391.43518 191.99569,0 c 5.04555,0 9.10749,46.87698 9.10749,105.10533 0,58.22836 -4.06194,105.10533 -9.10749,105.10533 l -191.99569,0 c -5.045545,0 -9.107486,-46.87697 -9.107486,-105.10533 0,-58.22835 4.061941,-105.10533 9.107486,-105.10533 z" class="rectangle" />
+            <path d="m 165.8125,358.21875 -5.1875,99.21875 -100.875,0 0,7.625 100.46875,0 -3.28125,62.59375 -97.1875,0 0,7.59375 96.78125,0 -5,95.5 7.625,0.40625 5.03125,-95.90625 62.5625,0 -5,95.5 7.59375,0.40625 5.03125,-95.90625 98.28125,0 0,-7.59375 -97.875,0 3.28125,-62.59375 94.59375,0 0,-7.625 -94.1875,0 5.15625,-98.84375 -7.59375,-0.375 -5.1875,99.21875 -62.5625,0 5.15625,-98.84375 -7.625,-0.375 z m 2.0625,106.84375 62.5625,0 -3.28125,62.59375 -62.5625,0 3.28125,-62.59375 z" class="lines" />
+        </g>
+    </g>
+</svg>
+    </a>
+</div>
+
+            <!-- menu, we did go with a static one, you can build a dynamic one, just google a little around -->
+<div class="main-menu">
+    <div class="content">
+        <nav id="menu">
+            <a class="toggle-link noline"><i class="fa fa-close fa-lg"></i></a>
+            <ul>
+                <li>
+                    <a class="homelink" href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/CV">CV</a>
+                </li>
+                <li>
+                    <a href="/projects">Projects</a>
+                </li>
+                <li>
+                    <a href="/tutorials">Tutorials</a>
+                </li>
+                
+                <li>
+                    <a href="/archive">Archive</a>
+                </li>
+               
+                
+            </ul>
+        </nav>
+        <nav class="iconnav">
+            <ul>
+                
+                <li class="social">
+                    <a href="#" class="youtube"><i class="fa fa-youtube fa-2x"></i></a>
+                </li>
+                 
+                <li class="social">
+                    <a href="https://vimeo.com/user105647066" class="vimeo"><i class="fa fa-vimeo-square fa-2x"></i></a>
+                </li>
+                
+                
+            </ul>
+        </nav>
+        <a href='#menu' class="toggle-link noline">
+            <i class="fa fa-navicon"></i>
+        </a>
+    </div>
+</div>
+
+
+
+
+<div id="colorswitch" class="modal color-change">
+    <div class="modal-content">
+      <h4>Change Color Palette</h4>
+      <p>
+      <img id="indigo" alt="color palette preview indigo" src="/media/compressed/indigo.jpg">
+      <img id="brown" alt="color palette preview brown" src="/media/compressed/brown.jpg">
+      <img id="green" alt="color palette preview green" src="/media/compressed/green.jpg">
+      <img id="teal" alt="color palette preview teal" src="/media/compressed/teal.jpg">
+      </p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">close</a>
+    </div>
+  </div>
+
+        </header>
+        <div id="search">
+    <form role="search" id="searchform">
+        <input type="search" placeholder="Search"/>
+    </form>
+</div>
+
+        <div class="margin">
+            <div class="content full">
+                <div class="content-container">
+                    <article>
+                        
+                            
+                                <div class="video-container">
+                                    <iframe src="https://www.youtube.com/embed/Ivk2ZBe-404?feature=player_detailpage" allowfullscreen></iframe>
+                                </div>
+                            
+                        
+
+                        <h1 class="post-title">
+                            PS$ controller + Xbee + Arduino
+                        </h1>
+                        <div class="meta">
+                            
+
+    <span class="author">Posted by
+        
+        
+    </span>
+
+ &bull;
+                            <span class="date">
+                                Published on 
+                            </span>
+                        </div>
+                        
+                        <div class="post-content">
+                            <p>In this tutorial, I’ll show you how to control an Arduino-based robot  via the official PS4 Bluetooth-based DualShock joystick controller by using USB host, Arduino, and a USB Bluetooth Dongle. Before diving into this project, collect the necessary hardware.
+image
+Collect the Hardware</p>
+
+<ul>
+  <li>Arduino Pro Mini</li>
+  <li>PS4 Bluetooth Controller</li>
+  <li>USB Host Shield Mini</li>
+  <li>FT232RL</li>
+  <li>Arduino Robot Kit</li>
+</ul>
+
+<p>The necessary hardware.</p>
+
+<h4 id="arduino-pro-mini">Arduino Pro Mini</h4>
+
+<p>If we talk about Arduino Mini, it’s basically an Arduino controller without the programming chip installed on it. The reason why Arduino removed the programming chip is simply to reduce the size and cost of PRO Mini. Also once you have one programming device, it can then be reused for other PRO Mini projects, which is quite common.
+image</p>
+
+<p>Arduino Pro Mini</p>
+
+<h4 id="what-is-usb-host">What is USB host?</h4>
+
+<p>USB Host is an adapter for USB devices. You can use it to connect an Arduino board to a USB device, such as a USB joystick, a mouse, or a thumb drive.</p>
+
+<p>For example, you can control your Arduino robot with your own USB based joystick gamepad. We can connect any USB slave device easily with an Arduino microcontroller such as a USB mouse, USB keyboard, USB printer, USB mass storage, and more.</p>
+
+<p>The USB Host might need analog/digital converters necessary to develop a full-speed USB peripheral/host controller with Arduino microcontroller.<br />
+image</p>
+
+<p>The USB host shield.
+Features</p>
+
+<ul>
+  <li>USB 2.0 Full Speed compatible</li>
+  <li>3.3/5V operation level compatible</li>
+  <li>All GPIOx pins break-out</li>
+  <li>USB Host 5V/500mA supply for USB protocol</li>
+</ul>
+
+<p>Specifications</p>
+
+<ul>
+  <li>Operating Voltage: 5V/3V</li>
+  <li>Max Current: 500mA only when Arduino is connected with a good power supply</li>
+  <li>Max Current: 400mA only when Arduino is powered from its USB port</li>
+  <li>USB Controller: MAX3421E</li>
+</ul>
+
+<p>To get this project working, you will need the USB Host Shield for the Arduino and a Bluetooth dongle. I used the USB host shield from Arduino but it’s now discontinued. You can utilize Sparkfun’s USB shield instead.</p>
+
+<p>The USB shield is necessary because we need to connect a Bluetooth based PS4 Controller to the Arduino, which doesn’t have a Bluetooth receiver. Then you can use the included library to pair with the Bluetooth based PS4 controller. And once the Bluetooth connection is established with the PS4 controller, we can use simple functions to read the state of the device.</p>
+
+<p>Also, all of the code is open source. If you want to experiment more with the USB Host by yourself, [Kristian]’s work could be helpful to get started. All of the source code is available on Github. The example sketch also shows how easy it is to add a PS4 controller into your own Arduino project. For this project, we will be adapting this code for controlling the motor of an Arduino Robot car using the left joystick of a PS4 controller.
+Assembling the Hardware</p>
+
+<p>If you are using a different version of Arduino, then you can simply follow the pinout below for wiring it to your own Arduino board. 
+image</p>
+
+<p>The pinout for wiring your Arduino.</p>
+
+<p>if you have an Arduino Pro Mini, assemble the hardware as shown in the image below. Solder the female headers to your USB host, male headers for Arduino Pro Mini and assemble the Arduino micro board at the top of the USB host shield into their female headers.
+image</p>
+
+<p>The Arduino Pro Mini and USB host shield.
+image</p>
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/FCfDlQEcGVw&amp;t=3s">
+</iframe>
+
+<p>Another angle of the connected Arduino Pro Mini and USB host shield.</p>
+
+<p>After assembling the USB Host Shield with Arduino Mini, add the connections for the L298N motor driver module, by following this Fritzing diagram:
+image</p>
+
+<p>The Fritzing diagram</p>
+
+<p>If you are not using an Arduino Mini or not utilizing the shield setup, these are the connections you need to the USB host:
+image</p>
+
+<p>Fritzing diagram if you are not using an Arduino Mini or the shield setup.
+image</p>
+
+<p>The properly connected hardware.
+Upload Source code</p>
+
+<p>The following connections will be used for uploading the source code:
+Arduino Pro –&gt; FTDI</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GND --&gt; GND
+CTS --&gt; GND
+VCC --&gt; VCC
+TXD --&gt; RXD
+RXD --&gt; TXD
+DTR --&gt; DTR
+</code></pre></div></div>
+
+<h3 id="attach-the-dongle-to-you-completed-build">Attach the dongle to you completed build.</h3>
+<p>Pairing the PS4 Controller</p>
+
+<p>In order to pair the Bluetooth based PS4 controller with Arduino. Set the gamepad controller into pairing mode by pressing and holding the “PlayStation button” and ”Share button” at the same time. Hold these two buttons until the light on the PS4 controller starts flashing rapidly. Now the Arduino should automatically detect your PS4 controller.</p>
+
+<p>Once the PS4 controller is connected with your Arduino robot, the controller’s light will turn blue.
+image</p>
+
+<p>When pairing is complete, the light will turn blue!
+image</p>
+
+<p>The completed build.</p>
+
+<h3 id="code-for-trsnsmiting-ps-data-over-xbee">Code for trsnsmiting PS* data over XBEE</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #include &lt;EasyTransfer.h&gt;
+    #include &lt;PS4BT.h&gt;
+    //#include &lt;PS4USB.h&gt;
+    USB Usb;
+    BTD Btd(&amp;Usb);
+
+    EasyTransfer ET;
+
+    PS4BT PS4(&amp;Btd,PAIR);
+    //PS4USB PS4(&amp;Usb);
+    struct SEND_DATA_STRUCTURE{
+    
+    int count;
+    int left;
+    int right;
+    
+    
+    };
+
+    #define TX_INTERVAL 5
+    #define RX_TIMEOUT 100
+    #define STATUS_BLINKRATE 250
+
+    //data group
+    SEND_DATA_STRUCTURE txdata;
+
+    void setup(){
+    
+    
+    Serial.begin(115200);
+    
+    if (Usb.Init() == -1) {
+        Serial.print(F("\r\nOSC did not start"));
+        while(1); //halt
+    }
+    Serial.print(F("\r\nPS4 Bluetooth Library Started"));
+    
+    ET.begin(details(txdata), &amp;Serial);
+    
+    
+    }
+
+    void loop(){
+    
+    Usb.Task();
+    
+    if(PS4.connected() )
+    { 
+    calcPS4Input();
+    }
+
+    else{
+        txdata.count = 0;
+        txdata.left=0;
+        txdata.right =0;
+
+        sendData();
+        }
+    
+    }
+
+    long l2, r2;
+    double old_tx;
+    double old_rx;
+    double old_blink;
+
+    void sendData(){
+    if(millis()&gt;=(old_tx+TX_INTERVAL)){
+        
+        ET.sendData();
+        old_tx=millis();
+    }
+    }
+    int counter = 0;
+    void calcPS4Input(){
+    if (PS4.getButtonPress(L2) || PS4.getButtonPress(R2) || PS4.getButtonClick(L1)|| PS4.getButtonClick(R1)|| PS4.getButtonClick(L2)|| PS4.getButtonClick(R2)){
+        bool l1_press = PS4.getButtonPress(L1);
+    txdata.count=0;
+        l2=PS4.getAnalogButton(L2);
+        if(l1_press)
+        txdata.left= (-1*(l2));
+        else
+        txdata.left= ((l2));
+    
+    
+    
+        bool r2_press = PS4.getButtonPress(R1);
+        
+        r2=PS4.getAnalogButton(R2);
+        if(r2_press)
+        txdata.right= (-1*(r2));
+        else
+        txdata.right= (r2);
+
+        
+        sendData();
+    
+
+    }
+    else if (++counter &gt;10){
+    txdata.count =0;
+    txdata.left=0;
+    txdata.right=0;
+    sendData();
+    counter =0;
+    }
+    
+    if (PS4.getAnalogHat(LeftHatX) &gt; 137 || PS4.getAnalogHat(LeftHatX) &lt; 117 || PS4.getAnalogHat(LeftHatY) &gt; 137 || PS4.getAnalogHat(LeftHatY) &lt; 117 ){
+        txdata.count=1;
+        txdata.left= (PS4.getAnalogHat(LeftHatX));
+        txdata.right= (PS4.getAnalogHat(LeftHatY));
+        sendData();
+        
+        
+    }
+    
+
+    if (PS4.getAnalogHat(RightHatX) &gt; 137 || PS4.getAnalogHat(RightHatX) &lt; 117 || PS4.getAnalogHat(RightHatY) &gt; 137 || PS4.getAnalogHat(RightHatY) &lt; 117){
+        
+        txdata.count=2;
+        txdata.left= (PS4.getAnalogHat(RightHatX));
+        txdata.right= (PS4.getAnalogHat(RightHatY));
+        sendData();
+    }
+    
+    if(PS4.getButtonPress(UP)||PS4.getButtonPress(DOWN)){
+        txdata.count=3;
+        txdata.left= (PS4.getButtonPress(UP));
+        txdata.right= (PS4.getButtonPress(DOWN));
+        sendData();
+        }
+
+    if(PS4.getButtonPress(LEFT)||PS4.getButtonPress(RIGHT)){
+        txdata.count=4;
+        txdata.left= (PS4.getButtonPress(LEFT));
+        txdata.right= (PS4.getButtonPress(RIGHT));
+        sendData();
+        }
+    
+    if(PS4.getButtonPress(CROSS)||PS4.getButtonPress(SQUARE)){
+        
+        txdata.count=5;
+        txdata.left= (PS4.getButtonPress(SQUARE));
+        txdata.right=(PS4.getButtonPress(CROSS));
+        sendData();
+        }
+    
+    if (PS4.getButtonPress(TRIANGLE)||PS4.getButtonPress(CIRCLE)){
+        txdata.count=6;
+        txdata.left= (PS4.getButtonPress(CIRCLE));
+        txdata.right=(PS4.getButtonPress(TRIANGLE));
+        sendData();
+        }
+    
+    
+    }
+</code></pre></div></div>
+
+<h2 id="code-for-reciving-the-data-and-actuating-servo-motors">Code for reciving the data and actuating servo motors</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        #include &lt;EasyTransfer.h&gt;
+        #include &lt;SoftwareSerial.h&gt;
+        #include &lt;Servo.h&gt;
+
+        #include &lt;Wire.h&gt;
+        #include &lt;Adafruit_PWMServoDriver.h&gt;
+
+        #define SERVOMIN  150  // Minimum pulse length count out of 4096.
+        #define SERVOMAX  700 // Maximum pulse length count out of 4096.
+        int servoNo = 0; // Defines a counter for servos.
+        Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver();   // Initiates library.
+
+
+        SoftwareSerial mySerial(2, 3); // RX, TX
+
+        //create object
+        EasyTransfer ET;
+
+        int const ledpin = 13;
+        int val;
+
+        bool Triangle = false ;
+        int last_press ;
+        bool Square = false;
+        bool Cross = false;
+        bool Circle = false;
+
+        int left_drive;
+        int right_drive;
+
+        int lift_actuator = 0;
+        int tilt_actuator = 7;
+
+        int boom_lift = 8;
+        int swing_actuator = 15;
+        int bucket_actuator = 4;
+        int dipper_actuator = 5;
+
+        int starter = 12;
+        int stopper = 13;
+
+        //data group
+        struct RECEIVE_DATA_STRUCTURE{
+
+        int count;
+        int left;
+        int right;
+        
+        
+        };
+
+        RECEIVE_DATA_STRUCTURE txdata;
+
+
+
+        void setup(){
+        
+        Serial.begin(115200);
+        
+        mySerial.begin(115200);
+        ET.begin(details(txdata), &amp;mySerial); //start library
+        Serial.print("Module Started");
+        pwm.begin();         // Sends PWM signals.
+        pwm.setPWMFreq(60);  // Makes servos run at 60 Hz rate.
+        delay(20);
+
+
+        }
+
+
+        void loop(){
+        
+        
+        if(ET.receiveData()){ //check for incoming data
+
+            
+            Serial.println(txdata.count);
+            Serial.println(txdata.left);
+            Serial.println(txdata.right);
+            Serial.println(Triangle);
+
+            switch(txdata.count){
+            
+            case 0:
+                
+                
+                
+                //delay(300);
+                //left_drive.write(map(txdata.left, -255, 255, 0, 255)); 
+                //right_drive.write(map(txdata.right, -255, 255, 0, 255)); 
+                break;
+            case 1:
+            
+                if (Triangle){
+                pwm.setPWM(boom_lift, 0, map(txdata.right, 0, 255, SERVOMIN, SERVOMAX));
+                
+                //dipper_actuator.write(map(txdata.left, -255, 255, 0, 255)); 
+                
+                }
+
+                else
+                pwm.setPWM(swing_actuator, 0, map(txdata.right, 0, 255, SERVOMIN, SERVOMAX));
+                break;
+            case 2:
+            
+                if (Triangle){
+                
+                pwm.setPWM(lift_actuator, 0, map(txdata.left, 0, 255, SERVOMIN, SERVOMAX));
+                //bucket_actuator.write(map(txdata.right, -255, 255, 0, 255)); 
+                }
+                else
+                    pwm.setPWM(tilt_actuator, 0, map(txdata.right, 0, 255, SERVOMIN, SERVOMAX));
+                break;
+            case 5:
+                if (txdata.left)
+                    Square = !Square;
+                if (txdata.right)
+                    Cross = !Cross;
+
+                    if (Cross)
+                    // digitalWrite(HIGH , starter);
+                    break;
+            case 6:
+                if (txdata.left)
+                    Circle = !Circle;
+                    if (Circle)
+                    digitalWrite(HIGH , stopper);
+                if (txdata.right )
+                    Triangle = !Triangle;
+                //last_press = txdata.right;  
+                break;
+                default:
+                Serial.println();
+                break;
+                
+            }   
+        
+        }
+        
+        }
+</code></pre></div></div>
+
+<p>PS3_standalone_BT</p>
+
+<p>This is the code to work on without the xbee connection .</p>
+
+<p>here also you can make similar changes to switch from BT to USB .</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>BT is by default *
+</code></pre></div></div>
+
+<table>
+  <tbody>
+    <tr>
+      <td>PS3_easy_transfer</td>
+      <td> </td>
+      <td>PS4_easy_transfer</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Tested with</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Arduino Uno
+USB HostShield
+Xbee Shield
+</code></pre></div></div>
+
+<p>For USB connection</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>USB Usb;
+//PS3USB PS3(&amp;Usb);
+BTD Btd(&amp;Usb);
+PS3BT PS3(&amp;Btd);
+</code></pre></div></div>
+
+<p>For BlueTooth connection</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>USB Usb;
+PS3USB PS3(&amp;Usb);
+//BTD Btd(&amp;Usb);
+//PS3BT PS3(&amp;Btd);
+</code></pre></div></div>
+
+<p>carCode(for the tractor)</p>
+
+<p>This is the code for recieving the decoding the data thats coming from xbee (via serial)</p>
+
+<p>I have attached the image of a JCB for better clarity.</p>
+
+<p>Tractor drive (differential drive )</p>
+
+<p>all controlled using L1, L2 &amp; R1, R2</p>
+
+<p>left_drive
+right_drive</p>
+
+<p>attachments</p>
+
+<p>##When Square is pressed</p>
+
+<p>left and right hat</p>
+
+<p>lift_actuator
+tilt_actuator</p>
+
+<p>When triangle is pressed</p>
+
+<p>left and right hat</p>
+
+<p>boom_lift
+swing_actuator
+bucket_actuator</p>
+
+<p>UP , DOWN , LEFT , RIGHT
+Wiring</p>
+
+<p>Host Shield     Teensy          Teensy++
+———–     ——          ——–
+SS              10              10
+INT             9               9
+MOSI            2               22
+MISO            3               23
+SCK             1               21
+Reset           Vcc             Vcc
++3.3V           Vcc (MCP1825)   Vcc  (must use MCP1825)
+GND             GND             GND</p>
+
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+
+
+</code></pre></div></div>
+
+<!-- Gallery with lightbox -->
+<div class="masonry">
+    
+        
+            <a href="/media/compressed/tractor.jpg" data-imagelightbox="f" class="noline">
+                
+                    
+                    <img src="/media/compressed/crops/450x450/tractor-450x450.jpg" alt="Bloom Flat" />
+                
+            </a>
+        
+            <a href="/media/compressed/pca9685.png" data-imagelightbox="f" class="noline">
+                
+                    
+                    <img src="/media/compressed/crops/450x450/pca9685-450x450.png" alt="PCA9685 nano" />
+                
+            </a>
+        
+    
+</div>
+
+                        </div>
+                        
+                        <div class="catsandtags">
+                            
+                            <span class="category">
+                                <span class="name">categories:</span>
+                                
+                            </span>
+                            
+                            
+                                &bull;
+                            
+                            
+                            <span class="tags">
+                                <span class="name">tags:</span>
+                                
+                                    <a href="/tag/video">video</a>
+                                
+                                    <a href="/tag/iframe">iframe</a>
+                                
+                            </span>
+                            
+                        </div>
+                        
+                    </article>
+                    <div class="post-nav">
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+    <div class="content">
+        <span>&copy; gridster</span>
+        <span class="backtotop">back to top</span>
+    </div>
+</footer>
+<script src="/js/build/global.min.js"></script>
+<!-- analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-50358022-5', 'auto');
+  ga('send', 'pageview');
+
+</script>
+        
+    </body>
+</html>
