@@ -3,6 +3,7 @@ layout: page
 permalink: /repositories/
 title: repositories
 description: My main github profiles on spotlight
+nav: true
 nav_order: 3
 ---
 
