@@ -8,7 +8,7 @@
     "url": "https://chrissunny94.github.io/",
     "summary": "A Indian-born software engineer with a flare for Robotics and ADAS ",
     "location": {
-      "address": "2712 HSR Layout",
+      "address": "HSR Layout",
       "postalCode": "IN 560102",
       "city": "Bengaluru",
       "countryCode": "India",
@@ -26,12 +26,56 @@
     {
       "name": "Vanora Robots",
       "position": "Software Devloper",
-      "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
+      "url": "https://vanorarobots.com/",
+      "startDate": "2017-06-01",
+      "endDate": "2018-03-01",
       "summary": "UGV robot , ROS enabled platform development",
       "highlights": [
-        "Relativity"
+        "ROS", "PYTHON","C++" , "Gazebo"
+      ]
+    },
+    {
+      "name": "Ubiquity Robotics",
+      "position": "Software Devloper(Remote)",
+      "url": "https://ubiquityrobotics.com/",
+      "startDate": "2018-04-01",
+      "endDate": "2018-07-01",
+      "summary": "Ware house robot , Fiducial SLAM , Kalman Filter , ROS robot",
+      "highlights": [
+        "ROS", "PYTHON","C++"
+      ]
+    },
+    {
+      "name": "Robert Bosch",
+      "position": "Senior Software Devloper ",
+      "url": "https://www.bosch.in/",
+      "startDate": "2018-07-01",
+      "endDate": "2021-07-01",
+      "summary": "Worked on a self driving golf cart project ",
+      "highlights": [
+        "ROS", "PYTHON","C++" ,"CAN-BUS","RADAR" , "LIDAR"
+      ]
+    },
+    {
+      "name": "Electric Sheep Robotics",
+      "position": "Senior Software Devloper(Remote)",
+      "url": "https://sheeprobotics.ai/",
+      "startDate": "2021-07-01",
+      "endDate": "2022-10-01",
+      "summary": "Worked on Autonomous Golf cart ",
+      "highlights": [
+        "ROS", "PYTHON","C++" ,"CAN-BUS","RADAR" , "LIDAR"
+      ]
+    },
+    {
+      "name": "Mercedes Benz R&D India",
+      "position": "Senior Software Devloper",
+      "url": "https://www.mbrdi.co.in/#/",
+      "startDate": "2022-08-01",
+      "endDate": "CURRENT",
+      "summary": "Working as a Lidar and perception engineer ",
+      "highlights": [
+        "ROS2", "PYTHON","C++" ,"CAN-BUS","RADAR" , "LIDAR" ,"CICD","PCL","Deep Learning"
       ]
     }
   ],
@@ -46,7 +90,21 @@
       "endDate": "2017-01-01",
       "score": "",
       "courses": [
-        "Theory of Computing"
+        "Theory of Computing",
+        "Robotics",
+        "Operating Systems"
+      ]
+    },
+    {
+      "institution": "IIT Jammu",
+      "url": "https://www.iitjammu.ac.in/",
+      "area": "AIML",
+      "studyType": "  Ex-Mtech",
+      "startDate": "2023-01-01",
+      "endDate": "Pursuing",
+      "score": "",
+      "courses": [
+        "Statistical Foundation for AIML"
       ]
     }
   ],
