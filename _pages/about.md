@@ -9,7 +9,7 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Hidden Israel, </p>
+    <p>YAHW's Hidden Israel, </p>
     <p>Kerala</p>
     <p>India 91</p>
 

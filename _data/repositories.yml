@@ -4,3 +4,7 @@ github_users:
 github_repos:
   - chrissunny94/ackerman_ros_robot_gazebo_simulation
   - chrissunny94/t265_robot_navigation
+  - chrissunny94/floam
+  - chrissunny94/Lane_Detection_CPP_ROS
+  - chrissunny94/URC2017
+  - chrissunny94/DBMS_project
