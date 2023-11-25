@@ -6,9 +6,10 @@ subtitle: <a href='#'>Affiliations</a>. From Tartaria
 
 profile:
   align: right
-  image: ann.webp
+  image: IMG_7189.JPG
   image_circular: false # crops the image to make it circular
   more_info: >
+    <p>YAHW's Hidden Israel, </p>
     <p>Kerala</p>
     <p>India 91</p>
 
