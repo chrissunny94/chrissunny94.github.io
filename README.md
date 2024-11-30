@@ -10,3 +10,14 @@ $ docker compose pull
 $ docker compose up
 ```
 
+
+
+```
+sudo apt install ruby-dev ruby-bundler -y
+```
+
+
+```
+bundle install 
+bundle exec jekyll serve --lsi --trace -P 4001
+```

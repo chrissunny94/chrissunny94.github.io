@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Krishi
-description: Agriculture  
+description: Advanced and sustainable farming techniques 
 img: assets/blog/5/maxresdefault.jpg
 importance: 1
 category: Agriculture
@@ -9,10 +9,10 @@ related_publications:
 ---
 
 
-Bio Flock farming 
+# Bio Flock farming 
 
 
-GreenHouse 
+# GreenHouse 
 
 
 
