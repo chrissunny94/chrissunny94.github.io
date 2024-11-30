@@ -14,11 +14,25 @@ related_publications:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/lc6EPBMUZRY?si=5PP_0iF9AbNOEJ5H" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/blog/ROS_Robots/IMG_20180219_182233.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
 
 
 ### Ubiquity Robots
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nA-RsXVA3_s?si=X_AaWFkdd-z0Mqsj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/blog/ROS_Robots/image.png" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
 
 
 ### ESR
@@ -41,4 +55,6 @@ allowfullscreen></iframe>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/da0fIKfoB4c?si=nAV-ASA99ynyJuK0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Ete5fBUHzz8?si=Hl1vStbtuTVh8T3J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
