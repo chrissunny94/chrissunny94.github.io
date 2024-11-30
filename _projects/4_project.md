@@ -14,4 +14,12 @@ related_publications:
 assets/blog/4/BEV_PLANNER.png
 
 
+Metrics
+
+
+- Curb Collision Rate (CCR). 
+
+- Union Implementation. 
+
+
 
