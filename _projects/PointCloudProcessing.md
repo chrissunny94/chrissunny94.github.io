@@ -48,3 +48,10 @@ Another objective of Pointcloud processing is being able to filter out Ground pl
 - Furthermore, the point cloud contained a significant amount of noise points (as can be seen in the image below) that are situated far outside the standard point cloud data.
 
 RANSAC works by randomly selecting a subset of points and fitting a model to the subset. The model is then evaluated to determine how well it fits the data. The model with the best fit is selected as the best model. This process is repeated a number of times to find the best model.
+
+
+We have 2 main ways to process point clouds with Deep Learning: 
+
+    point based (direct processing) 
+
+    voxel based (voxelization, then convolutions)
