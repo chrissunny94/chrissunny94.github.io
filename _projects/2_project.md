@@ -9,3 +9,8 @@ related_publications:
 ---
 
 
+
+DBC - The de facto standard for CAN databases is the DBC file format developed by Vector Informatik GmbH. It is a proprietary format in that no official public documentation or specification is available.
+
+Vector DBC - Library to access CAN Databases (aka CANdb, aka DBC files) from Vector Informatik.
+
