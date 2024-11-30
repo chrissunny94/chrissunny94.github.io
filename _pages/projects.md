@@ -5,7 +5,7 @@ permalink: /projects/
 description: A set of technical documents
 nav: true
 nav_order: 2
-display_categories: [SLAM, CAN, ROS,AIML,PCL,Electronics,APP_DEVELOPMENT, Agriculture]
+display_categories: [ROS,AIML,PCL,SLAM, Automotive,Electronics,APP_DEVELOPMENT, Agriculture]
 horizontal: false
 ---
 

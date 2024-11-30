@@ -8,7 +8,42 @@ category: AIML
 related_publications: 
 ---
 
+## Word to Vec techniques
 
+    - Continuous Bag of Words (CBOW)
+    - Skip-gram (SKI gram) word embedding models on the preprocessed data.
+
+
+
+
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/blog/NLP/CBOW.png" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
+
+
+## LSTM
+
+RNNs are neural networks designed for sequential data, where each neuron has connections to subsequent layers and to neurons within the same layer.
+
+LSTMs are a type of RNN designed to learn long-term dependencies and retain information over longer sequences.
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/blog/NLP/LSTM.gif" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/blog/NLP/comparison_DL_networks.webp" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
+Transformers
 
 ## BeRT
 
