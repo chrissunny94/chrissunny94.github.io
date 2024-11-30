@@ -2,10 +2,10 @@
 layout: page
 title: projects
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: A set of technical documents
 nav: true
 nav_order: 2
-display_categories: [SLAM, CAN, ROS,AIML,PCL,Electronics,APP_DEVELOPMENT]
+display_categories: [SLAM, CAN, ROS,AIML,PCL,Electronics,APP_DEVELOPMENT, Agriculture]
 horizontal: false
 ---
 

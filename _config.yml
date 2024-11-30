@@ -2,7 +2,7 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: blank # the website title (if blank, full name will be used instead)
+title: My careless wall on the internet ! 
 first_name: Chris
 middle_name: Sunny
 last_name: Thaliyath
@@ -120,7 +120,7 @@ bing_site_verification:  # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: My Portfolio # blog_name will be displayed in your blog page
+blog_name: Medium articles # blog_name will be displayed in your blog page
 blog_nav_title: blog # your blog must have a title for it to be displayed in the nav bar
 blog_description: Welcome to my blog , hope you learn something new !
 permalink: /blog/:year/:title/
