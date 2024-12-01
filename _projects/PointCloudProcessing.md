@@ -9,49 +9,47 @@ related_publications:
 ---
 
 
-In this blog i am going to go about how to start working on Pointcloud Data .
+In this blog, I am going to go over how to start working with **PointCloud Data**.
 
-To start off with PCL , you need to understand some basic Datastructures and what it represents .
+To begin with **PCL (Point Cloud Library)**, it's important to understand some basic data structures and what they represent:
 
-- Pointcloud 
-- Voxel 
-
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/blog/3/PointvsVoxel.png" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-
-
-
-
-
-Clustering algorithms
-
-- Hungarian 
-- Eucledian
-
+- **PointCloud**: A set of points in 3D space that represents the surface of an object or scene.
+- **Voxel**: A volume element representing a 3D space, typically used for processing large 3D datasets.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/blog/3/polygonization_teaser.gif" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/blog/3/PointvsVoxel.png" title="Example Image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
+### Clustering Algorithms
 
+Clustering algorithms are used to group similar points in a point cloud. Some common algorithms include:
 
-Another objective of Pointcloud processing is being able to filter out Ground plane and Whatever is above .
+- **Hungarian Algorithm**: Often used for solving assignment problems, it can help with point matching and clustering.
+- **Euclidean Clustering**: A method for grouping points that are within a specific distance (i.e., Euclidean distance) of each other.
 
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/blog/3/polygonization_teaser.gif" title="Clustering Example" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 
-- It was observed that the ground plane is primarily flat, which suggested that a plane fitting algorithm like RANSAC can be used to remove the ground plane points.
-    
-- Furthermore, the point cloud contained a significant amount of noise points (as can be seen in the image below) that are situated far outside the standard point cloud data.
+### Ground Plane Filtering
 
-RANSAC works by randomly selecting a subset of points and fitting a model to the subset. The model is then evaluated to determine how well it fits the data. The model with the best fit is selected as the best model. This process is repeated a number of times to find the best model.
+Another objective in point cloud processing is to filter out the **ground plane** and other unnecessary elements. This is crucial for many applications, such as autonomous driving and object detection.
 
+- The **ground plane** is typically flat, which suggests that a **plane fitting algorithm** like **RANSAC** (Random Sample Consensus) can be used to remove ground plane points.
+  
+- In many point clouds, there are also significant **noise points** that are far outside the standard data, which can be filtered using RANSAC. It works by randomly selecting a subset of points, fitting a model to this subset, and evaluating how well the model fits the data. This process is repeated to find the best model.
 
-We have 2 main ways to process point clouds with Deep Learning: 
+### Point Cloud Processing with Deep Learning
 
-    point based (direct processing) 
+There are two main ways to process point clouds using deep learning:
 
-    voxel based (voxelization, then convolutions)
+1. **Point-Based Processing (Direct Processing)**: Each point in the cloud is directly processed using neural networks, such as PointNet, which are designed for non-grid data.
+   
+2. **Voxel-Based Processing (Voxelization + Convolutions)**: The point cloud is first converted into a voxel grid, and then traditional convolutional neural networks (CNNs) are applied to process the voxelized data.
+
+These methods are essential for applications like 3D object recognition, segmentation, and autonomous navigation.
+
