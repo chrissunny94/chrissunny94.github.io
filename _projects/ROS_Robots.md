@@ -1,11 +1,15 @@
 ---
-layout: page
+layout: post
 title: ROS Robots
 description: All the ROS robots I have got my hands on
+date: 2015-10-20 11:59:00-0400
 img: assets/blog/ROS_Robots/VanoraIMG_20180219_182408.jpg
 importance: 1
 category: ROS
+tags: comments
 related_publications:
+disqus_comments: true
+related_posts: false
 ---
 
 ### Vanora Robots
