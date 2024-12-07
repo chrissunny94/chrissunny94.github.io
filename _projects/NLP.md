@@ -251,3 +251,6 @@ print(f"F1 Score: {f1}")
 This project highlights the use of preprocessing techniques and word embeddings (CBOW and Skip-Gram) to perform sentiment analysis. The neural network built using Keras demonstrated how to classify sentiments in text data, and the evaluation metrics showed the model's performance.
 
 By leveraging the power of word embeddings and deep learning, we can tackle a wide range of natural language processing tasks, including sentiment analysis, text classification, and language translation.
+
+
+
