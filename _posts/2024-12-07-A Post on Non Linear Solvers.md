@@ -3,8 +3,8 @@ layout: post
 title: Non Linear Optimizers
 date: 2024-12-05 11:12:00-0400
 description: Some examples of using a Non Linear Solver 
-tags: formatting math
-categories: sample-posts
+tags: NonLinearOptimizer math 
+categories: NLS
 related_posts: false
 ---
 
@@ -41,7 +41,7 @@ Popular optimizers include Ceres Solver, GTSAM, and g2o. They handle non-linear 
 </div>
 
 
-🛠️ 1. Ceres Solver (C++ Implementation)
+### 🛠️ 1. Ceres Solver (C++ Implementation)
 
 ```
 #include "ceres/ceres.h"
@@ -101,7 +101,7 @@ int main(int argc, char** argv) {
 ```
 
 
-🛠️ 2. NLopt (C++ Implementation)
+### 🛠️ 2. NLopt (C++ Implementation)
 
 ```
 #include <nlopt.hpp>
@@ -143,7 +143,7 @@ int main() {
 }
 ```
 
-🛠️ 3. COBYLA (Python Implementation)
+### 🛠️ 3. COBYLA (Python Implementation)
 
 
 ```
@@ -177,7 +177,7 @@ arr = [1, 3, 20, 4, 1, 0]
 peak_index, peak_value = find_peak(arr)
 print(f"Peak found at index: {peak_index}, Value: {peak_value}")
 ```
-🛠️ 4. GTSAM (C++ Implementation)
+### 🛠️ 4. GTSAM (C++ Implementation)
 
 ```
 #include <gtsam/nonlinear/NonlinearFactorGraph.h>
@@ -249,7 +249,7 @@ int main() {
 
 
 
-🔎 Explanation of the Code
+## 🔎 Explanation of the Code
 
     Objective Function:
     The goal is to minimize the negative of arr[i] to effectively maximize arr[i].
@@ -260,7 +260,7 @@ int main() {
     Initial Guess:
     We start the optimization from the middle of the array.
 
-📊 Complexity Analysis
+## 📊 Complexity Analysis
 
     Time Complexity:
     Approximately O(log n) or higher due to the iterative nature of non-linear optimizers.
@@ -271,9 +271,11 @@ int main() {
 
 
 
-Real world use cases in Robotics 
+## Some examples of Real world use cases of these algorithms 
 
-Bundle Adjustment:
+
+
+## Bundle Adjustment:
 
     Optimizes both the camera poses and 3D feature points to minimize reprojection error.
     Bundle adjustment is computationally intensive and requires efficient non-linear solvers.
@@ -301,23 +303,23 @@ Values result = optimizer.optimize();
 
 
 
-Pose Graph Optimization:
+## Pose Graph Optimization:
 
     Visual SLAM systems generate a graph where nodes represent camera poses and edges represent constraints (from odometry, feature matching, or loop closure).
     Non-linear solvers minimize the error across this pose graph to refine the robot's trajectory and map.
 
-Sensor Fusion:
+## Sensor Fusion:
 
     Combining data from different sensors (e.g., IMU and camera) using non-linear optimization to improve localization accuracy.
 
 
 
-Dynamic Systems with Non-Linear Dynamics:
+## Dynamic Systems with Non-Linear Dynamics:
 
     When dealing with non-linear systems (e.g., self-driving cars, robotic manipulators), MPC relies on non-linear optimization solvers to find optimal control actions.
 
 
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -385,3 +387,29 @@ control = mpc_controller(x, x_ref)
 print(f"Optimal control: {control}")
 
 ```
+
+
+
+### 📊 **Comparison of Non-Linear Solvers**
+
+| **Solver**        | **Language**       | **Gradient Requirement** | **Constraints Support** | **Best For**                                |
+|-------------------|--------------------|-------------------------|------------------------|---------------------------------------------|
+| **Ceres Solver**  | C++                | Yes                     | Yes                    | Large-scale optimization, robotics, SLAM   |
+| **NLopt**         | C/C++              | Optional                | Yes                    | General non-linear optimization             |
+| **COBYLA**        | Python (SciPy)     | No                      | Yes                    | Derivative-free optimization with constraints|
+| **GTSAM**         | C++                | Yes                     | Yes                    | Factor graphs, SLAM, robotics               |
+| **g2o**           | C++                | Yes                     | Limited                | Graph-based optimization, SLAM              |
+
+---
+
+### ✅ **Pros and Cons of Non-Linear Solvers**
+
+| **Aspect**       | **Pros**                                                                 | **Cons**                                                                  |
+|------------------|--------------------------------------------------------------------------|---------------------------------------------------------------------------|
+| **Flexibility**  | Can handle complex, non-linear relationships.                           | May require problem-specific tuning.                                      |
+| **Accuracy**     | Achieves high-precision solutions.                                      | Sensitive to initial guesses (may get stuck in local minima).             |
+| **Constraints**  | Supports various types of constraints.                                  | Constraint handling can increase computation time.                        |
+| **Gradient Use** | Efficient with gradient information (when available).                   | Requires gradient calculation or approximation (can be costly).           |
+| **Applications** | Widely used in SLAM, robotics, and control systems.                    | Not always suitable for real-time applications due to computation time.   |
+
+---
