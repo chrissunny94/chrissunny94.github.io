@@ -122,3 +122,19 @@ The New Testament does not directly address usury as the Old Testament does, but
 - **Compassionate Lending**: Loans should be given out of kindness and care, especially to those in need, without charging interest.
 - **Community and Equity**: The Bible promotes a sense of communal responsibility and fairness in economic practices.
 
+
+### The Modern Economic Disparity
+
+The economic disparity we witness today can be attributed to a system that allows a small minority to amass disproportionate purchasing power. This imbalance stems, in part, from what some describe as a "Babylonian banking system," characterized by debt cycles, inflation, and the speculative manipulation of currency.
+
+This system, heavily influenced by fiat currencies and centralized control, often undermines the fairness and transparency that Jesus' teachings advocate. Instead of fostering community and equality, it prioritizes profit over compassion, creating a divide between the wealthy elite and the struggling majority.
+
+### The Hope of the Millennial Kingdom
+
+In contrast to this flawed system, many believe that when Jesus returns to establish His millennial kingdom, He will reset the world’s economic and moral order. His governance will bring about:
+
+- **Fairness**: A financial system rooted in intrinsic value, free from manipulation and speculation.
+- **Stability**: Work and effort will be preserved, ensuring individuals reap the rewards of their labor across their lifetime.
+- **Decentralized Governance**: As the ultimate "King of decentralized systems," Jesus’ leadership will eliminate the need for extensive oversight, fostering trust and equity.
+
+This system may reflect the best elements of fair capitalism, where innovation and effort are rewarded, combined with a touch of socialism, ensuring no one is left behind. It will prioritize compassion, justice, and the well-being of all, transcending the divisive ideologies of our current era.
