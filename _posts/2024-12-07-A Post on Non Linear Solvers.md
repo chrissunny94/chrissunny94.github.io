@@ -41,6 +41,26 @@ Popular optimizers include Ceres Solver, GTSAM, and g2o. They handle non-linear 
 </div>
 
 
+## 🔎 Explanation of the Code
+
+    Objective Function:
+    The goal is to minimize the negative of arr[i] to effectively maximize arr[i].
+
+    Index Bounds:
+    Constraints ensure the index stays within the valid range of the array.
+
+    Initial Guess:
+    We start the optimization from the middle of the array.
+
+## 📊 Complexity Analysis
+
+    Time Complexity:
+    Approximately O(log n) or higher due to the iterative nature of non-linear optimizers.
+
+    Space Complexity:
+    O(1) – Minimal additional memory usage.
+
+
 ### 🛠️ 1. Ceres Solver (C++ Implementation)
 
 ```
@@ -249,24 +269,6 @@ int main() {
 
 
 
-## 🔎 Explanation of the Code
-
-    Objective Function:
-    The goal is to minimize the negative of arr[i] to effectively maximize arr[i].
-
-    Index Bounds:
-    Constraints ensure the index stays within the valid range of the array.
-
-    Initial Guess:
-    We start the optimization from the middle of the array.
-
-## 📊 Complexity Analysis
-
-    Time Complexity:
-    Approximately O(log n) or higher due to the iterative nature of non-linear optimizers.
-
-    Space Complexity:
-    O(1) – Minimal additional memory usage.
 
 
 
