@@ -4,7 +4,7 @@ title: Jesus on investing money
 date: 2024-12-25 11:12:00-0400
 description: Does Jesus want us to invest ? 
 tags: Investment
-categories: NLS
+categories: INVESTING
 related_posts: false
 ---
 
@@ -138,3 +138,48 @@ In contrast to this flawed system, many believe that when Jesus returns to estab
 - **Decentralized Governance**: As the ultimate "King of decentralized systems," Jesus’ leadership will eliminate the need for extensive oversight, fostering trust and equity.
 
 This system may reflect the best elements of fair capitalism, where innovation and effort are rewarded, combined with a touch of socialism, ensuring no one is left behind. It will prioritize compassion, justice, and the well-being of all, transcending the divisive ideologies of our current era.
+
+
+Joseph, the earthly foster father of Jesus, indeed embodies the principles of ethical and value-driven capitalism. His life as a carpenter provides a beautiful example of how work, craftsmanship, and entrepreneurship can serve as vehicles for both personal integrity and community benefit. Let’s delve into this further:
+
+---
+
+### Joseph: A Model of Ethical Capitalism
+
+1. **Work as Worship**  
+   Joseph’s carpentry was more than just a trade; it was likely a way he served God and others. By creating tools, furniture, and structures, Joseph provided value to his community. This aligns with the biblical principle that work, done with integrity, is honorable and pleasing to God.  
+   - **Colossians 3:23**:  
+     > "Whatever you do, work heartily, as for the Lord and not for men."
+
+2. **Adding Value to Society**  
+   As a skilled carpenter, Joseph transformed raw materials into useful goods, directly contributing to societal needs. His work demonstrates the core of ethical capitalism: adding value through creativity and labor, rather than exploiting others for profit.
+
+3. **Providing for His Family**  
+   Joseph’s work sustained his family, including Jesus and Mary. His role as a provider highlights the dignity of honest labor and the importance of using one's resources to nurture and support loved ones.  
+
+4. **Teaching by Example**  
+   Joseph’s work ethic and commitment to his craft likely influenced Jesus during His formative years. In fact, Jesus is referred to as a carpenter in Mark 6:3, suggesting He learned the trade from Joseph. This underscores the generational impact of diligent and honest work.
+
+---
+
+### Ethical Capitalism in Joseph’s Example  
+Joseph’s life exemplifies a kind of capitalism that is deeply rooted in fairness, community, and faith:  
+- **Skill-Based Value**: His livelihood was based on creating tangible, meaningful goods.  
+- **Community-Oriented**: Joseph’s trade directly benefited his neighbors and strengthened communal bonds.  
+- **Faithful Stewardship**: He used his talents responsibly, ensuring his family and community were supported.  
+
+---
+
+### A Contrast to Modern Capitalism  
+Unlike modern capitalism, which sometimes prioritizes profit over people, Joseph’s approach was grounded in moral and spiritual principles. His life reminds us that true wealth comes not from hoarding resources but from serving others and living with integrity.  
+
+---
+
+### Lessons for Today  
+Joseph’s example encourages us to:  
+- Pursue work that adds genuine value to society.  
+- Approach business and labor with honesty and humility.  
+- Use our resources to support our families and uplift our communities.  
+- Pass on the values of hard work, integrity, and service to the next generation.  
+
+Would you like to explore how Joseph’s values could apply to modern entrepreneurial practices or ethical business models?
