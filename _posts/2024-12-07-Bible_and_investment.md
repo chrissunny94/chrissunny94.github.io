@@ -10,16 +10,20 @@ related_posts: false
 
 I have for many years wondered about Jesus's position on investing. Let us approach this topic objectively.
 
-The Nature of Money
+### The Nature of Money
+
 First and foremost, money is not a commodity; it is a tool for the exchange of value. Its purpose is to facilitate trade and provide a medium for economic activity.
 
-Jesus and Speculation
+### Jesus and Speculation
+
 From a Biblical perspective, Jesus appears to discourage speculative practices. This can be inferred from His teachings, which emphasize honest work, fair dealings, and stewardship of resources. Speculation, often driven by greed and uncertainty, contrasts sharply with these principles.
 
-Gold and Silver as Standards
+### Gold and Silver as Standards
+
 Historically, Gold and Silver have been seen as stable mediums of exchange. Their intrinsic value is derived from their scarcity, as they cannot be synthesized and must be mined. This makes them relatively immune to the speculative fluctuations that plague fiat currencies. In a way, their fixed supply reflects a divine order—offering stability and fairness in trade.
 
-The Issue with Modern Money
+### The Issue with Modern Money
+
 Today, money, especially fiat currency, lacks intrinsic value. It is subject to inflation and speculation, eroding its reliability as a medium of exchange. A significant shift occurred when the U.S. dollar moved away from the Gold standard, transitioning into the era of the "petrodollar." This decoupling from a tangible standard introduced an environment ripe for speculative practices, diminishing the moral foundation of money as a tool for equitable exchange.
 
 
@@ -118,4 +122,3 @@ The New Testament does not directly address usury as the Old Testament does, but
 - **Compassionate Lending**: Loans should be given out of kindness and care, especially to those in need, without charging interest.
 - **Community and Equity**: The Bible promotes a sense of communal responsibility and fairness in economic practices.
 
-Would you like to explore historical context or how these teachings apply to modern financial systems?
