@@ -3,7 +3,7 @@ layout: post
 title: Jesus on investing money 
 date: 2024-12-25 11:12:00-0400
 description: Does Jesus want us to invest ? 
-tags: Investment
+tags: Investment Bible
 categories: INVESTING
 related_posts: false
 ---
