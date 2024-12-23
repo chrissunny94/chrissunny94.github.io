@@ -1,11 +1,10 @@
 ---
 layout: post
-title: Bible on Investing
-date: 2024-12-25 11:59:00-0400
-description: How jesus would want us to manage money 
-tags: comments
-categories: Investing
-disqus_comments: true
+title: Non Linear Optimizers
+date: 2024-12-25 11:12:00-0400
+description: Some examples of using a Non Linear Solver 
+tags: NonLinearOptimizer math 
+categories: NLS
 related_posts: false
 ---
 
