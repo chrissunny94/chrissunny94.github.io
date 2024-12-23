@@ -12,13 +12,11 @@ related_posts: false
 
 For years, I have pondered what Jesus' position on investing might be. Let us explore this topic through biblical principles and their application in today's world.
 
----
 
 ## Understanding Money
 
 Money serves as a tool to facilitate trade and enable economic activity. However, its misuse—driven by greed or hoarding—leads to societal and moral problems.
 
----
 
 ## Biblical Principles on Investing
 
@@ -42,7 +40,6 @@ This parable warns against hoarding wealth without generosity or purpose.
 
 **Key Takeaway**: Thoughtful planning and stewardship are essential for managing resources effectively.
 
----
 
 ## Usury: A Biblical Perspective
 
@@ -57,7 +54,6 @@ This parable warns against hoarding wealth without generosity or purpose.
 
 **Key Takeaway**: Generosity aligns with Jesus' teachings on lending.
 
----
 
 ## Lessons from Joseph: Ethical Capitalism
 
@@ -75,7 +71,6 @@ Joseph, the earthly father of Jesus, exemplifies value-driven capitalism:
 
 **Key Takeaway**: Ethical capitalism values honest labor and community well-being.
 
----
 
 ## Modern Economic Systems and Biblical Ideals
 
@@ -83,7 +78,6 @@ Today’s shift from gold-backed currency to fiat money has introduced volatilit
 
 **Key Takeaway**: A fair economic system prioritizes stability, equity, and compassion over profit.
 
----
 
 ## The Millennial Kingdom: A Hopeful Future
 
@@ -94,7 +88,6 @@ In Jesus' future kingdom, the economic order is expected to reflect:
 
 **Key Takeaway**: Jesus’ teachings inspire a vision of justice and equity in all financial systems.
 
----
 
 ## Conclusion
 
