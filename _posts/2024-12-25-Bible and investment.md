@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Non Linear Optimizers
-date: 2024-12-05 11:12:00-0400
-description: Some examples of using a Non Linear Solver 
-tags: NonLinearOptimizer math 
+title: Bible and money
+date: 2024-12-25 11:12:00-0400
+description: How would Jesus expect us to invest ?
+tags: Bible Investing
 categories: NLS
 related_posts: false
 ---
