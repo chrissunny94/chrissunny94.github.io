@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Non Linear Optimizers
+title: Bible and Investing
 date: 2024-12-25 11:12:00-0400
-description: Some examples of using a Non Linear Solver 
+description: Investment and Bible 
 tags: NonLinearOptimizer math 
 categories: NLS
 related_posts: false
