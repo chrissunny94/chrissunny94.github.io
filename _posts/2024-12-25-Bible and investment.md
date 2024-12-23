@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bible and Money: How Would Jesus Expect Us to Invest?
+title: How Would Jesus Expect Us to Invest?
 date: 2024-12-20 11:12:00-0400
 description: Exploring Jesus' teachings on money and investments.
 tags: Faith, Investing, Stewardship
