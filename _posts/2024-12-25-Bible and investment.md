@@ -3,7 +3,7 @@ layout: post
 title: Bible and money
 date: 2024-12-25 11:12:00-0400
 description: How would Jesus expect us to invest ?
-tags: Bible Investing
+tags: NonLinearOptimizer math 
 categories: NLS
 related_posts: false
 ---
