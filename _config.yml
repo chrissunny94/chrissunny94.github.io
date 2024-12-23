@@ -264,7 +264,7 @@ jekyll-archives:
     category: '/blog/category/:name/'
 
 display_tags: ['ROS', 'Automotive', 'Electronics', 'Physics', 'AIML','APP_DEVELOPMENT'] # these tags will be displayed on the front page of your blog
-display_categories: ['blockquotes'] # these categories will be displayed on the front page of your blog
+display_categories: ['blockquotes','Investing'] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar

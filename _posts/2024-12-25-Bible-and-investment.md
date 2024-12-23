@@ -4,7 +4,7 @@ title: Bible on Investing
 date: 2024-12-25 11:59:00-0400
 description: How jesus would want us to manage money 
 tags: comments
-categories: sample-posts external-services
+categories: Investing
 disqus_comments: true
 related_posts: false
 ---
