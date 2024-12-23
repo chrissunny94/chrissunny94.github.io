@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bible and money
-date: 2024-12-25 11:12:00-0400
+date: 2024-12-20 11:12:00-0400
 description: How would Jesus expect us to invest ?
 tags: NonLinearOptimizer math 
 categories: NLS
@@ -165,6 +165,7 @@ Joseph, the earthly foster father of Jesus, indeed embodies the principles of et
 
 ### Ethical Capitalism in Joseph’s Example  
 Joseph’s life exemplifies a kind of capitalism that is deeply rooted in fairness, community, and faith:  
+
 - **Skill-Based Value**: His livelihood was based on creating tangible, meaningful goods.  
 - **Community-Oriented**: Joseph’s trade directly benefited his neighbors and strengthened communal bonds.  
 - **Faithful Stewardship**: He used his talents responsibly, ensuring his family and community were supported.  
@@ -177,7 +178,9 @@ Unlike modern capitalism, which sometimes prioritizes profit over people, Joseph
 ---
 
 ### Lessons for Today  
+
 Joseph’s example encourages us to:  
+
 - Pursue work that adds genuine value to society.  
 - Approach business and labor with honesty and humility.  
 - Use our resources to support our families and uplift our communities.  
