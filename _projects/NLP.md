@@ -253,4 +253,51 @@ This project highlights the use of preprocessing techniques and word embeddings 
 By leveraging the power of word embeddings and deep learning, we can tackle a wide range of natural language processing tasks, including sentiment analysis, text classification, and language translation.
 
 
+CLASS NOTES
+--------------
 
+RNN (2017)
+
+LSTM 
+- Very unstable 
+- Very hard to train 
+
+Attention 
+- Information shared beteween Encoder and Decoder 
+- Positional encodings were added using hand crafted features like sinosodila functions 
+
+Transformer (2018)
+
+- Initial goal for an architecture Encoder Decoder 
+- Get rid of recurrence 
+- replace with self attention 
+- Sequence to sequence models became easy 
+  - Preserves sentence structures .
+  - Various stacks of Encoders and Decoders 
+    - Self Attention feed forward 
+
+
+Self Attention 
+
+- Self attention is the key layer in a transformer stack  
+    - Get 3 vectors for each embedding Query , Key and Value 
+    - Scale  , MatMul , SoftMax 
+    - Finaly outputs Scores(because we do a Dot product )
+     - A.B = A B cos(theta)
+       - Will give distance 
+     - AxB = A B sin(theta)
+       - will give direction
+
+- Tranfformers have Multiple heads and Attention 
+- LLMs are trained on large datasets
+- 
+
+
+
+
+| **Architecture** | **Inventors** | **Introduction Date** | **Pros** | **Cons** | **Architecture Diagram** |
+|------------------|---------------|-----------------------|----------|----------|--------------------------|
+| **Recurrent Neural Networks (RNNs)** | John Hopfield (1982) | 1980s | - Suitable for sequential data processing.<br>- Captures temporal dynamics. | - Suffers from vanishing and exploding gradient problems.<br>- Struggles with long-term dependencies. | ![RNN Architecture](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Recurrent_neural_network_unfold.svg/440px-Recurrent_neural_network_unfold.svg.png) |
+| **Long Short-Term Memory (LSTM)** | Sepp Hochreiter and Jürgen Schmidhuber | 1997 | - Addresses vanishing gradient problem.<br>- Capable of learning long-term dependencies. | - Computationally intensive.<br>- Complex architecture. | ![LSTM Architecture](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/The_LSTM_cell.png/440px-The_LSTM_cell.png) |
+| **Attention Mechanism** | Dzmitry Bahdanau, Kyunghyun Cho, and Yoshua Bengio | 2014 | - Allows the model to focus on relevant parts of the input sequence.<br>- Improves performance on tasks like machine translation. | - Increases computational complexity.<br>- May require large amounts of data to train effectively. | ![Attention Mechanism](https://jalammar.github.io/images/attention_3.gif) |
+| **Transformer** | Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Łukasz Kaiser, and Illia Polosukhin | 2017 | - Enables parallel processing of sequence data.<br>- Captures long-range dependencies effectively.<br>- Reduces training time compared to RNNs and LSTMs. | - Requires large datasets and computational resources.<br>- May struggle with very long sequences due to fixed input size during training. | ![Transformer Architecture](https://jalammar.github.io/images/t/transformer_architecture_diagram.png) |
