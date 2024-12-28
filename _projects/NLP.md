@@ -253,6 +253,56 @@ This project highlights the use of preprocessing techniques and word embeddings 
 By leveraging the power of word embeddings and deep learning, we can tackle a wide range of natural language processing tasks, including sentiment analysis, text classification, and language translation.
 
 
+CLASS NOTES
+--------------
+
+RNN (2017)
+
+LSTM 
+- Very unstable 
+- Very hard to train 
+
+Attention 
+- Information shared beteween Encoder and Decoder 
+- Positional encodings were added using hand crafted features like sinosodila functions 
+
+Transformer (2018)
+
+- Initial goal for an architecture Encoder Decoder 
+- Get rid of recurrence 
+- replace with self attention 
+- Sequence to sequence models became easy 
+  - Preserves sentence structures .
+  - Various stacks of Encoders and Decoders 
+    - Self Attention feed forward 
+
+
+Self Attention 
+
+- Self attention is the key layer in a transformer stack  
+    - Get 3 vectors for each embedding Query , Key and Value 
+    - Scale  , MatMul , SoftMax 
+    - Finaly outputs Scores(because we do a Dot product )
+     - A.B = A B cos(theta)
+       - Will give distance 
+     - AxB = A B sin(theta)
+       - will give direction
+
+- Tranfformers have Multiple heads and Attention 
+- LLMs are trained on large datasets
+- Positional Encoding , how this works 
+  - Its notghin but a vector of the same length . 
+  - sin and cosine embedding 
+  - Self Attention Add , normalization layer  , Earliest problem was diminishing gradient , float numbers were becoming realy small  , working with decimal numbers is always a problem  , gradient back propagration was always ending up as zero . Residual connection was doing it at every layer Added layer normalization , its different from batch normalizaiton  , it learns two parameters . What it does it , it learnds means and adds a huge number of parameters . We can switch off these layers in fine tuning . Sometimes tries to remove these laers .
+
+  - What happens in a Decoders?
+    - Masked multihead self attention 
+    - Multi headed attention layer over encoder output 
+    - Position wise feed forward layer 
+    - Each sublayer has a residuals connection and is normalized LayerNorma(x + Sublayer(x))
+    
+
+
 
 
 | **Architecture** | **Inventors** | **Introduction Date** | **Pros** | **Cons** | **Architecture Diagram** |
@@ -261,3 +311,63 @@ By leveraging the power of word embeddings and deep learning, we can tackle a wi
 | **Long Short-Term Memory (LSTM)** | Sepp Hochreiter and Jürgen Schmidhuber | 1997 | - Addresses vanishing gradient problem.<br>- Capable of learning long-term dependencies. | - Computationally intensive.<br>- Complex architecture. | ![LSTM Architecture](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/The_LSTM_cell.png/440px-The_LSTM_cell.png) |
 | **Attention Mechanism** | Dzmitry Bahdanau, Kyunghyun Cho, and Yoshua Bengio | 2014 | - Allows the model to focus on relevant parts of the input sequence.<br>- Improves performance on tasks like machine translation. | - Increases computational complexity.<br>- May require large amounts of data to train effectively. | ![Attention Mechanism](https://jalammar.github.io/images/attention_3.gif) |
 | **Transformer** | Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Łukasz Kaiser, and Illia Polosukhin | 2017 | - Enables parallel processing of sequence data.<br>- Captures long-range dependencies effectively.<br>- Reduces training time compared to RNNs and LSTMs. | - Requires large datasets and computational resources.<br>- May struggle with very long sequences due to fixed input size during training. | ![Transformer Architecture](https://jalammar.github.io/images/t/transformer_architecture_diagram.png) |
+
+
+# Positional Encoding and Decoders in Transformers
+
+## **Positional Encoding**
+- **Purpose**: Adds information about the position of tokens in a sequence since Transformers lack inherent sequential understanding.
+  
+- **Mechanism**:
+  - Positional encoding is a vector of the same length as token embeddings.
+  - Encoded using sinusoidal functions:
+    - **Formula**:
+      $$PE(pos, 2i) = \sin\left(\frac{pos}{10000^{\frac{2i}{d_{\text{model}}}}}\right)$$
+      $$PE(pos, 2i+1) = \cos\left(\frac{pos}{10000^{\frac{2i}{d_{\text{model}}}}}\right)$$
+      Where:
+      - \( pos \): Position of the token in the sequence.
+      - \( i \): Dimension index.
+      - \( d_{\text{model}} \): Dimensionality of embeddings.
+  - Smooth encoding allows the model to infer relative positions.
+
+- **Integration**: Added to token embeddings before passing to the self-attention layers.
+
+---
+
+## **Self-Attention with Residual Connections**
+- **Gradient Vanishing Problem**:
+  - Small gradients caused ineffective learning in earlier deep networks, especially with long sequences.
+
+- **Residual Connections**:
+  - Skip connections pass input directly to the layer output:
+    $$y = \text{LayerNorm}(x + \text{Sublayer}(x))$$
+  - Helps stabilize gradient flow and improves training.
+
+- **Layer Normalization**:
+  - Normalizes across features of a single data point instead of batch-wise.
+  - **Key Differences from Batch Normalization**:
+    - Operates on individual samples, not batches.
+    - Learns mean and variance parameters for flexibility.
+    - Can be disabled during fine-tuning to reduce parameter overhead.
+
+---
+
+## **Decoders in Transformers**
+- **Functionality**:
+  - Generates the output sequence token by token.
+  - Attends to encoder outputs and previously generated tokens.
+
+- **Components**:
+  1. **Masked Multi-Head Self-Attention**:
+     - Ensures causal masking by preventing attention to future tokens.
+  2. **Multi-Head Attention Layer over Encoder Outputs**:
+     - Allows focusing on relevant encoder outputs for each token.
+  3. **Position-Wise Feed-Forward Layer**:
+     - Applies fully connected layers to each position independently, enabling non-linear transformations.
+
+- **Residual Connections and Layer Normalization**:
+  - Each sublayer includes:
+    - Residual connections to address gradient issues.
+    - Layer normalization for numerical stability and consistent learning.
+
+---
