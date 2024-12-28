@@ -253,46 +253,6 @@ This project highlights the use of preprocessing techniques and word embeddings 
 By leveraging the power of word embeddings and deep learning, we can tackle a wide range of natural language processing tasks, including sentiment analysis, text classification, and language translation.
 
 
-CLASS NOTES
---------------
-
-RNN (2017)
-
-LSTM 
-- Very unstable 
-- Very hard to train 
-
-Attention 
-- Information shared beteween Encoder and Decoder 
-- Positional encodings were added using hand crafted features like sinosodila functions 
-
-Transformer (2018)
-
-- Initial goal for an architecture Encoder Decoder 
-- Get rid of recurrence 
-- replace with self attention 
-- Sequence to sequence models became easy 
-  - Preserves sentence structures .
-  - Various stacks of Encoders and Decoders 
-    - Self Attention feed forward 
-
-
-Self Attention 
-
-- Self attention is the key layer in a transformer stack  
-    - Get 3 vectors for each embedding Query , Key and Value 
-    - Scale  , MatMul , SoftMax 
-    - Finaly outputs Scores(because we do a Dot product )
-     - A.B = A B cos(theta)
-       - Will give distance 
-     - AxB = A B sin(theta)
-       - will give direction
-
-- Tranfformers have Multiple heads and Attention 
-- LLMs are trained on large datasets
-- 
-
-
 
 
 | **Architecture** | **Inventors** | **Introduction Date** | **Pros** | **Cons** | **Architecture Diagram** |
