@@ -1,0 +1,83 @@
+I"D<p>The following table lists the precedence and associativity of <strong>ET</strong> operators.</p>
+
+<p>Operators are listed top to bottom, in descending precedence.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Precedence</th>
+      <th>Operator</th>
+      <th>Description</th>
+      <th>Associativity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>++<br />–<br />()<br />[]</td>
+      <td>Suffix/Postfix increment<br />Suffix/Postfix decrement<br />Function call<br />Array subscripting</td>
+      <td>Left-to-right</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>+<br />-<br />!<br />~<br />&amp;</td>
+      <td>Unary plus<br />Unary minus<br />Logical NOT<br />Bitwise NOT<br />Address-of</td>
+      <td>Right-to-left</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>**</td>
+      <td>Pow</td>
+      <td>Left-to-right</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>*<br />/<br />%</td>
+      <td>Multiplication<br />Division<br />Remainder</td>
+      <td>Left-to-right</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>+<br />-</td>
+      <td>Addition<br />Subtraction</td>
+      <td>Left-to-right</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>&lt;&lt;<br />&gt;&gt;</td>
+      <td>Bitwise left shift<br />Bitwise right shift</td>
+      <td>Left-to-right</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>&lt; <br />&lt;=<br />&gt;<br />&gt;=</td>
+      <td>For relational operators &lt; respectively<br />For relational operators ≤ respectively<br />For relational operators &gt; respectively<br />For relational operators ≥ respectively</td>
+      <td>Left-to-right</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>==<br />!=</td>
+      <td>For relational = <br />For relational ≠</td>
+      <td>Left-to-right</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>&amp;&amp;</td>
+      <td>Logical AND</td>
+      <td>Left-to-right</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>||</td>
+      <td>Logical OR</td>
+      <td>Left-to-right</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>^</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+:ET

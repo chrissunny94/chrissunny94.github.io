@@ -1,0 +1,74 @@
+I" <p>Here I want to tell from the past.
+Itâ€™s about a some of years ago.</p>
+
+<p>When there was an Android operating system.</p>
+
+<p>I suppose this was for before <strong>2015</strong>.</p>
+
+<p><img src="https://basemax.github.io/assets/image/icon.png" alt="App Icon" /></p>
+
+<h3 id="a-sample-project-using-this-technology-">A sample project using this technology :</h3>
+
+<p>index.design :</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;app&gt;</span>
+	<span class="nt">&lt;page&gt;</span>
+		<span class="nt">&lt;title&gt;</span>Main<span class="nt">&lt;/title&gt;</span>
+		<span class="nt">&lt;style </span><span class="na">url=</span><span class="s">"main.style"</span><span class="nt">&gt;</span>
+		<span class="o">&lt;</span><span class="nt">toolbar</span><span class="o">=</span><span class="s1">"true"</span><span class="o">&gt;</span>
+		<span class="o">&lt;</span><span class="nt">theme</span><span class="o">=</span><span class="s1">"..."</span><span class="o">&gt;</span>
+	<span class="o">&lt;/</span><span class="nt">page</span><span class="o">&gt;</span>
+	<span class="o">&lt;</span><span class="nt">content</span><span class="o">&gt;</span>
+		<span class="o">&lt;</span><span class="nt">items</span> <span class="nt">layout</span><span class="o">=</span><span class="s1">"index_row.design"</span> <span class="nt">style</span><span class="o">=</span><span class="s1">"#listview"</span><span class="o">/&gt;</span>
+	<span class="o">&lt;/</span><span class="nt">content</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="nt">app</span><span class="o">&gt;</span>
+</code></pre></div></div>
+
+<p>index.script :</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;load&gt;</span>
+	<span class="nt">&lt;net_get</span> <span class="na">src=</span><span class="s">"http://site.com/news.json"</span> <span class="na">save=</span><span class="s">"data"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;json_decode</span> <span class="na">input=</span><span class="s">$data</span> <span class="na">save=</span><span class="s">"input"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;items</span> <span class="na">target=</span><span class="s">"#listview"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;list</span> <span class="err">$</span><span class="na">input = </span><span class="s">$item</span><span class="nt">&gt;</span>
+			<span class="nt">&lt;item_add</span> <span class="na">input=</span><span class="s">[</span>
+							 <span class="err">"</span><span class="na">image</span><span class="err">"</span><span class="na">:</span><span class="err">$</span><span class="na">item</span><span class="err">['</span><span class="na">image</span><span class="err">']</span>
+							 <span class="err">,</span>
+							 <span class="err">"</span><span class="na">title</span><span class="err">"</span><span class="na">:</span><span class="err">$</span><span class="na">item</span><span class="err">['</span><span class="na">title</span><span class="err">']</span>
+							 <span class="err">,</span>
+							 <span class="err">"</span><span class="na">text</span><span class="err">"</span><span class="na">:</span><span class="err">$</span><span class="na">item</span><span class="err">['</span><span class="na">text</span><span class="err">']</span>
+							<span class="err">]</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;/list&gt;</span>
+	<span class="nt">&lt;/items&gt;</span>
+<span class="nt">&lt;/load&gt;</span>
+</code></pre></div></div>
+
+<p>index_row.design :</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;box</span> <span class="na">style=</span><span class="s">"#item"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;box</span> <span class="na">style=</span><span class="s">"#left"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;image</span> <span class="na">style=</span><span class="s">"#image"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;/box&gt;</span>
+	<span class="nt">&lt;box</span> <span class="na">style=</span><span class="s">"#right"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;label</span> <span class="na">style=</span><span class="s">"#title"</span> <span class="na">size=</span><span class="s">"20px"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;label</span> <span class="na">style=</span><span class="s">"#text"</span> <span class="na">size=</span><span class="s">"16px"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;/box&gt;</span>
+<span class="nt">&lt;/box&gt;</span>
+</code></pre></div></div>
+
+<p>main.style :</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;style&gt;</span>
+	<span class="o">&lt;</span><span class="nt">item</span> <span class="nf">#listview</span><span class="o">&gt;</span>
+		<span class="o">&lt;</span><span class="nt">padding</span><span class="o">=</span><span class="s1">"10px"</span><span class="o">&gt;</span>
+		<span class="o">&lt;</span><span class="nt">background</span><span class="o">=</span><span class="s1">"red"</span><span class="o">&gt;</span>
+	<span class="o">&lt;/</span><span class="nt">item</span><span class="o">&gt;</span>
+<span class="nt">&lt;/style&gt;</span>
+</code></pre></div></div>
+
+<p>setting.android :</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;app&gt;</span>
+	<span class="nt">&lt;name</span><span class="err">="</span><span class="na">Name</span> <span class="na">Of</span> <span class="na">App</span><span class="err">"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;package</span><span class="err">="</span><span class="na">com.mypcname.appname</span><span class="err">"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;icon</span><span class="err">="</span><span class="na">icon.png</span><span class="err">"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;sdk</span><span class="err">="18"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/app&gt;</span>
+</code></pre></div></div>
+
+:ET

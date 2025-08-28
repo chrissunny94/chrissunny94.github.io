@@ -1,0 +1,75 @@
+I"�<p>Although this is a simple question and easy…
+But it can be interesting for many people.</p>
+
+<p>I saw this question at Stanford University.
+And thanks to the professor.</p>
+
+<h1 id="question-1">Question 1</h1>
+
+<p>The image below, golden-gate-red.jpg, shows the golden gate bridge, but all of the data is in the red values. 
+golden gate bridge, shown in red</p>
+
+<p>Write code that for each pixel copies the red value over to be the green and blue value. The result will be to change the image to grayscale which will look better.</p>
+
+<p><img src="https://basemax.github.io/assets/image/city3.jpg" alt="Make the picture more natural" /></p>
+
+<h3 id="final-answer">Final Answer</h3>
+
+<p><img src="https://basemax.github.io/assets/image/city4.jpg" alt="Final Answer" /></p>
+
+<h1 id="question-2">Question 2</h1>
+
+<p><img src="https://basemax.github.io/assets/image/image3.jpg" alt="Make the picture more natural" /></p>
+
+<h3 id="final-answer-1">Final Answer</h3>
+
+<p><img src="https://basemax.github.io/assets/image/image4.jpg" alt="Final Answer" /></p>
+
+<h1 id="question-3">Question 3</h1>
+
+<h3 id="converting-color-to-grayscale">Converting Color To Grayscale</h3>
+
+<ul>
+  <li>How to covert a regular color image to grayscale?</li>
+  <li>Problem: for each pixel, how dark/light is it (ignoring hue)</li>
+  <li>Choose a few pixels out of flowers.jpg, each in a row below</li>
+  <li>Q: which pixel is brightest? darkest?</li>
+  <li>We compute average for each pixel</li>
+  <li>Reminder: to average 3 numbers, add them up and divide by 3</li>
+  <li>
+    <p>average = (red + green + blue)/3</p>
+  </li>
+  <li>Average combines red/green/blue into one number</li>
+  <li>The average measures how bright the pixel is 0..255</li>
+  <li>Ignoring hue</li>
+</ul>
+
+<p>write code to change the flowers.jpg image to grayscale, using the “average” strategy: for each pixel, compute the average of its red/green/blue values. This average number represents the brightness of the pixel 0..255. Then set the red, green, and blue values of the pixel to be that average number. The result is a grayscale version of the original color image. Once its working with flowers.jpg, try it with poppy.jpg or oranges.jpg. (Solution code available below)</p>
+
+<p><img src="https://basemax.github.io/assets/image/flower5.jpg" alt="Make the picture more natural" /></p>
+
+<h3 id="final-answer-2">Final Answer</h3>
+
+<p><img src="https://basemax.github.io/assets/image/flower6.jpg" alt="Final Answer" /></p>
+
+<h1 id="question-4">Question 4</h1>
+
+<p>Write code to change the banana.jpg image to be grayscale. Reminder: here is the line used in the loop to compute the average of the red/green/blue values and store that value in a variable named “avg”.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>avg = (pixel.getRed() + pixel.getGreen() + pixel.getBlue())/3;
+</code></pre></div></div>
+
+<p><img src="https://basemax.github.io/assets/image/banana.jpg" alt="Make the picture more natural" /></p>
+
+<h3 id="final-answer-3">Final Answer</h3>
+
+<p><img src="https://basemax.github.io/assets/image/banana2.jpg" alt="Final Answer" /></p>
+
+<p>Click <a href="https://basemax.github.io/2019/02/02/Part3-Question-Make-the-picture-more-natural.html">here</a> to view further queries.</p>
+
+<hr />
+
+<p>If you tried and thought …</p>
+
+<p>Click <a href="https://basemax.github.io/2019/01/31/Part2-Answer-Make-the-picture-more-natural.html">here</a> to check the final answer.</p>
+:ET

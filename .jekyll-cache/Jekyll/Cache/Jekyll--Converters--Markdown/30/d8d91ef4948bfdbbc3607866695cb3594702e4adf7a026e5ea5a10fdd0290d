@@ -1,0 +1,83 @@
+I"<
+<p>Please not see the answer before think.</p>
+
+<p>You should try and thinking to solve the questions.</p>
+
+<p><a href="https://basemax.github.io/2019/01/31/Part1-Question-Make-the-picture-more-natural.html">View Questions</a></p>
+
+<p>Although this is a simple question and easy…
+But it can be interesting for many people.</p>
+
+<h1 id="question-1">Question 1</h1>
+
+<p><img src="https://basemax.github.io/assets/image/flower4.jpg" alt="Final Answer" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for (pixel: image)
+{
+   pixel.setRed(pixel.getRed()*10);
+   pixel.setGreen(pixel.getGreen()*5);
+   pixel.setBlue(pixel.getBlue()*20);
+}
+</code></pre></div></div>
+
+<h1 id="question-2">Question 2</h1>
+
+<p><img src="https://basemax.github.io/assets/image/orange2.jpg" alt="Final Answer" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for (pixel: image)
+{
+   pixel.setRed(pixel.getRed() * 20);
+   pixel.setGreen(pixel.getGreen() * 5);
+   pixel.setBlue(pixel.getBlue() * 10);
+}
+</code></pre></div></div>
+
+<h1 id="question-3">Question 3</h1>
+
+<p><img src="https://basemax.github.io/assets/image/city2.jpg" alt="Final Answer" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for (pixel: image)
+{
+   pixel.setGreen(0);
+   pixel.setBlue(0);
+   pixel.setRed(pixel.getRed() * 10);
+}
+</code></pre></div></div>
+
+<h1 id="question-4">Question 4</h1>
+
+<p><img src="https://basemax.github.io/assets/image/stop2.jpg" alt="Final Answer" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for (pixel: image)
+{
+   pixel.setRed(pixel.getRed() * 20);
+   pixel.setGreen(pixel.getGreen() * 10);
+   pixel.setBlue(pixel.getBlue() * 5);
+}
+</code></pre></div></div>
+
+<h1 id="question-5">Question 5</h1>
+
+<p><img src="https://basemax.github.io/assets/image/paris2.jpg" alt="Final Answer" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for (pixel: image)
+{
+   pixel.setRed(0);
+   pixel.setGreen(0);
+   pixel.setBlue(pixel.getBlue()*10);
+}
+</code></pre></div></div>
+
+<h1 id="question-6">Question 6</h1>
+
+<p><img src="https://basemax.github.io/assets/image/image2.jpg" alt="Final Answer" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for (pixel: image)
+{
+   pixel.setRed(0);
+   pixel.setGreen(pixel.getGreen()*10);
+   pixel.setBlue(pixel.getBlue()*10);
+}
+</code></pre></div></div>
+
+:ET

@@ -1,0 +1,119 @@
+I"D<p>Although this is a simple question and easy…
+But it can be interesting for many people.</p>
+
+<p>I saw this question at Stanford University.
+And thanks to the professor.</p>
+
+<h1 id="question-1">Question 1</h1>
+
+<p>Write code to fix the poppy.png image which should show an orange California Poppy in the foreground (the California state flower!).</p>
+
+<p>The background is mostly green with some in the upper-right.</p>
+
+<p><img src="https://basemax.github.io/assets/image/flower.jpg" alt="Make the picture more natural" /></p>
+
+<h3 id="primary-pseudo-code-sample">Primary Pseudo Code Sample</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>image = new SimpleImage("poppy.png");
+for (pixel: image)
+{
+   //Complate Here...
+}
+print(image);
+</code></pre></div></div>
+
+<h3 id="description-about-functions">Description about functions</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pixel.setBlue( &lt;number&gt; );
+pixel.setGreen( &lt;number&gt; );
+pixel.setRed( &lt;number&gt; );
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pixel.getRed()
+pixel.getGreen()
+pixel.getBlue()
+</code></pre></div></div>
+
+<h3 id="how-solve">How Solve</h3>
+
+<p>At the first, you need to know <strong>Poppy California</strong>.
+And how it looks.</p>
+
+<p><img src="https://basemax.github.io/assets/image/flower2.jpg" alt="Poppy California" /></p>
+
+<p><img src="https://basemax.github.io/assets/image/flower3.jpg" alt="Poppy California" /></p>
+
+<h3 id="final-answer">Final Answer</h3>
+
+<p><img src="https://basemax.github.io/assets/image/flower4.jpg" alt="Final Answer" /></p>
+
+<h1 id="question-2">Question 2</h1>
+
+<p>Write code to fix the oranges image which should show a box of oranges. The box itself is dull gray. The sign on the box is black, with “organic” written in light orange, and the rest of the letters in white.</p>
+
+<p><img src="https://basemax.github.io/assets/image/orange.jpg" alt="Orange" /></p>
+
+<h3 id="final-answer-1">Final Answer</h3>
+
+<p><img src="https://basemax.github.io/assets/image/orange2.jpg" alt="Final Answer" /></p>
+
+<h1 id="question-3">Question 3</h1>
+
+<ul>
+  <li>The green and blue values are all just random values in the range 0..255 (“snow”)</li>
+  <li>The data of the real image is exclusively in the red values</li>
+  <li>In addition, the red values have all been divided by 10 (dark)</li>
+  <li>The green/blue snow is obscuring the real image</li>
+</ul>
+
+<p>Write code to recover the real image.</p>
+
+<p><img src="https://basemax.github.io/assets/image/city.jpg" alt="City" /></p>
+
+<h3 id="final-answer-2">Final Answer</h3>
+
+<p><img src="https://basemax.github.io/assets/image/city2.jpg" alt="Final Answer" /></p>
+
+<h1 id="question-4">Question 4</h1>
+
+<p>Write code to fix the stop-sky image which should show a red stop sign front with a background of a light blue sky and green tree leaves.</p>
+
+<p><img src="https://basemax.github.io/assets/image/stop.jpg" alt="Stop" /></p>
+
+<h3 id="final-answer-3">Final Answer</h3>
+
+<p><img src="https://basemax.github.io/assets/image/stop2.jpg" alt="Final Answer" /></p>
+
+<h1 id="question-5">Question 5</h1>
+
+<p>Write code to fix the puzzle-copper image. The red values in the image are random noise, so they should be set to 0.</p>
+
+<p>The real image is in the blue and green values, which have been divide by 10.</p>
+
+<p><img src="https://basemax.github.io/assets/image/paris.jpg" alt="Stop" /></p>
+
+<h3 id="final-answer-4">Final Answer</h3>
+
+<p><img src="https://basemax.github.io/assets/image/paris2.jpg" alt="Final Answer" /></p>
+
+<h1 id="question-6">Question 6</h1>
+
+<p>Write code to fix the puzzle-iron image. The red and green values in the image are random noise, so they should be set to 0.</p>
+
+<p>The real image is in the blue values, which have been divide by 10. The “solution” image will look blue, since it is exclusively in the blue values, so don’t worry about that. We’ll see a way to fix that blueness in a later section.</p>
+
+<p><img src="https://basemax.github.io/assets/image/image.jpg" alt="Stop" /></p>
+
+<h3 id="final-answer-5">Final Answer</h3>
+
+<p><img src="https://basemax.github.io/assets/image/image2.jpg" alt="Final Answer" /></p>
+
+<p>Click <a href="https://basemax.github.io/2019/01/31/Part2-Question-Make-the-picture-more-natural.html">here</a> to view further queries.</p>
+
+<hr />
+
+<p>If you tried and thought …</p>
+
+<p>Click <a href="https://basemax.github.io/2019/01/31/Part1-Answer-Make-the-picture-more-natural.html">here</a> to check the final answer.</p>
+
+:ET
