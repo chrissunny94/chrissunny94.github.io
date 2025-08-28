@@ -2,8 +2,5 @@
 layout: home
 ---
 
-Welcome to the **Max** blog.
+Welcome to the **Chris Sunny Thaliyath** blog.
 
-# Max Base
-
-Visit my new website at [MaxBase.org](https://maxbase.org/)
