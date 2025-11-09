@@ -1,5 +1,5 @@
 
-### Title: Bridging ROS to Reality: How "protobot" Connects High-Power Motors
+### Title: Bridging ROS to Reality: How "protobot" Connects High-Power Motors via Sabertooth motor controllers
 
 In the world of robotics, we often live in two separate worlds.
 
