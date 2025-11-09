@@ -1,3 +1,5 @@
+
+
 ## How Does Shazam "Know" That Song? A Look at Audio Fingerprinting in MATLAB
 
 Have you ever been in a coffee shop, heard a song, and used an app like Shazam to instantly identify it? That "magic" is a brilliant piece of technology called **audio fingerprinting**, and a fascinating repository by Chris Sunny, **[Audio\_finger\_printing\_using\_matlab](https://github.com/chrissunny94/Audio_finger_printing_using_matlab)**, shows us how to build this system from the ground up.
@@ -13,6 +15,10 @@ An audio fingerprint is a small, unique digital signature for an audio file. Unl
 * Only a small 10-15 second snippet.
 
 The algorithm works by analyzing the audio's **spectrogram**—a visual map of the sound's frequencies over time. It identifies "peaks" or other robust features in this map and turns them into a unique set of data points. This is the song's "fingerprint."
+
+
+
+[Image of an audio spectrogram]
 
 
 ### How This MATLAB Project Works
