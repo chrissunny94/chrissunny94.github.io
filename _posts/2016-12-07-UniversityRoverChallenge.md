@@ -5,7 +5,18 @@
 Ever wondered what it takes to build a robot capable of navigating a Mars-like terrain? The University Rover Challenge (URC) inspires student teams worldwide to design and build the next generation of Mars rovers. Today, we're diving into a public GitHub repository, **[URC2017 by chrissunny94](https://github.com/chrissunny94/URC2017)**, which gives us a peek into the engineering and software challenges of such a monumental task.
 
 
-The project, which appears to be a fork from an original repository by rajagopalvenkat, lays out the core components and a clear-eyed view of the hurdles involved in creating an autonomous rover.
+
+## 🎥 Watch on YouTube
+
+[![Watch on YouTube](https://img.youtube.com/vi/DiEkgIxIhTQ/hqdefault.jpg)](https://www.youtube.com/watch?v=DiEkgIxIhTQ)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DiEkgIxIhTQ" 
+title="YouTube video player" frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+allowfullscreen></iframe>
+
+
+
 
 ### The Rover's Core: Control and Sensing
 
