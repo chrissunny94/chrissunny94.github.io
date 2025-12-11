@@ -12,7 +12,7 @@ Repository link:
 
 ---
 
-![Architecture](/images/LSAD/image.png)
+![Architecture](/images/LSAD/architecture.png)
 
 
 # 🏁 Why I Built This Simulation
