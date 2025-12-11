@@ -32,7 +32,7 @@ This repository contains all the key components for a complete, end-to-end song 
 3.  **`MAtchCodeFinal.m` (Finding the Match):** This is the "Shazam" part. This script takes a new, unknown audio sample, generates its fingerprint on the fly, and then searches the database for the closest match.
 
 
-![FFT](/images/AUDIO_FINGERPRINTING/FFT_spectrum.png)
+![FFT](/images/AUDIO_FINGERPRINTING/FFT.png)
 
 ### Why MATLAB?
 
@@ -45,6 +45,6 @@ For any student or enthusiast of digital signal processing (DSP), this repositor
 
 ## Python code 
 
-![FFT](/images/AUDIO_FINGERPRINTING/live_microphone.png)
+![live_microPhone](/images/AUDIO_FINGERPRINTING/live_microphone.png)
 
 **[Check out the Audio\_finger\_printing\_using\_matlab project on GitHub here!](https://github.com/chrissunny94/Audio_finger_printing_using_matlab)**
