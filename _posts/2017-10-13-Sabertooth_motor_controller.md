@@ -9,6 +9,23 @@ Second, there's the "brawn": the physical hardware. This is the world of high-cu
 
 The gap between them is vast, and bridging it is one of the most critical steps in building a functional robot. That's exactly what the **protobot** project by chrissunny94 on GitHub sets out to do, and it does so by taming a particularly powerful piece of hardware: the **Sabertooth 2x32 motor controller**.
 
+
+## 🎥 Simulation Demo
+
+<p align="center">
+  <iframe width="560" height="315"
+    src="https://www.youtube.com/embed/da0fIKfoB4c"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+</p>
+
+<p align="center">
+  <em>Engineered simulation of Ackermann-drive autonomous robot running perception and navigation stacks.</em>
+</p>
+
 ---
 
 ### What is the "protobot" Project?
@@ -20,6 +37,23 @@ It listens to the abstract "brain" of ROS and translates its commands into the p
 In ROS, the standard way to command a robot's movement is by publishing a `geometry_msgs/Twist` message to a topic, typically named `/cmd_vel`. This message contains the desired linear velocity (forward/backward) and angular velocity (left/right turn).
 
 
+## 🎥 Watch the Simulation in Action
+
+<p align="center">
+  <iframe width="560" height="315"
+    src="https://www.youtube.com/embed/ZdJOPB8KKqI"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+</p>
+
+<p align="center">
+  <em>Simulation demo showing Ackermann-drive robot in Gazebo executing navigation tasks.</em>
+</p>
+
+---
 
 The `protobot` node subscribes to this `/cmd_vel` topic. When it receives a new `Twist` message, it does the following:
 
