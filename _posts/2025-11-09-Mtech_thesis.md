@@ -4,6 +4,32 @@ Autonomous driving (AD) is arguably one of the most complex engineering challeng
 
 The project's goal was to create a "Software-in-the-Loop" (SIL) system to develop, train, and test modern autonomous driving models in a high-fidelity simulator. This digital testbed is the essential first step before any code ever touches a real vehicle.
 
+
+## Autonomous Driving Video Collection
+
+## 1) CARLA Videos
+
+### [CARLA Simulator Tutorial](https://www.youtube.com/watch?v=VIDEO_ID)
+A detailed tutorial on using CARLA Simulator for autonomous driving research.
+
+### [CARLA Advanced Features](https://www.youtube.com/watch?v=VIDEO_ID)
+Exploring sensors, traffic scenarios, and ROS integration in CARLA.
+
+---
+
+## 2) BEVFusion Videos
+
+### [BEVFusion Explained](https://www.youtube.com/watch?v=VIDEO_ID)
+A walkthrough of BEVFusion for multi-camera 3D perception and autonomous driving pipelines.
+
+---
+
+## 3) nuScenes Dataset Videos
+
+### [nuScenes Dataset Overview](https://www.youtube.com/watch?v=VIDEO_ID)
+Understanding the nuScenes dataset, including 3D bounding boxes, LiDAR, and camera fusion.
+
+
 ### The Toolkit: A Virtual Car in a Virtual World
 
 To build a self-driving "brain," you first need a car and a world to test it in. The project leveraged an industry-standard toolkit:
