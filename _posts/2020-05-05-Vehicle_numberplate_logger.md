@@ -14,170 +14,156 @@ The project cleverly combines several key technologies to create a complete pipe
 1.  **Vehicle Detection:** Before you can find a *plate*, you usually need to find the *car*. The repository includes **Haar Cascades** for car detection, a classic and fast machine learning-based technique used in OpenCV to identify objects in an image. 2.  **Plate Recognition:** Once a vehicle is found, the system hunts for the number plate. The project's "secret weapon" is its integration of **OpenAlpr**, a powerful, open-source ANPR library. OpenAlpr is specifically trained to find the rectangular region of a license plate and then perform Optical Character Recognition (OCR) to read the letters and numbers.
 3.  **Logging:** As the name "logger" implies, the system isn't just for show. It's designed to take the recognized plate text and save it, creating a log of all vehicles that pass by the camera.
 
-<div style="width:100%; max-width:1100px; margin:auto;">
+
+<div style="width:100%; max-width:900px; margin:auto;">
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>ANPR Pipeline Flowchart</title>
+  <title>ANPR Process Flow</title>
   <style>
-    :root{
-      --bg:#0f1724; --card:#0b1220; --accent:#60a5fa; --muted:#94a3b8; --glass: rgba(255,255,255,0.03);
-      --w:320px; --h:76px;
-      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    :root {
+      --bg-color: #0f172a;
+      --box-fill: #1e293b;
+      --box-stroke: #3b82f6; /* Bright Blue */
+      --text-main: #f8fafc;
+      --text-sub: #cbd5e1;
+      --accent: #60a5fa;
     }
-    body{margin:0;background:linear-gradient(180deg,#061021 0%, #071428 100%);color:#e6eef8;display:flex;align-items:center;justify-content:center;min-height:100vh}
-    .canvas{width:100%;max-width:1100px;padding:28px}
-    .header{display:flex;align-items:center;gap:16px;margin-bottom:22px}
-    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#8b5cf6);display:flex;align-items:center;justify-content:center;font-weight:700;color:#041025}
-    h1{margin:0;font-size:18px}
-    p.sub{margin:0;color:var(--muted);font-size:13px}
-
-    /* Flow area */
-    .flow{background:var(--glass);border-radius:14px;padding:28px;box-shadow:0 6px 22px rgba(2,6,23,0.6)}
-    svg{width:100%;height:auto;display:block}
-
-    .node{fill:transparent;stroke:rgba(255,255,255,0.06);stroke-width:1;rx:12;}
-    .node-bg{fill:#071428;stroke:none}
-    .label{font-size:14px;fill:#e6eef8}
-    .desc{font-size:12px;fill:var(--muted)}
-
-    .chip{font-size:11px;fill:#041025}
-    .chip-rect{rx:10}
-
-    .arrow{stroke:rgba(150,180,255,0.12);stroke-width:2;marker-end:url(#arrowhead)}
-
-    /* Hover effects */
-    .group:hover .node-bg{filter: drop-shadow(0 8px 18px rgba(96,165,250,0.12));}
-    .group:hover .label{fill:var(--accent)}
-
-    /* small screen */
-    @media (max-width:760px){
-      :root{--w:260px}
-      .canvas{padding:12px}
+    .chart-container {
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-color);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+      color: var(--text-main);
     }
-
-    .legend{display:flex;gap:12px;align-items:center;margin-top:18px}
-    .legend .item{display:flex;gap:8px;align-items:center;font-size:13px;color:var(--muted)}
-    .legend .sw{width:18px;height:12px;border-radius:4px;background:var(--accent)}
-
+    .chart-title {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.5px;
+    }
+    svg {
+      width: 100%;
+      height: auto;
+      display: block;
+      overflow: visible;
+    }
+    /* SVG Styles */
+    .node-rect {
+      fill: var(--box-fill);
+      stroke: var(--box-stroke);
+      stroke-width: 2px;
+      rx: 8px; /* Rounded corners */
+      filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+      transition: all 0.3s ease;
+    }
+    .node-header {
+      font-size: 16px;
+      font-weight: 700;
+      fill: var(--text-main);
+    }
+    .node-desc {
+      font-size: 13px;
+      font-weight: 400;
+      fill: var(--text-sub);
+    }
+    .edge-path {
+      fill: none;
+      stroke: #64748b;
+      stroke-width: 2.5px;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .edge-arrow {
+      fill: #64748b;
+    }
+    /* Hover effect */
+    .node-group:hover .node-rect {
+      stroke: var(--accent);
+      filter: drop-shadow(0 8px 15px rgba(59, 130, 246, 0.25));
+    }
   </style>
 </head>
 <body>
-  <div class="canvas">
-    <div class="header">
-      <div class="logo">ANPR</div>
-      <div>
-        <h1>ANPR Pipeline — Visual Flowchart</h1>
-        <p class="sub">From camera feed to logged plate text — Vehicle detection, plate recognition (OpenAlpr), OCR & logging.</p>
-      </div>
-    </div>
 
-    <div class="flow">
-      <!-- SVG flowchart -->
-      <svg viewBox="0 0 1100 420" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-            <polygon points="0 0, 10 3.5, 0 7" fill="#9fb7ff" opacity="0.9"/>
-          </marker>
-        </defs>
+<div class="chart-container">
+  <div class="chart-title">Vehicle Logger: ANPR Logic Flow</div>
+  
+  <svg viewBox="0 0 850 480" preserveAspectRatio="xMidYMid meet">
+    <defs>
+      <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+        <path d="M2,2 L10,6 L2,10" class="edge-arrow" />
+      </marker>
+    </defs>
 
-        <!-- Camera Input -->
-        <g class="group" transform="translate(20,30)">
-          <rect class="node-bg" x="0" y="0" width="220" height="76" rx="12"></rect>
-          <rect class="node" x="0" y="0" width="220" height="76" rx="12"></rect>
-          <text class="label" x="18" y="28">Camera / Video Feed</text>
-          <text class="desc" x="18" y="50">Live camera or recorded video input</text>
-          <rect x="150" y="44" width="60" height="20" fill="#60a5fa" rx="8" class="chip-rect"></rect>
-          <text class="chip" x="174" y="58">Input</text>
-        </g>
+    <g class="node-group" transform="translate(20, 40)">
+      <rect class="node-rect" width="220" height="90"></rect>
+      <text x="20" y="35" class="node-header">1. Input Source</text>
+      <text x="20" y="60" class="node-desc">Load Image or Video</text>
+      <text x="20" y="78" class="node-desc" style="fill:#60a5fa; font-size:11px;">(OpenCV VideoCapture)</text>
+    </g>
 
-        <!-- Preprocessing -->
-        <g class="group" transform="translate(260,30)">
-          <rect class="node-bg" x="0" y="0" width="220" height="76" rx="12"></rect>
-          <rect class="node" x="0" y="0" width="220" height="76" rx="12"></rect>
-          <text class="label" x="18" y="28">Preprocessing</text>
-          <text class="desc" x="18" y="50">Resize, denoise, color adjust</text>
-          <rect x="150" y="44" width="60" height="20" fill="#60a5fa" rx="8" class="chip-rect"></rect>
-          <text class="chip" x="168" y="58">BGR/MONO</text>
-        </g>
+    <g class="node-group" transform="translate(300, 40)">
+      <rect class="node-rect" width="220" height="90"></rect>
+      <text x="20" y="35" class="node-header">2. Vehicle Detection</text>
+      <text x="20" y="60" class="node-desc">Locate car in frame</text>
+      <text x="20" y="78" class="node-desc" style="fill:#60a5fa; font-size:11px;">(Haar Cascade Classifier)</text>
+    </g>
 
-        <!-- Vehicle Detection -->
-        <g class="group" transform="translate(500,30)">
-          <rect class="node-bg" x="0" y="0" width="260" height="76" rx="12"></rect>
-          <rect class="node" x="0" y="0" width="260" height="76" rx="12"></rect>
-          <text class="label" x="18" y="26">Vehicle Detection</text>
-          <text class="desc" x="18" y="46">Haar Cascades (OpenCV) — find vehicle bounding boxes</text>
-          <rect x="180" y="44" width="66" height="20" fill="#60a5fa" rx="8" class="chip-rect"></rect>
-          <text class="chip" x="200" y="58">BBox</text>
-        </g>
+    <g class="node-group" transform="translate(580, 40)">
+      <rect class="node-rect" width="240" height="90"></rect>
+      <text x="20" y="35" class="node-header">3. Plate Localization</text>
+      <text x="20" y="60" class="node-desc">Identify plate Region (ROI)</text>
+      <text x="20" y="78" class="node-desc" style="fill:#60a5fa; font-size:11px;">(OpenALPR Integration)</text>
+    </g>
 
-        <!-- Plate Detection (OpenALPR) -->
-        <g class="group" transform="translate(20,150)">
-          <rect class="node-bg" x="0" y="0" width="420" height="88" rx="12"></rect>
-          <rect class="node" x="0" y="0" width="420" height="88" rx="12"></rect>
-          <text class="label" x="18" y="30">Plate Detection</text>
-          <text class="desc" x="18" y="52">OpenAlpr / ANPR module — detects license plate region (rectangular ROI)</text>
-          <rect x="330" y="56" width="70" height="22" fill="#60a5fa" rx="10" class="chip-rect"></rect>
-          <text class="chip" x="352" y="72">ROI</text>
-        </g>
+    <g class="node-group" transform="translate(580, 220)">
+      <rect class="node-rect" width="240" height="90"></rect>
+      <text x="20" y="35" class="node-header">4. Recognition (OCR)</text>
+      <text x="20" y="60" class="node-desc">Convert image pixels to text</text>
+      <text x="20" y="78" class="node-desc" style="fill:#60a5fa; font-size:11px;">(Returns String + Confidence)</text>
+    </g>
 
-        <!-- OCR -->
-        <g class="group" transform="translate(480,170)">
-          <rect class="node-bg" x="0" y="0" width="260" height="76" rx="12"></rect>
-          <rect class="node" x="0" y="0" width="260" height="76" rx="12"></rect>
-          <text class="label" x="18" y="28">OCR</text>
-          <text class="desc" x="18" y="50">Optical character recognition on plate ROI — returns text + confidence</text>
-          <rect x="190" y="44" width="62" height="20" fill="#60a5fa" rx="8" class="chip-rect"></rect>
-          <text class="chip" x="214" y="58">Text</text>
-        </g>
+    <g class="node-group" transform="translate(300, 220)">
+      <rect class="node-rect" width="220" height="90"></rect>
+      <text x="20" y="35" class="node-header">5. Data Logging</text>
+      <text x="20" y="60" class="node-desc">Save Plate # + Timestamp</text>
+      <text x="20" y="78" class="node-desc" style="fill:#60a5fa; font-size:11px;">(CSV / Database)</text>
+    </g>
 
-        <!-- Logging -->
-        <g class="group" transform="translate(760,170)">
-          <rect class="node-bg" x="0" y="0" width="260" height="76" rx="12"></rect>
-          <rect class="node" x="0" y="0" width="260" height="76" rx="12"></rect>
-          <text class="label" x="18" y="28">Logging & Storage</text>
-          <text class="desc" x="18" y="50">Save plate text, timestamp, image snapshot (CSV / DB / JSON)</text>
-          <rect x="180" y="44" width="70" height="20" fill="#60a5fa" rx="8" class="chip-rect"></rect>
-          <text class="chip" x="202" y="58">DB / CSV</text>
-        </g>
+    <g class="node-group" transform="translate(20, 220)">
+      <rect class="node-rect" width="220" height="90"></rect>
+      <text x="20" y="35" class="node-header">6. User Interface</text>
+      <text x="20" y="60" class="node-desc">Display Result to User</text>
+      <text x="20" y="78" class="node-desc" style="fill:#60a5fa; font-size:11px;">(PyQT / Flask)</text>
+    </g>
 
-        <!-- UI / Dashboard -->
-        <g class="group" transform="translate(480,270)">
-          <rect class="node-bg" x="0" y="0" width="540" height="76" rx="12"></rect>
-          <rect class="node" x="0" y="0" width="540" height="76" rx="12"></rect>
-          <text class="label" x="18" y="28">Dashboard / Logger UI</text>
-          <text class="desc" x="18" y="50">Search, filter, view plate images and timestamps</text>
-          <rect x="420" y="44" width="92" height="20" fill="#60a5fa" rx="8" class="chip-rect"></rect>
-          <text class="chip" x="440" y="58">Review</text>
-        </g>
 
-        <!-- Arrows -->
-        <path class="arrow" d="M240 68 L260 68" marker-end="url(#arrowhead)" />
-        <path class="arrow" d="M480 68 L500 68" marker-end="url(#arrowhead)" />
-        <path class="arrow" d="M160 118 L160 150" marker-end="url(#arrowhead)" />
-        <path class="arrow" d="M620 118 L340 160" marker-end="url(#arrowhead)" />
+    <path d="M240 85 L300 85" class="edge-path" marker-end="url(#arrow)" />
+    
+    <path d="M520 85 L580 85" class="edge-path" marker-end="url(#arrow)" />
 
-        <path class="arrow" d="M580 160 L580 170" marker-end="url(#arrowhead)" />
-        <path class="arrow" d="M740 200 L760 200" marker-end="url(#arrowhead)" />
-        <path class="arrow" d="M640 240 L640 270" marker-end="url(#arrowhead)" />
+    <path d="M700 130 L700 220" class="edge-path" marker-end="url(#arrow)" />
 
-        <path class="arrow" d="M820 210 L820 270" marker-end="url(#arrowhead)" />
-        <path class="arrow" d="M600 320 L480 320" marker-end="url(#arrowhead)" />
+    <path d="M580 265 L520 265" class="edge-path" marker-end="url(#arrow)" />
 
-      </svg>
+    <path d="M300 265 L240 265" class="edge-path" marker-end="url(#arrow)" />
 
-      <div class="legend">
-        <div class="item"><span class="sw"></span>Pipeline step</div>
-        <div class="item"><svg width="14" height="14"><rect width="14" height="14" rx="3" fill="#60a5fa"></rect></svg>Quick metadata</div>
-      </div>
+    <path d="M130 310 L130 360" class="edge-path" />
+    <circle cx="130" cy="365" r="5" fill="#60a5fa" />
+    <text x="145" y="370" fill="#cbd5e1" font-size="14">End of Pipeline</text>
 
-    </div>
-  </div>
+  </svg>
+</div>
+
 </body>
 </html>
 </div>
+
 
 
 ### A Full Application, Not Just a Script
