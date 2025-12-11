@@ -12,6 +12,20 @@ Your solution is to use an **Intel RealSense T265** (likely held by the person w
 
 As you've correctly pointed out, this is the *exact* problem the `t265_json` project was built to solve. It's the perfect foundation.
 
+
+## 🎥 Related Demo
+
+<p align="center">
+  <iframe width="560" height="315"
+    src="https://www.youtube.com/embed/MnoF_PxyOCU?start=94"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+</p>
+
+
 ### The Architectural Blueprint (Using `t265_json`)
 
 By adapting the `t265_json` project, the architecture for your new cellular logger is already 90% complete. Here is how the data pipeline works:
