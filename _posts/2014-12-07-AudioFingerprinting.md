@@ -47,4 +47,6 @@ For any student or enthusiast of digital signal processing (DSP), this repositor
 
 ![live_microPhone](/images/AUDIO_FINGERPRINTING/live_microphone.png)
 
+![live_guitar_tunner ](/images/AUDIO_FINGERPRINTING/guitar_tuning.svg)
+
 **[Check out the Audio\_finger\_printing\_using\_matlab project on GitHub here!](https://github.com/chrissunny94/Audio_finger_printing_using_matlab)**
