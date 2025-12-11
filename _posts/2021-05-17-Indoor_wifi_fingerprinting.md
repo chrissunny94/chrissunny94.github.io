@@ -3,6 +3,8 @@
 
 This is a fantastic example of "engineering re-use." You've laid out a detailed proposal for an **Automated Cellular Signal Strength Monitoring System,** and in the process, you've identified that the core data pipeline is a problem *you've already solved* with your **`t265_json`** project.
 
+
+![indoor wifi signal strength](/images/WIFI_FINGERPRINTING/example.jpeg)
 Your new proposal is simple and clear: to create a heatmap of cellular signal strength, you need to log two key pieces of data simultaneously:
 
 1.  **The Signal Strength:** An Android phone can easily poll this from its own cellular radio.
