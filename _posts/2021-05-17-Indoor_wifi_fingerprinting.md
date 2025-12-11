@@ -1,6 +1,3 @@
-Here is a blog post that synthesizes your project proposal with the `t265_json` project.
-
----
 
 ## The Perfect Foundation: Using `t265_json` for a Cellular Signal Heatmap
 
