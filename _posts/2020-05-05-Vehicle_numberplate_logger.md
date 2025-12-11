@@ -4,6 +4,9 @@ Automatic Number Plate Recognition (ANPR) is one of the most fascinating and pra
 
 If you've ever wanted to build such a system, a great place to start is the **[Vehicle\_Number\_plate\_logger\_Python](https://github.com/chrissunny94/Vehicle_Number_plate_logger_Python)** repository on GitHub. This project by Chris Sunny isn't just a simple script; it's a comprehensive toolkit for detecting, recognizing, and logging license plates, all built with Python.
 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BoUYBXSpq1c" frameborder="0" allowfullscreen></iframe>
+
 ### How It Works: The ANPR Pipeline
 
 The project cleverly combines several key technologies to create a complete pipeline:
