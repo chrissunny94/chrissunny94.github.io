@@ -4,6 +4,19 @@ What do you do with that old PlayStation 3 controller you have in a drawer? If y
 
 This repository is a fantastic blueprint for a classic DIY robotics project: bridging the gap between a consumer-grade game controller and a custom RC vehicle. It's the perfect weekend build for anyone who loves hardware, coding, and seeing their work move in the real world.
 
+## 🎥 Additional Demo
+
+<p align="center">
+  <iframe width="560" height="315"
+    src="https://www.youtube.com/embed/Ivk2ZBe-404"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+</p>
+
+
 
 ### How It Works: A Two-Part System
 
