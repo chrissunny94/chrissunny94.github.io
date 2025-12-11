@@ -12,7 +12,8 @@ Repository link:
 
 ---
 
-![Golfcart](../images/LSAD/image.png)
+![Architecture](/images/LSAD/image.png)
+
 
 # 🏁 Why I Built This Simulation
 
