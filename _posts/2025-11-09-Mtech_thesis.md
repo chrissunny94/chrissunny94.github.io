@@ -12,8 +12,12 @@ The project's goal was to create a "Software-in-the-Loop" (SIL) system to develo
 ### [CARLA Simulator Tutorial](https://www.youtube.com/watch?v=VIDEO_ID)
 A detailed tutorial on using CARLA Simulator for autonomous driving research.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+
 ### [CARLA Advanced Features](https://www.youtube.com/watch?v=VIDEO_ID)
 Exploring sensors, traffic scenarios, and ROS integration in CARLA.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
 
 ---
 
@@ -22,12 +26,16 @@ Exploring sensors, traffic scenarios, and ROS integration in CARLA.
 ### [BEVFusion Explained](https://www.youtube.com/watch?v=VIDEO_ID)
 A walkthrough of BEVFusion for multi-camera 3D perception and autonomous driving pipelines.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+
 ---
 
 ## 3) nuScenes Dataset Videos
 
 ### [nuScenes Dataset Overview](https://www.youtube.com/watch?v=VIDEO_ID)
 Understanding the nuScenes dataset, including 3D bounding boxes, LiDAR, and camera fusion.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
 
 
 ### The Toolkit: A Virtual Car in a Virtual World
