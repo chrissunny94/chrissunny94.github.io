@@ -122,6 +122,19 @@ This simulation was heavily inspired by a project I worked on: a **fully autonom
 
 Below is a summary of the core modules I built at Bosch.
 
+## 📺 Watch a Demo
+
+<p align="center">
+  <iframe width="560" height="315"
+    src="https://www.youtube.com/embed/mKGz9AZkB7g?start=30"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+</p>
+
+
 ---
 
 ## 🛰️ Perception & Localization
@@ -154,6 +167,19 @@ In the simulation, you can replicate these behaviors using:
 * DWB controllers
 
 ---
+
+## 🎥 Video Demo
+
+<p align="center">
+  <iframe width="560" height="315"
+    src="https://www.youtube.com/embed/OOuhFgwMPpY"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+</p>
+
 
 ## 🔌 Hardware Integration
 
