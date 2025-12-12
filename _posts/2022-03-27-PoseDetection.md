@@ -1,14 +1,6 @@
 # Pose detection of humans using Camera 
 
 
-## 🎥 Related Video
-
-<iframe width="560" height="315"
-src="https://www.youtube.com/embed/XJyVrdXujX4"
-title="Related YouTube Video"
-frameborder="0"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-allowfullscreen></iframe>
 
 
 | Category | Approach Description | Key Papers / Models | Pros | Cons |
@@ -21,3 +13,37 @@ allowfullscreen></iframe>
 | Model-Based Mesh Recovery | Predict full human mesh (SMPL) from a monocular RGB | HMR, SMPLify-X, SPIN, PARE, FrankMocap, ROMP | Full mesh output, good for animation | Complex, compute-heavy |
 | Regression-Based Pose | Directly regress joint coordinates or heatmaps | DeepPose (Google) | Simple & fast | Lower accuracy today |
 | Heatmap-Based Keypoints | Predict per-joint 2D heatmaps | Hourglass, CPN, HRNet | High accuracy, robust | More memory, extra post-processing |
+
+
+
+GATs compute attention coefficients between nodes, allowing the model to focus on the most relevant neighbors when updating node embeddings.
+
+✔️ Advantages
+
+    Learns which neighbors matter most
+
+    Works on graphs with varying degrees
+
+    Multi-head attention improves stability
+
+    Parallelizable (unlike RNN-based GNNs)
+
+    No need for Laplacian eigenvectors
+
+## 🎥 Related Video
+
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/XJyVrdXujX4"
+title="Related YouTube Video"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen></iframe>
+
+
+| Model | Key Mechanism | Strengths | Weaknesses | Best For |
+|------|----------------|-----------|------------|----------|
+| **GCN** (Kipf & Welling, 2017) | Fixed normalized adjacency for message passing | Fast, simple | Treats all neighbors equally | Node classification, semi-supervised learning |
+| **GraphSAGE** (2017) | Sampling + aggregation (mean, LSTM, pooling) | Handles large graphs | Aggregators may lose structure | Inductive learning on huge graphs |
+| **GAT** (2018) | Attention-based neighbor weighting | Learns importance of neighbors | Slower on large/dense graphs | Social networks, molecules, citation networks |
+| **Gated GNN / GGNN** (2016) | Gated recurrent updates | Captures sequential structure | Harder to train | Program analysis, chemistry |
+| **Graph Transformer** (2020–) | Global self-attention | Handles long-range relations | Computationally heavy | Molecules, scene graphs, NLP-style tasks |
