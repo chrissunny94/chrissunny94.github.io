@@ -4,10 +4,10 @@
 
 # BEV Perception Comparison
 
-## VAD (Voxel-based Detection)
+## VAD (Voxel-based Detection End-to-End Vectorized Autonomous Driving via Probabilistic Planning)
 ![VAD](/images/BEV_PERCEPTION/vad.png)
 
-## PPGeo (Point-Pillar + Geometry)
+## PPGeo (Policy Pre-training for Autonomous Driving via Self-supervised Geometric Modeling)
 ![PPGeo](/images/BEV_PERCEPTION/ppgeo.PNG)
 
 ## BEV Detection
