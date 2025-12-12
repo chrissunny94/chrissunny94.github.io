@@ -8,6 +8,8 @@ Physics is no longer just about chalkboards and expensive lab equipment. A "thir
 
 A fantastic example of this in practice is the **[Computational\_physics](https://github.com/chrissunny94/Computational_physics)** repository by Chris Sunny. This project, structured as a series of assignments, serves as a practical, hands-on journey through the core techniques of the field.
 
+![solar_system_model](/images/COMPUTATIONAL_PHYSICS/solar_system.gif)
+
 ### A Code-Based Physics Course
 
 The repository is neatly organized into five assignments (`assignment1` through `assignment5`) plus an `examples` folder. This structure strongly suggests it's the coursework from a university-level class, which is great for learners as it provides a logical progression of topics, from basic numerical methods to more complex simulations.
