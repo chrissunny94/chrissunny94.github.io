@@ -8,7 +8,7 @@ Ever wondered what it takes to build a robot capable of navigating a Mars-like t
 
 ## 🎥 Watch on YouTube
 
-[![Watch on YouTube](https://img.youtube.com/vi/DiEkgIxIhTQ/hqdefault.jpg)](https://www.youtube.com/watch?v=DiEkgIxIhTQ)
+
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/DiEkgIxIhTQ" 
 title="YouTube video player" frameborder="0" 
@@ -26,6 +26,16 @@ At its heart, the project is neatly organized into two fundamental systems, whic
 * **Sensing:** A rover is blind without its senses. This part of the project houses the code for its sensory modules. This could involve everything from camera inputs and ultrasonic sensors to inertial measurement units (IMUs) that help the rover understand its orientation and the environment around it.
 
 The repository's code, a mix of **C++ (75.5%)** and **Python (16.1%)**, highlights the blend of high-performance, low-level control (C++) and high-level scripting for easier prototyping and logic (Python) common in modern robotics.
+
+## 🎥 Project Demo Video
+
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/vtUX1oxKBC4"
+title="URC 2017 Robotics Bot Demo"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen></iframe>
+
 
 ### The Gauntlet: Autonomous Navigation Challenges
 
