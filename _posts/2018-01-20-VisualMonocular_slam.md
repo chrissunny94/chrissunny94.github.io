@@ -16,17 +16,59 @@ Think of it as a way for a robot to "feel" its own motion by just watching the w
 
 This repository cleverly splits the task between high-performance C++ and flexible Python, creating a standard ROS-compatible sensor.
 
-1.  **`flow.cpp` (The C++ Vision Engine):** This is the high-speed core. Written in C++, it uses the OpenCV library to perform the heavy lifting.
-    * It grabs the live camera feed.
-    * It **extracts key features** from the image.
-    * It **calculates the "optical flow"**—the direction and speed at which these features are moving.
-    * It publishes this motion as a raw `geometry_msgs/Twist` message (containing linear and angular velocity) to a ROS topic.
+<div style="width:100%; max-width:900px; margin:auto;">
+  <div style="font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; text-align:center; margin-bottom:20px; font-size:24px; font-weight:600; color:#2563eb;">
+    Optical Flow ROS Pipeline
+  </div>
+  
+  <svg viewBox="0 0 900 500" preserveAspectRatio="xMidYMid meet">
+    <defs>
+      <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+        <path d="M2,2 L10,6 L2,10" stroke="#64748b" stroke-width="2" fill="none"/>
+      </marker>
+    </defs>
 
-2.  **`twist_data.py` (The Python ROS Wrapper):** This script acts as a smart converter. It listens to the raw `Twist` data from the C++ node and:
-    * **Adds covariance data.** This is a crucial step for real robotics. Covariance is a measure of *uncertainty*. The script is essentially saying, "Here's the velocity I *think* I see, and here's how confident I am about it."
-    * It republishes this "smarter" data as a standard `nav_msgs/Odometry` message.
+    <!-- Node 1 -->
+    <g transform="translate(20,40)">
+      <rect x="0" y="0" width="220" height="80" rx="10" ry="10" fill="#fbb" stroke="#333" stroke-width="2"/>
+      <text x="20" y="30" font-size="16" font-weight="700" fill="#111">1. Camera Feed</text>
+      <text x="20" y="55" font-size="12" fill="#1e40af">ROS Image Topic</text>
+    </g>
 
-This final odometry message can be fed directly into a robot's navigation stack, like an **Extended Kalman Filter (EKF)**. The project `README` explicitly mentions this, showing the ultimate goal is to fuse this visual data with an IMU (Inertial Measurement Unit) to get a highly accurate and robust state estimate.
+    <!-- Node 2 -->
+    <g transform="translate(260,40)">
+      <rect x="0" y="0" width="240" height="120" rx="10" ry="10" fill="#bbf" stroke="#333" stroke-width="2"/>
+      <text x="20" y="25" font-size="16" font-weight="700" fill="#111">2. C++ Node: flow.cpp</text>
+      <text x="20" y="50" font-size="12" fill="#111">- Extract Key Features (OpenCV)</text>
+      <text x="20" y="70" font-size="12" fill="#111">- Compute Optical Flow</text>
+      <text x="20" y="90" font-size="12" fill="#111">- Publish geometry_msgs/Twist</text>
+    </g>
+
+    <!-- Node 3 -->
+    <g transform="translate(520,40)">
+      <rect x="0" y="0" width="240" height="120" rx="10" ry="10" fill="#ffb" stroke="#333" stroke-width="2"/>
+      <text x="20" y="25" font-size="16" font-weight="700" fill="#111">3. Python Node: twist_data.py</text>
+      <text x="20" y="50" font-size="12" fill="#111">- Subscribe Raw Twist Msg</text>
+      <text x="20" y="70" font-size="12" fill="#111">- Add Covariance / Uncertainty</text>
+      <text x="20" y="90" font-size="12" fill="#111">- Republish nav_msgs/Odometry</text>
+    </g>
+
+    <!-- Node 4 -->
+    <g transform="translate(260,220)">
+      <rect x="0" y="0" width="240" height="80" rx="10" ry="10" fill="#9ff" stroke="#333" stroke-width="2"/>
+      <text x="20" y="35" font-size="16" font-weight="700" fill="#111">4. Navigation Stack</text>
+      <text x="20" y="55" font-size="12" fill="#111">EKF Fusion / Robot Odometry</text>
+    </g>
+
+    <!-- Arrows -->
+    <path d="M240 80 L260 80" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M500 100 L520 100" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M640 100 L640 220" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M500 260 L500 220" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M260 160 L380 220" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  </svg>
+</div>
+
 
 ### Why It Matters
 
