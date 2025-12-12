@@ -1,10 +1,3 @@
----
-layout: post
-title: "Solving Physics with Python: A Look at a Computational Toolkit"
-date: 2024-12-12
-categories: [Python, Physics, Simulation]
----
-
 ## Solving Physics with Python: A Look at a Computational Toolkit
 
 Physics is no longer just about chalkboards and expensive lab equipment. A "third pillar" of modern science has emerged: **computational physics**. This is the art of using code and numerical methods to simulate and solve problems that are too complex for pen and paper.
