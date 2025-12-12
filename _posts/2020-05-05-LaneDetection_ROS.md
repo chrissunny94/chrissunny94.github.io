@@ -47,13 +47,13 @@ The repository, tested on ROS Kinetic, is structured as a standard ROS package w
 ### Lane Detection Flowchart
 
 <div style="width:100%; max-width:900px; margin:auto;">
-<!-- Include Mermaid.js -->
-<script type="module">
-  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-  mermaid.initialize({ startOnLoad: true });
-</script>
+  <!-- Include Mermaid.js UMD version -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({ startOnLoad: true });
+  </script>
 
-<div class="mermaid">
+  <div class="mermaid">
 graph TD
     A[ROS Camera Image] --> B[Convert ROS Image to OpenCV Mat]
     B --> C[Preprocessing]
@@ -76,10 +76,9 @@ graph TD
     style G fill:#bff,stroke:#333,stroke-width:1px
     style H fill:#ff9,stroke:#333,stroke-width:1px
     style I fill:#9ff,stroke:#333,stroke-width:1px
-</div>
+  </div>
 </div>
 
----
 
 ## Summary
 
