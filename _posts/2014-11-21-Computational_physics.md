@@ -18,6 +18,7 @@ The repository is neatly organized into five assignments (`assignment1` through 
 The entire repository is 100% **Python**. This is a smart choice, as Python—powered by its "scientific stack" of libraries like **NumPy**, **SciPy**, and **Matplotlib**—has become the language of choice for scientific computing. It's readable, powerful, and has a vast ecosystem of tools for everything from matrix math to plotting.
 
 
+![capacitor](/images/COMPUTATIONAL_PHYSICS/capacitor.png)
 #### examples
 A collection of reference Python programs demonstrating classical computational physics models, such as:
 
