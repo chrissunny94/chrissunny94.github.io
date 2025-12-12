@@ -1,4 +1,4 @@
-## Keeping Robots on Track: A C++ & ROS Lane Detection Project
+## Keeping Robots on Track: A C++ and ROS Lane Detection Project
 
 For any autonomous ground robot, from a self-driving car to a small warehouse bot, the ability to perceive the environment is critical. One of the most fundamental tasks in navigation is identifying and following lanes. This is where a fantastic, focused project from developer Chris Sunny (chrissunny94) comes in: **[Lane_Detection_CPP_ROS](https://github.com/chrissunny94/Lane_Detection_CPP_ROS)**.
 
@@ -47,36 +47,78 @@ The repository, tested on ROS Kinetic, is structured as a standard ROS package w
 ### Lane Detection Flowchart
 
 <div style="width:100%; max-width:900px; margin:auto;">
-  <!-- Include Mermaid.js UMD version -->
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-  <script>
-    mermaid.initialize({ startOnLoad: true });
-  </script>
 
-  <div class="mermaid">
-graph TD
-    A[ROS Camera Image] --> B[Convert ROS Image to OpenCV Mat]
-    B --> C[Preprocessing]
-    C --> C1[Grayscale Conversion]
-    C --> C2[Gaussian Blur]
-    C1 --> D[Edge Detection (Canny)]
-    C2 --> D
-    D --> E[Region of Interest (ROI Mask)]
-    E --> F[Hough Line Transform]
-    F --> G[Lane Classification & Averaging]
-    G --> H[Draw Lane Lines on Frame]
-    H --> I[Publish to ROS / Display in RViz]
+<div class="chart-container" style="font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color:#0f172a; padding:30px; border-radius:12px; box-shadow:0 10px 25px rgba(0,0,0,0.5); color:#f8fafc;">
+  <div class="chart-title" style="text-align:center; margin-bottom:30px; font-size:24px; font-weight:600; color:#60a5fa; letter-spacing:0.5px;">Lane Detection: ROS + OpenCV Flow</div>
+  
+  <svg viewBox="0 0 900 500" preserveAspectRatio="xMidYMid meet">
+    <defs>
+      <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+        <path d="M2,2 L10,6 L2,10" fill="#64748b" />
+      </marker>
+    </defs>
 
-    style A fill:#f9f,stroke:#333,stroke-width:1px
-    style B fill:#bbf,stroke:#333,stroke-width:1px
-    style C fill:#bfb,stroke:#333,stroke-width:1px
-    style D fill:#ffb,stroke:#333,stroke-width:1px
-    style E fill:#fbf,stroke:#333,stroke-width:1px
-    style F fill:#fbb,stroke:#333,stroke-width:1px
-    style G fill:#bff,stroke:#333,stroke-width:1px
-    style H fill:#ff9,stroke:#333,stroke-width:1px
-    style I fill:#9ff,stroke:#333,stroke-width:1px
-  </div>
+    <!-- Nodes -->
+    <g class="node-group" transform="translate(20, 20)">
+      <rect class="node-rect" width="220" height="70" rx="8" style="fill:#f9f; stroke:#333; stroke-width:2;"></rect>
+      <text x="15" y="35" style="fill:#0f172a; font-weight:700;">1. ROS Camera Image</text>
+    </g>
+
+    <g class="node-group" transform="translate(250, 20)">
+      <rect class="node-rect" width="220" height="70" rx="8" style="fill:#bbf; stroke:#333; stroke-width:2;"></rect>
+      <text x="15" y="35" style="fill:#0f172a; font-weight:700;">2. Convert ROS Image to OpenCV Mat</text>
+    </g>
+
+    <g class="node-group" transform="translate(480, 20)">
+      <rect class="node-rect" width="200" height="90" rx="8" style="fill:#bfb; stroke:#333; stroke-width:2;"></rect>
+      <text x="15" y="30" style="fill:#0f172a; font-weight:700;">3. Preprocessing</text>
+      <text x="15" y="50" style="fill:#cbd5e1; font-size:13px;">Grayscale Conversion</text>
+      <text x="15" y="70" style="fill:#cbd5e1; font-size:13px;">Gaussian Blur</text>
+    </g>
+
+    <g class="node-group" transform="translate(700, 20)">
+      <rect class="node-rect" width="180" height="70" rx="8" style="fill:#ffb; stroke:#333; stroke-width:2;"></rect>
+      <text x="15" y="35" style="fill:#0f172a; font-weight:700;">4. Edge Detection (Canny)</text>
+    </g>
+
+    <g class="node-group" transform="translate(700, 120)">
+      <rect class="node-rect" width="180" height="70" rx="8" style="fill:#fbf; stroke:#333; stroke-width:2;"></rect>
+      <text x="15" y="35" style="fill:#0f172a; font-weight:700;">5. ROI Mask</text>
+    </g>
+
+    <g class="node-group" transform="translate(480, 220)">
+      <rect class="node-rect" width="200" height="70" rx="8" style="fill:#fbb; stroke:#333; stroke-width:2;"></rect>
+      <text x="15" y="35" style="fill:#0f172a; font-weight:700;">6. Hough Line Transform</text>
+    </g>
+
+    <g class="node-group" transform="translate(250, 320)">
+      <rect class="node-rect" width="220" height="70" rx="8" style="fill:#bff; stroke:#333; stroke-width:2;"></rect>
+      <text x="15" y="35" style="fill:#0f172a; font-weight:700;">7. Lane Classification & Averaging</text>
+    </g>
+
+    <g class="node-group" transform="translate(20, 420)">
+      <rect class="node-rect" width="220" height="70" rx="8" style="fill:#ff9; stroke:#333; stroke-width:2;"></rect>
+      <text x="15" y="35" style="fill:#0f172a; font-weight:700;">8. Draw Lane Lines</text>
+    </g>
+
+    <g class="node-group" transform="translate(250, 420)">
+      <rect class="node-rect" width="220" height="70" rx="8" style="fill:#9ff; stroke:#333; stroke-width:2;"></rect>
+      <text x="15" y="35" style="fill:#0f172a; font-weight:700;">9. Publish to ROS / Display</text>
+    </g>
+
+    <!-- Edges -->
+    <path d="M240 55 L250 55" class="edge-path" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)" />
+    <path d="M470 55 L480 55" class="edge-path" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)" />
+    <path d="M680 55 L700 55" class="edge-path" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)" />
+    <path d="M790 90 L790 120" class="edge-path" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)" />
+    <path d="M790 155 L680 255" class="edge-path" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)" />
+    <path d="M580 295 L380 335" class="edge-path" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)" />
+    <path d="M360 355 L130 455" class="edge-path" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)" />
+    <path d="M240 455 L250 455" class="edge-path" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)" />
+
+  </svg>
+</div>
+
 </div>
 
 
