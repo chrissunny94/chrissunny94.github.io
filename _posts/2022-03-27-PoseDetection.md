@@ -47,3 +47,62 @@ allowfullscreen></iframe>
 | **GAT** (2018) | Attention-based neighbor weighting | Learns importance of neighbors | Slower on large/dense graphs | Social networks, molecules, citation networks |
 | **Gated GNN / GGNN** (2016) | Gated recurrent updates | Captures sequential structure | Harder to train | Program analysis, chemistry |
 | **Graph Transformer** (2020–) | Global self-attention | Handles long-range relations | Computationally heavy | Molecules, scene graphs, NLP-style tasks |
+
+
+
+<div style="max-width:800px;margin:auto;padding:20px;">
+<svg width="100%" height="380">
+  <!-- Node Styles -->
+  <style>
+    .box { fill:#1e293b; stroke:#3b82f6; stroke-width:2; rx:8; }
+    .title { fill:white; font-size:14px; font-weight:700; }
+    .desc { fill:#cbd5e1; font-size:12px; }
+    .edge { stroke:#94a3b8; stroke-width:2; marker-end:url(#arrow); }
+  </style>
+
+  <!-- Arrow Marker -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#94a3b8"></polygon>
+    </marker>
+  </defs>
+
+  <!-- Boxes -->
+  <g transform="translate(20,40)">
+    <rect class="box" width="200" height="70"></rect>
+    <text x="10" y="25" class="title">Input Graph</text>
+    <text x="10" y="50" class="desc">Nodes + Edges with Features</text>
+  </g>
+
+  <g transform="translate(300,40)">
+    <rect class="box" width="220" height="70"></rect>
+    <text x="10" y="25" class="title">Linear Projection</text>
+    <text x="10" y="50" class="desc">hᵢ → W hᵢ</text>
+  </g>
+
+  <g transform="translate(20,180)">
+    <rect class="box" width="250" height="90"></rect>
+    <text x="10" y="30" class="title">Attention Coefficients</text>
+    <text x="10" y="55" class="desc">αᵢⱼ = softmax(aᵀ(W hᵢ || W hⱼ))</text>
+  </g>
+
+  <g transform="translate(330,180)">
+    <rect class="box" width="200" height="90"></rect>
+    <text x="10" y="30" class="title">Aggregation</text>
+    <text x="10" y="55" class="desc">Σ αᵢⱼ W hⱼ</text>
+  </g>
+
+  <g transform="translate(600,110)">
+    <rect class="box" width="180" height="90"></rect>
+    <text x="10" y="35" class="title">Updated Node Embedding</text>
+    <text x="10" y="60" class="desc">hᵢ′</text>
+  </g>
+
+  <!-- Arrows -->
+  <line x1="220" y1="75" x2="300" y2="75" class="edge"/>
+  <line x1="330" y1="75" x2="330" y2="180" class="edge"/>
+  <line x1="150" y1="110" x2="150" y2="180" class="edge"/>
+  <line x1="270" y1="225" x2="330" y2="225" class="edge"/>
+  <line x1="530" y1="225" x2="600" y2="155" class="edge"/>
+</svg>
+</div>
