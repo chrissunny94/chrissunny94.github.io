@@ -44,106 +44,41 @@ For anyone looking to build an autonomous ground vehicle or just learn how high-
 
 
 
-## 1. Converting ROS Image to OpenCV
+<div style="width:100%; max-width:900px; margin:auto;">
+<!-- Include Mermaid.js -->
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true });
+</script>
 
-Incoming ROS camera messages are converted to OpenCV `cv::Mat` using `cv_bridge`:
+<!-- Lane Detection Flowchart -->
+<div class="mermaid">
+graph TD
+    A[ROS Camera Image] --> B[Convert ROS Image to OpenCV Mat]
+    B --> C[Preprocessing]
+    C --> C1[Grayscale Conversion]
+    C --> C2[Gaussian Blur]
+    C1 --> D[Edge Detection (Canny)]
+    C2 --> D
+    D --> E[Region of Interest (ROI Mask)]
+    E --> F[Hough Line Transform]
+    F --> G[Lane Classification & Averaging]
+    G --> H[Draw Lane Lines on Frame]
+    H --> I[Publish to ROS / Display in RViz]
 
-```cpp
-cv_bridge::CvImagePtr cv_ptr;
-cv_ptr = cv_bridge::toCvCopy(msg, sensor_msgs::image_encodings::BGR8);
-cv::Mat frame = cv_ptr->image;
-````
+    style A fill:#f9f,stroke:#333,stroke-width:1px
+    style B fill:#bbf,stroke:#333,stroke-width:1px
+    style C fill:#bfb,stroke:#333,stroke-width:1px
+    style D fill:#ffb,stroke:#333,stroke-width:1px
+    style E fill:#fbf,stroke:#333,stroke-width:1px
+    style F fill:#fbb,stroke:#333,stroke-width:1px
+    style G fill:#bff,stroke:#333,stroke-width:1px
+    style H fill:#ff9,stroke:#333,stroke-width:1px
+    style I fill:#9ff,stroke:#333,stroke-width:1px
+</div>
 
-This allows standard OpenCV processing on the image.
 
----
-
-## 2. Preprocessing
-
-### Grayscale Conversion
-
-The input frame is converted to grayscale to simplify processing:
-
-```cpp
-cv::cvtColor(frame, gray, cv::COLOR_BGR2GRAY);
-```
-
-### Gaussian Blur
-
-A Gaussian blur is applied to reduce noise and smooth the image:
-
-```cpp
-cv::GaussianBlur(gray, blurred, cv::Size(5,5), 0);
-```
-
----
-
-## 3. Edge Detection
-
-Canny edge detection is applied to detect strong gradients corresponding to lane lines:
-
-```cpp
-cv::Canny(blurred, edges, 50, 150);
-```
-
----
-
-## 4. Region of Interest (ROI)
-
-Only the relevant part of the image (road area) is processed:
-
-```cpp
-cv::Mat mask = cv::Mat::zeros(edges.size(), edges.type());
-std::vector<cv::Point> polygon = { /* ROI vertices */ };
-cv::fillPoly(mask, std::vector<std::vector<cv::Point>>{ polygon }, cv::Scalar(255));
-cv::Mat roi;
-cv::bitwise_and(edges, mask, roi);
-```
-
-This removes irrelevant edges from the sky or roadside.
-
----
-
-## 5. Hough Line Transform
-
-Line segments are detected using the Probabilistic Hough Transform:
-
-```cpp
-std::vector<cv::Vec4i> lines;
-cv::HoughLinesP(roi, lines, 1, CV_PI/180, 50, 40, 100);
-```
-
-Each `Vec4i` contains `(x1, y1, x2, y2)` for a line segment.
-
----
-
-## 6. Lane Classification and Averaging
-
-Lines are classified as left or right based on slope:
-
-```cpp
-float slope = float(y2 - y1) / float(x2 - x1 + 1e-6);
-```
-
-* Negative slope → left lane
-* Positive slope → right lane
-
-Segments are averaged to produce stable left/right lane lines.
-
----
-
-## 7. Drawing Lane Lines
-
-The final lane lines are drawn on the frame:
-
-```cpp
-cv::line(frame, cv::Point(x1, y1), cv::Point(x2, y2), cv::Scalar(0,255,0), 3);
-```
-
-The annotated frame can then be published back to ROS or displayed in RViz.
-
----
-
+</div>
 ## Summary
 
 The OpenCV C++ pipeline:
