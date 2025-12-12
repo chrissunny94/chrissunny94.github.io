@@ -17,6 +17,23 @@ The repository is neatly organized into five assignments (`assignment1` through 
 
 The entire repository is 100% **Python**. This is a smart choice, as Python—powered by its "scientific stack" of libraries like **NumPy**, **SciPy**, and **Matplotlib**—has become the language of choice for scientific computing. It's readable, powerful, and has a vast ecosystem of tools for everything from matrix math to plotting.
 
+
+#### examples
+A collection of reference Python programs demonstrating classical computational physics models, such as:
+
+- Damped oscillations
+
+- Lotka–Volterra predator–prey systems
+
+- RLC oscillating circuits
+
+- Hodgkin–Huxley neuronal model
+
+- Numerical ODE solvers (Runge–Kutta)
+
+- solar_system.py
+    A Python-Pygame simulation that visualizes the motion of planets around the Sun. The program uses basic Newtonian gravitational physics and numerical integration to animate planetary orbits in real-time.
+
 ### What's Inside?
 
 While we can't see the exact problem descriptions, a computational physics curriculum typically involves a standard set of powerful techniques. Looking at the structure, this repository is likely a practical playbook for solving problems like:
