@@ -2,6 +2,18 @@
 
 Robotics today is no longer limited to industrial labs or high-end research facilities. Thanks to open-source microcontrollers like **Arduino**, learning robotics has become accessible, affordable, and irresistibly fun. One of the most iconic beginner-to-intermediate robotics projects is the **Line Follower Robot** — a small autonomous vehicle that follows a visual path using sensors and feedback control.
 
+## 🎥 Watch the Line Follower Demo
+
+Below is a helpful video tutorial showing a Line Follower Robot in action — from wiring to programming:
+
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/BDalpVK5yu8"
+title="Arduino Line Follower Robot Tutorial"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen></iframe>
+
+
 A great example of this in practice is the **Arduino Line Follower** project by Chris Sunny. The project is neat, compact, and practical — a complete mini-course in sensors, control theory, and embedded programming.
 
 ![Arduino Setup](/images/LANE_FOLLOWER/arduino.png)
