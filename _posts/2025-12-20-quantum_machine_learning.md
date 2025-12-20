@@ -331,5 +331,123 @@ Step 20 | theta = -0.378 | output = 0.9122
 Step 25 | theta = -0.411 | output = 0.9251
 ```
 
+
+#### Now let us add a quantumn entanglement node 
+
+
+Let us go from 
+
+  |0⟩ ── RY(x) ── RY(θ) ── ⟨Z⟩
+
+
+to 
+
+  |0⟩ ── RY(x₁) ──●── RY(θ₁) ── ⟨Z⟩
+                │
+  |0⟩ ── RY(x₂) ──X── RY(θ₂) ── ⟨Z⟩
+
+
+So that we achieve 
+
+  ✔ Correlated features
+  ✔ Non-linear decision boundaries
+  ✔ True quantum behavior
+
+
+
+Probably confusing , my mind is stil tuned to the classical way of thinking , so let us take a analogy 
+
+
+  x1 = distance
+  x2 = relative speed
+  risk = f(x1) + f(x2)
+
+The risk in a real world driving would be a combination of distance AND speed together 
+
+  risk ≠ f(x1) + f(x2)
+  risk = f(x1, x2)
+
+
+So without entanglement 
+
+  Qubit 0 depends only on x1
+  Qubit 1 depends only on x2
+
+
+With entanglement
+
+  Qubit 0 state depends on x1 AND x2
+  Qubit 1 state depends on x1 AND x2
+
+
+```
+import pennylane as qml
+from pennylane import numpy as np
+
+dev = qml.device("default.qubit", wires=2)
+
+@qml.qnode(dev)
+def entangled_vqc(x, theta):
+    # x: 2-dim classical input
+    # theta: 2 trainable params
+
+    # 1️⃣ Encode classical features
+    qml.RY(x[0], wires=0)
+    qml.RY(x[1], wires=1)
+
+    # 2️⃣ Entanglement
+    qml.CNOT(wires=[0, 1])
+
+    # 3️⃣ Trainable rotations
+    qml.RY(theta[0], wires=0)
+    qml.RY(theta[1], wires=1)
+
+    # 4️⃣ Readout
+    return (
+        qml.expval(qml.PauliZ(0)),
+        qml.expval(qml.PauliZ(1))
+    )
+
+
+x = np.array([0.6, 0.2])
+theta = np.array([0.1, 0.1])
+
+print(entangled_vqc(x, theta))
+
+
+def loss(theta, x):
+    z0, z1 = entangled_vqc(x, theta)
+    return (z0 - 1.0) ** 2 + (z1 - 1.0) ** 2
+
+
+opt = qml.GradientDescentOptimizer(stepsize=0.1)
+theta = np.array([0.0, 0.0], requires_grad=True)
+
+x = np.array([0.8, 0.3])
+
+for step in range(30):
+    theta = opt.step(lambda t: loss(t, x), theta)
+
+    if step % 5 == 0:
+        z0, z1 = entangled_vqc(x, theta)
+        print(
+            f"Step {step} | "
+            f"theta = {theta} | "
+            f"Z = ({z0:.3f}, {z1:.3f})"
+        )
+
+```
+
+
+
+```
+Step 0 | theta = [-0.01285922 -0.01976502] | Z = (0.699, 0.671)
+Step 5 | theta = [-0.06818813 -0.10245817] | Z = (0.710, 0.692)
+Step 10 | theta = [-0.1116638  -0.16518783] | Z = (0.716, 0.705)
+Step 15 | theta = [-0.14628707 -0.21403244] | Z = (0.720, 0.713)
+Step 20 | theta = [-0.17410229 -0.25270375] | Z = (0.723, 0.718)
+Step 25 | theta = [-0.1965766  -0.28365224] | Z = (0.725, 0.722)
+```
+
 ## End-to-End Quantum Machine Learning Architecture
 ![QML Architecture](/images/QUANTUM_COMPUTING/Quantum_Machine_complete_Architecture.png)
