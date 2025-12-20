@@ -13,8 +13,8 @@
   <title>Quantum Machine Learning Architecture</title>
   <style>
     :root {
-      --bg-color: #020617;
-      --box-fill: #020617;
+      --bg-color: #ffffff;
+      --box-fill: #f8fafc;
       --box-stroke: #22d3ee;
       --text-main: #e5e7eb;
       --text-sub: #94a3b8;
@@ -266,6 +266,70 @@ Every QML model is just:
   [VQC] + [Classical Optimizer]
 
 
+
+#### Now let us build a quantum neuron
+
+The VQC now extended to behave like a *quantum neuron*
+
+
+  x  →  encode(x)  →  trainable circuit  →  output
+
+
+
+```
+import pennylane as qml
+from pennylane import numpy as np
+
+dev = qml.device("default.qubit", wires=1)
+
+@qml.qnode(dev)
+def vqc(x, theta):
+    # 1️⃣ Encode classical input
+    qml.RY(x, wires=0)
+
+    # 2️⃣ Trainable rotation
+    qml.RY(theta, wires=0)
+
+    # 3️⃣ Readout
+    return qml.expval(qml.PauliZ(0))
+
+x = 0.5        # classical input feature
+theta = 0.3   # trainable parameter
+
+print(vqc(x, theta))
+
+def loss(theta, x):
+    return (vqc(x, theta) - 1.0) ** 2
+
+
+opt = qml.GradientDescentOptimizer(stepsize=0.1)
+theta = np.array(0.0, requires_grad=True)
+
+x = 0.8  # fixed training input
+
+for step in range(30):
+    theta = opt.step(lambda t: loss(t, x), theta)
+
+    if step % 5 == 0:
+        print(
+            f"Step {step} | "
+            f"theta = {theta:.3f} | "
+            f"output = {vqc(x, theta):.4f}"
+        )
+
+```
+
+
+
+```
+0.6967067093471653
+Step 0 | theta = -0.044 | output = 0.7273
+Step 5 | theta = -0.191 | output = 0.8200
+Step 10 | theta = -0.277 | output = 0.8664
+Step 15 | theta = -0.335 | output = 0.8939
+Step 20 | theta = -0.378 | output = 0.9122
+Step 25 | theta = -0.411 | output = 0.9251
+```
 
 ## End-to-End Quantum Machine Learning Architecture
 ![QML Architecture](/images/QUANTUM_COMPUTING/Quantum_Machine_complete_Architecture.png)
