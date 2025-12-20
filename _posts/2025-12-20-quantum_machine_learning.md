@@ -332,8 +332,9 @@ Step 25 | theta = -0.411 | output = 0.9251
 ```
 
 
-#### Now let us add a quantumn entanglement node 
+#### Now let us add a quantumn entanglement node
 
+![](/images/QUANTUM_COMPUTING/quantum_gates.png)
 
 Let us go from 
 
@@ -437,7 +438,7 @@ for step in range(30):
         )
 
 ```
-
+![](/images/QUANTUM_COMPUTING/training_loss.png)
 
 
 ```
@@ -448,6 +449,11 @@ Step 15 | theta = [-0.14628707 -0.21403244] | Z = (0.720, 0.713)
 Step 20 | theta = [-0.17410229 -0.25270375] | Z = (0.723, 0.718)
 Step 25 | theta = [-0.1965766  -0.28365224] | Z = (0.725, 0.722)
 ```
+
+![](/images/QUANTUM_COMPUTING/entanglement_output.png)
+
+
+
 
 ## End-to-End Quantum Machine Learning Architecture
 ![QML Architecture](/images/QUANTUM_COMPUTING/Quantum_Machine_complete_Architecture.png)
