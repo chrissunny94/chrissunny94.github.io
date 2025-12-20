@@ -162,5 +162,110 @@
 
 
 
+### NISQ (Noisy Intermediate-Scale Quantum)
+
+All quantum models in this work are designed for NISQ hardware, employing shallow variational circuits and hybrid optimization to mitigate decoherence and gate noise.
+
+
+![QuantumSuperPosition](/images/quantum_superposition.gif)
+
+Let us write the most basic Quantum Program 
+
+```
+pip3 install pennylane
+```
+
+
+
+```
+import pennylane as qml
+import numpy as np
+# Create a quantum device with 1 qubit
+dev = qml.device("default.qubit", wires=1)
+@qml.qnode(dev)
+def quantum_hello():
+    qml.Hadamard(wires=0)        # Put qubit into superposition
+    return qml.probs(wires=0)    # Measure probabilities
+
+print(quantum_hello())
+
+```
+
+If you run the above snippet , you would see something like
+
+
+  [0.5 0.5]
+
+Basically this is 
+
+  Encode → Entangle → Measure → Optimize
+
+
+
+
+#### Now that we have a small QC module , lets extend it 
+
+![VQC](/images/VQC.gif)
+
+
+```
+import pennylane as qml
+from pennylane import numpy as np
+
+dev = qml.device("default.qubit", wires=1)
+
+
+@qml.qnode(dev)
+def vqc(theta):
+    qml.RY(theta, wires=0)     # trainable rotation
+    return qml.expval(qml.PauliZ(0))
+
+theta = 0.3
+print(vqc(theta))
+
+def loss(theta):
+    return (vqc(theta) - 1.0) ** 2
+
+opt = qml.GradientDescentOptimizer(stepsize=0.1)
+
+theta = np.array(0.0, requires_grad=True)
+
+for step in range(30):
+    theta = opt.step(loss, theta)
+    if step % 5 == 0:
+        print(f"Step {step} | theta = {theta:.3f} | loss = {loss(theta):.4f}")
+
+```
+
+
+```
+$
+0.9553364891256059
+Step 0 | theta = 0.000 | loss = 0.0000
+Step 5 | theta = 0.000 | loss = 0.0000
+Step 10 | theta = 0.000 | loss = 0.0000
+Step 15 | theta = 0.000 | loss = 0.0000
+Step 20 | theta = 0.000 | loss = 0.0000
+Step 25 | theta = 0.000 | loss = 0.0000
+```
+
+🧠 What this means physically
+
+- theta = trainable parameter
+- Circuit prepares a quantum state
+- Measurement returns ⟨Z⟩ expectation
+- This is your model output
+
+This is exactly like a neuron:
+
+  input → weight → activation
+
+
+Every QML model is just:
+
+  [VQC] + [Classical Optimizer]
+
+
+
 ## End-to-End Quantum Machine Learning Architecture
 ![QML Architecture](/images/QUANTUM_COMPUTING/Quantum_Machine_complete_Architecture.png)
