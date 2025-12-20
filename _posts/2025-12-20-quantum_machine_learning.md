@@ -167,7 +167,7 @@
 All quantum models in this work are designed for NISQ hardware, employing shallow variational circuits and hybrid optimization to mitigate decoherence and gate noise.
 
 
-![QuantumSuperPosition](/images/quantum_superposition.gif)
+![QuantumSuperPosition](/images/QUANTUM_COMPUTING/quantum_superposition.gif)
 
 Let us write the most basic Quantum Program 
 
@@ -205,7 +205,7 @@ Basically this is
 
 #### Now that we have a small QC module , lets extend it 
 
-![VQC](/images/VQC.gif)
+![VQC](/images/QUANTUM_COMPUTING/VQC.gif)
 
 
 ```
