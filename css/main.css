@@ -1,0 +1,14 @@
+.post_navi {
+  display: flex;
+  gap: 1rem;
+}
+
+.post_navi .nav_cv {
+  text-align: center;
+  justify-content: center;
+  opacity: 0.9;
+}
+
+.post_navi .nav_cv:hover {
+  opacity: 1;
+}

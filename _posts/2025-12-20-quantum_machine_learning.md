@@ -341,7 +341,8 @@ Let us go from
   |0⟩ ── RY(x) ── RY(θ) ── ⟨Z⟩
 
 
-to 
+To 
+
 
   |0⟩ ── RY(x₁) ──●── RY(θ₁) ── ⟨Z⟩
                 │

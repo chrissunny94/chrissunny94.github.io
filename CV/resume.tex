@@ -1,0 +1,182 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{multicol}
+\usepackage{xcolor}
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black,
+	urlcolor=blue
+}
+
+\setlength{\parindent}{0pt}
+\setlist[itemize]{noitemsep, topsep=2pt}
+
+\titleformat{\section}
+{\large\bfseries}
+{}
+{0em}
+{}[\titlerule]
+
+\begin{document}
+	
+	%================ HEADER =================
+	\begin{center}
+		{\LARGE \textbf{CHRIS SUNNY THALIYATH}}\\[6pt]
+		Robotics \& Autonomous Systems Engineer\\[4pt]
+		\href{mailto:chrissunny94@gmail.com}{chrissunny94@gmail.com} $\mid$
+		+91-8130324904 $\mid$
+		\href{https://www.linkedin.com/in/chris-sunny-thaliyath-02b282365}{LinkedIn} $\mid$
+		\href{https://github.com/chrissunny94}{GitHub} $\mid$
+		\href{https://www.youtube.com/@ChrisThaliyath153/videos}{YouTube} $\mid$
+		\href{https://strava.app.link/nBSLXqC1jWb}{Strava}
+	\end{center}
+	
+	%================ PROFILE =================
+	\section*{Profile}
+	Robotics software engineer with 7+ years of experience in perception, motion planning, and autonomous systems across ADAS (\href{https://www.mbrdi.co.in}{Mercedes-Benz}), autonomous lawn mowers (\href{https://electricsheeprobotics.com}{Electric Sheep Robotics}), and autonomous golf carts (\href{https://www.boschglobal.com}{Bosch}).  
+	Expert in multi-modal perception (camera, LiDAR, radar), SLAM, sensor fusion, 6-DOF pose estimation, and real-time distributed systems.  
+	Proficient in Python, C++, PyTorch, ROS/ROS2, and simulation platforms including CARLA, Gazebo, Unity, and Isaac Sim.  
+	Driven by continuous reinvention, human-centered technology, and values of peace, empathy, and excellence.
+	
+	%================ EXPERIENCE =================
+	\section*{Experience}
+	
+	\textbf{\href{https://www.mbrdi.co.in}{Mercedes-Benz Research and Development India}} \hfill \textit{2022 -- Present}\\
+	\textit{Level 3 ADAS – HAF 95 \& HAF 135}
+	
+	\begin{itemize}
+		\item Architected production-ready real-time distributed control modules for L3 ADAS, defining system boundaries, interfaces, and requirements.
+		\item Developed LiDAR-based clustering, tracking, and classification pipelines using Euclidean clustering, Hungarian matching, CenterPoint3D, and PointNet for small object detection.
+		\item Implemented monocular depth estimation and BEV-based perception models (PyTorch, BEVDet) to replace LiDAR with camera-only occupancy grids.
+		\item Hands-on with multi-modal BEVFusion (Camera + LiDAR); explored Vision-Language Models (VLMs) for semantic scene understanding.
+		\item Built multi-LiDAR and multi-camera calibration pipelines using ARUCO markers; implemented ICP/NDT-based alignment and ego-motion estimation.
+		\item Designed SLAM–IMU–GPS fusion achieving centimeter-level localization accuracy.
+		\item Implemented MPC, LQR, Pure Pursuit, and 2-DoF controllers integrated with vehicle dynamics.
+		\item Maintained Gen5 ADAS validation pipelines using Airflow, Docker, CI/CD, and large-scale data replay.
+		\item Deployed perception and planning stacks on NVIDIA Orin (IDC6) optimized with TensorRT and CUDA.
+		\item Developed CAN/CAN-FD drivers, DBC decoding, and ROS interfaces.
+	\end{itemize}
+	
+	\vspace{4pt}
+	
+	\textbf{\href{https://electricsheeprobotics.com}{Electric Sheep Robotics}} \hfill \textit{2021 -- 2022}\\
+	\textit{Fully Autonomous Lawn Mowers}
+	
+	\begin{itemize}
+		\item Improved SLAM-based 6-DOF pose estimation using EKF fusion of LiDAR, camera, IMU, and GPS.
+		\item Built navigation pipelines across Isaac Sim, Gazebo, and Unity enabling sim-to-real transfer.
+		\item Designed synthetic data pipelines for Vision-Language Models.
+		\item Integrated Visual Teach \& Repeat (VT\&R) navigation (Prof. Tim Barfoot, University of Toronto).
+		\item Deployed autonomy stack on NVIDIA Orin.
+	\end{itemize}
+	
+	\vspace{4pt}
+	
+	\textbf{\href{https://arway.ai}{Arway.ai}} \hfill \textit{2020}\\
+	\textit{Spatial Computing \& AR Platforms}
+	
+	\begin{itemize}
+		\item Implemented kidnapped-robot relocalization using Bag-of-Words techniques.
+		\item Cross-compiled ORB-SLAM2 C++ binaries for Unity, Android, and iOS.
+		\item Built a custom SLAM-based relocalization system replacing ARKit/ARCore.
+	\end{itemize}
+	
+	\vspace{4pt}
+	
+	\textbf{\href{https://www.boschglobal.com}{Bosch Global Software Technologies}} \hfill \textit{2018 -- 2021}\\
+	\textit{Autonomous Low-Speed Golf Cart}
+	
+	\begin{itemize}
+		\item Developed LiDAR-SLAM using Velodyne VLP-16 with EKF fusion (LiDAR + GPS + IMU).
+		\item Implemented NDT/ICP-based relocalization with OpenStreetMap lane-level context.
+		\item Built waypoint planners and integrated lane-keep assist and cruise control.
+		\item Developed ROS drivers for CAN, EPS, throttle/brake, radar, ultrasonic sensors.
+		\item Deployed autonomy stack on NVIDIA Drive PX with RTOS (QNX, Linux-RT).
+	\end{itemize}
+	
+	\vspace{4pt}
+	
+	\textbf{\href{https://www.linkedin.com/company/vanora-robots}{Vanora Robots}} \hfill \textit{2017}\\
+	\textit{Agricultural Autonomous Robot – Rubber Tapping}
+	
+	\begin{itemize}
+		\item Developed ROS drivers for Sabertooth 2x32 motor controllers on Raspberry Pi.
+		\item Programmed embedded controllers (Arduino, STM32) for real-time motor control.
+		\item Implemented encoder-based odometry integrated with ROS navigation stack.
+		\item Built Visual SLAM pipelines using depth camera (Xbox Kinect) fused with odometry.
+		\item Designed ArUco marker–based auto-docking for wireless charging.
+	\end{itemize}
+	
+	%================ EDUCATION =================
+	\section*{Education}
+	
+	\textbf{M.Tech in Artificial Intelligence \& Machine Learning} \hfill \textit{2023 -- 2025}\\
+	\href{https://www.iitjammu.ac.in}{Indian Institute of Technology Jammu}
+	
+	\begin{itemize}
+		\item Driver drowsiness detection using Android, DLIB facial landmarks, and CNNs.
+		\item End-to-end L3 autonomous vehicle stack using BEV fusion and MPC.
+	\end{itemize}
+	
+	\vspace{4pt}
+	
+	\textbf{B.Tech in Computer Science} \hfill \textit{2013 -- 2017}\\
+	\href{https://snu.edu.in}{Shiv Nadar University}
+	
+	\begin{itemize}
+		\item Built CNC machines, drones, lane-following and self-balancing robots.
+		\item Designed Shazam-like audio recognition using FFT-based fingerprints.
+		\item Automated greenhouse system using Arduino, Raspberry Pi, OpenCV, and web UI.
+	\end{itemize}
+	
+	%================ SKILLS =================
+	\section*{Skills}
+	
+	\begin{multicols}{2}
+		\begin{itemize}
+			\item Perception, SLAM, Localization, Mapping
+			\item Motion Planning (MPC, LQR, Optimization)
+			\item Multi-modal Sensor Fusion
+			\item PyTorch, TensorFlow, OpenCV
+			\item ROS, ROS2, DDS
+			\item Python, C++, CUDA
+			\item CARLA, Isaac Sim, Gazebo, Unity
+			\item Git, Docker, CI/CD, JIRA, Confluence
+		\end{itemize}
+	\end{multicols}
+	
+	%================ PATENTS =================
+	\section*{Patents}
+	
+	\begin{itemize}
+		\item \href{https://patents.google.com/patent/DE102024133915A1/en}{DE102024133915A1 – Method and device for reconstructing missing road lanes using LiDAR technology}.  
+		Inventors: Patnaikuni Srikhar, Aswathy Radhakrishnan, \textbf{Chris Sunny Thaliyath}.  
+		Assignee: Mercedes-Benz Group AG.
+	\end{itemize}
+	
+	%================ AWARDS =================
+	\section*{Awards}
+	\begin{itemize}
+		\item First Place – Lane Following Competition, Galgotias University (2014)
+		\item Second Place – Lane Following Competition, IIT Delhi (2015)
+		\item Qualified – University Rover Challenge (2017)
+		\item Bosch Appreciation – ROS vs Adaptive AUTOSAR Technical Talk
+		\item Bosch Appreciation – Top Cycle-to-Work Candidate
+	\end{itemize}
+	
+	%================ LEADERSHIP =================
+	\section*{Leadership}
+	Head of Robotics Club, Shiv Nadar University (2016–2017).  
+	Mentored junior engineers at Bosch and Mercedes-Benz.  
+	Leadership philosophy rooted in empathy, truth, and collective growth.
+	
+	%================ TRAITS =================
+	\section*{Personal Traits}
+	Curiosity, Integrity, Courage, Empathy, Self-Reflection, Discipline, Patience, Faith, and Love for Humanity.
+	
+\end{document}
