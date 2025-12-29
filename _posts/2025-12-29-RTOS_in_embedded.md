@@ -1,10 +1,14 @@
 ## RTOS in embedded
 
 
+
+![](/images/RTOS/differences.jpeg)
+
 ### Bare metal 
 
 
-      ```
+```
+
       int main(void)
       {
           system_init();
@@ -18,15 +22,15 @@
           }
       }
 
-      ```
+```
 
 ### What Actually Happens
 
-      ```
+```
       |--- read ---|--- process ---|--- send ---|--- blink ---|
       <------------------- ~10 ms ----------------------------->
 
-      ```
+```
 
 
 #### Timing is assumed, not guaranteed
@@ -46,7 +50,8 @@
 
 Sensor Task (10 ms)
 
-  ```
+```
+
   void sensor_task(void *arg)
   {
       TickType_t last = xTaskGetTickCount();
@@ -58,25 +63,28 @@ Sensor Task (10 ms)
           vTaskDelayUntil(&last, pdMS_TO_TICKS(10));
       }
   }
-  ```
+ 
+```
 
 #### Processing Task
 
 ```
-void processing_task(void *arg)
-{
-    while (1)
-    {
-        xQueueReceive(sensor_queue, &data, portMAX_DELAY);
-        process_data();
-        xQueueSend(tx_queue, &result, 0);
-    }
-}
+  void processing_task(void *arg)
+  {
+      while (1)
+      {
+          xQueueReceive(sensor_queue, &data, portMAX_DELAY);
+          process_data();
+          xQueueSend(tx_queue, &result, 0);
+      }
+  }
+
 ```
 
 #### Communication Task
 
 ```
+
 void comm_task(void *arg)
 {
     while (1)
@@ -85,10 +93,11 @@ void comm_task(void *arg)
         send_message();
     }
 }
+
 ```
 #### Heartbeat Task
 
-    ```
+```
     void heartbeat_task(void *arg)
     {
         while (1)
@@ -97,7 +106,9 @@ void comm_task(void *arg)
             vTaskDelay(pdMS_TO_TICKS(500));
         }
     }
-    ```
+
+```
+
 #### System Behavior (RTOS)
 
   Sensor Task     : | read | wait | read | wait |
