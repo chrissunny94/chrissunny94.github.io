@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.11.7)  20 DEC 2025 20:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.11.7)  26 JAN 2026 13:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -397,41 +397,41 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 31.
 
-Overfull \hbox (2.86607pt too wide) in paragraph at lines 56--57
+Overfull \hbox (2.86607pt too wide) in paragraph at lines 70--71
 []\OT1/cmr/m/n/10.95 Hands-on with multi-modal BEV-Fu-sion (Cam-era + Li-DAR); 
 ex-plored Vision-Language Mod-els (VLMs)
  []
 
 
-Overfull \hbox (21.30624pt too wide) in paragraph at lines 57--58
+Overfull \hbox (21.30624pt too wide) in paragraph at lines 71--72
 []\OT1/cmr/m/n/10.95 Built multi-LiDAR and multi-camera cal-i-bra-tion pipeline
 s us-ing ARUCO mark-ers; im-ple-mented ICP/NDT-
  []
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] (./resume.aux)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] (./resume.aux)
 Package rerunfilecheck Info: File `resume.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 9465 strings out of 480247
- 146828 string characters out of 5896151
+ 9466 strings out of 480247
+ 146834 string characters out of 5896151
  464344 words of memory out of 5000000
  27327 multiletter control sequences out of 15000+600000
  474204 words of font info for 44 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 60i,5n,63p,366b,321s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,5n,63p,366b,422s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/chris/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1095.600
 pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on resume.pdf (2 pages, 90944 bytes).
+Output written on resume.pdf (3 pages, 99283 bytes).
 PDF statistics:
- 64 PDF objects out of 1000 (max. 8388607)
- 48 compressed objects within 1 object stream
- 3 named destinations out of 1000 (max. 500000)
+ 70 PDF objects out of 1000 (max. 8388607)
+ 53 compressed objects within 1 object stream
+ 4 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
