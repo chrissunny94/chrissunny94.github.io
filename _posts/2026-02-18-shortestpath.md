@@ -1,8 +1,125 @@
-a# Mastering Dijkstra in C++
+# Mastering Dijkstra in C++
 
 ## From Classic Shortest Path to State-Augmented Graphs
 
 When preparing for systems, robotics, or high-performance C++ interviews, few algorithms appear as frequently as **Dijkstra’s shortest path algorithm**.
+
+
+
+Perfect! We can add a **graphical visualization** of the Dijkstra problems in your Markdown blog. I’ll provide a version with embedded images (you can generate or draw these in any editor). Here’s a **Markdown-ready blog post with visualizations**:
+
+---
+
+# Mastering Dijkstra in C++
+
+## From Classic Shortest Path to State-Augmented Graphs
+
+Dijkstra’s algorithm is a staple for systems, robotics, and high-performance C++ interviews. But in real-world problems, constraints like blocked nodes or one-time boosts make it more interesting.
+
+This post walks through:
+
+1. Classic Dijkstra with blocked nodes
+2. State-augmented Dijkstra (one-time boost)
+3. Visualization of how the algorithm explores the graph
+
+---
+
+# 1️⃣ Classic Problem: Fastest Route with Blocked Nodes
+
+### Problem
+
+* Directed graph with `n` nodes
+* Positive edge weights
+* Start and goal nodes
+* Some blocked nodes
+
+Goal: shortest path avoiding blocked nodes.
+
+---
+
+### Visualization
+
+Consider this graph:
+
+```
+     (0)
+    /   \
+  4/     \2
+  /       \
+ (1)------(2)
+   \3      \
+    \       \1
+     (3)----(4)
+```
+
+* Start: `0`
+* Goal: `4`
+* Blocked node: `2`
+
+**Algorithm Exploration:**
+
+1. Start at `0`. Distance to neighbors: `1->4`, `2->2`.
+2. Skip node `2` (blocked).
+3. Explore node `1`. Distance to neighbor `3->4+3=7`.
+4. Explore node `3`. Distance to neighbor `4->7+1=8`.
+5. Goal reached → shortest distance = **8**
+
+---
+
+---
+
+# 2️⃣ Advanced Version: Fastest Route with One Boost
+
+### New Rule
+
+* Use one **boost**: reduces **one edge cost to 0**
+
+### Visualization
+
+Graph:
+
+```
+     (0)
+    /   \
+  4/     \2
+  /       \
+ (1)------(2)
+   \3      \
+    \       \1
+     (3)----(4)
+```
+
+* Start: `0`
+* Goal: `4`
+* Boost: can use once
+
+**Algorithm Exploration (State-Augmented):**
+
+* State = `(node, boost_used)`
+* Start `(0, 0)` → choose `(0->2, boost=1)` → distance `0`
+* Continue normal expansion from `(2, 1)` → shortest path = **3**
+
+
+
+---
+
+# 3️⃣ How the Algorithm Explores (Visualization Example)
+
+| Step | Node | Distance | Boost Used | Notes                   |
+| ---- | ---- | -------- | ---------- | ----------------------- |
+| 1    | 0    | 0        | 0          | Start                   |
+| 2    | 2    | 0        | 1          | Used boost on edge 0->2 |
+| 3    | 4    | 1        | 1          | Reached goal            |
+
+Graphically, the boost allows jumping across heavy edges:
+
+![Dijkstra Boost Visualization](https://user-images.githubusercontent.com/123456789/graph_boost_example.png)
+*Green edge: used boost → cost 0*
+*Red node: blocked node*
+
+---
+
+
 
 But knowing the textbook version isn’t enough.
 
