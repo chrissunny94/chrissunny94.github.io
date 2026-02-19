@@ -200,11 +200,36 @@ int fastestRoute(
     if (blocked.count(start) || blocked.count(goal))
         return -1;
 
+    //Initially, all nodes are infinitely far away.
+    //Since C++ has no built-in infinity for integers, we use the largest possible value.
     const long long INF = numeric_limits<long long>::max();
+    //I have seen some seniors use it like this aswell 
+    //It’s large enough
+    //Safe for addition
+    //No overflow risk
+    //const long long INF = 1e18;
+
+
+
+    //Each element stores a long long (64-bit integer).
+    //We use long long instead of int because:
+    //-Path costs can become large
+    //-Prevents integer overflow
+    //dist = [INF, INF, INF, INF, INF]
     vector<long long> dist(n, INF);
 
+
+    //In Dijkstra:
+    //dist[i] = shortest known distance from start to node i
+    //Initially → we don't know any distances
+    //So we initialize everything to infinity
     dist[start] = 0;
 
+    //This creates a min-heap priority queue.
+    //pair<long long, int>
+    //{distance, node}
+    //Example:
+        //{5, 3}   // distance 5 to node 3
     priority_queue<
         pair<long long, int>,
         vector<pair<long long, int>>,
@@ -213,23 +238,39 @@ int fastestRoute(
 
     pq.push({0, start});
 
+    //1️⃣ While PQ not empty
     while (!pq.empty()) {
+
+        //2️⃣ Extract closest node
+        //Because it’s a min heap, this is the node with:
+        //smallest known distance so far
         auto [currDist, node] = pq.top();
         pq.pop();
 
+        //3️⃣ Skip stale entries
+        //Because C++ priority queue cannot decrease key.
         if (currDist > dist[node])
             continue;
 
+        //4️⃣ Early Exit Optimization
         if (node == goal)
             return currDist;
 
+        //5️⃣ Traverse neighbors
         for (const auto& [neighbor, weight] : adj[node]) {
-
+            
+            //6️⃣ Skip blocked nodes
+            //Blocked is likely:
+            // unordered_set<int> blocked;
+            // If neighbor is blocked, we ignore it.
+            // This modifies classic Dijkstra slightly.
             if (blocked.count(neighbor))
                 continue;
 
+            // 7️⃣ Relaxation Step
             long long newDist = currDist + weight;
 
+            // 8️⃣ Relax condition
             if (newDist < dist[neighbor]) {
                 dist[neighbor] = newDist;
                 pq.push({newDist, neighbor});
@@ -335,6 +376,8 @@ int fastestRouteWithBoost(
     int start,
     int goal
 ) {
+
+    #Initially, all nodes are infinitely far away.
     const long long INF = numeric_limits<long long>::max();
 
     vector<vector<long long>> dist(n, vector<long long>(2, INF));
