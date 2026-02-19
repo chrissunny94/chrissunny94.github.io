@@ -461,3 +461,192 @@ That’s where engineering judgment matters.
 
 ---
 
+
+
+
+
+## 1️⃣ C++ Essentials for Senior Robotics Engineer
+
+### Memory & Pointers
+
+* `unique_ptr<T>` → single ownership, auto-deletes
+* `shared_ptr<T>` → multiple ownership, reference counted
+* `weak_ptr<T>` → non-owning reference
+* RAII → manage resources in constructor/destructor
+* Move vs Copy semantics → use `std::move` to avoid unnecessary copies
+
+### STL Quick Reference
+
+| Container               | Access              | Insert/Delete         | Notes               |
+| ----------------------- | ------------------- | --------------------- | ------------------- |
+| `vector`                | O(1)                | end O(1), middle O(n) | dynamic array       |
+| `deque`                 | O(1)                | both ends O(1)        | double-ended queue  |
+| `list`                  | O(n)                | O(1)                  | doubly-linked list  |
+| `map`                   | O(log n)            | O(log n)              | sorted key-value    |
+| `unordered_map`         | O(1) avg            | O(1) avg              | hash map            |
+| `set` / `unordered_set` | O(log n) / O(1) avg | O(log n)/O(1) avg     | unique keys         |
+| `priority_queue`        | O(1) peek           | O(log n) push/pop     | max heap by default |
+
+### Algorithm Tips
+
+* Always check bounds / edge cases (`empty`, `start == goal`, `blocked node`)
+* Prefer `emplace` over `push_back` when possible
+* Use `std::pair` and `std::tuple` for graph nodes `(distance, node)`
+
+---
+
+## 2️⃣ Graph Algorithms & Variants
+
+### Classic Dijkstra (Blocked Nodes)
+
+* Skip blocked nodes in the graph
+* Use `priority_queue` (min-heap) to pick smallest distance
+* Complexity: `O((V+E) log V)`
+
+```cpp
+int fastestRoute(int n, const vector<vector<pair<int,int>>>& adj,
+                 int start, int goal, const unordered_set<int>& blocked);
+```
+
+**Example Visualization:**
+
+```
+     (0)
+    /   \
+  4/     \2
+  /       \
+ (1)------(2)
+   \3      \
+    \       \1
+     (3)----(4)
+
+Blocked: 2 → Path 0→1→3→4
+```
+
+### Dijkstra with One-Time Boost
+
+* State = `(node, boost_used)`
+* Boost reduces one edge cost to 0
+* Complexity: `O(V * 2 + E log V)`
+
+```cpp
+int fastestRouteWithBoost(int n, const vector<vector<pair<int,int>>>& adj,
+                          int start, int goal);
+```
+
+**Visualization:** Boost on heaviest edge, track distances separately for `boost_used=0` and `boost_used=1`
+
+---
+
+## 3️⃣ RTOS & Embedded System Concepts
+
+### Bare Metal vs FreeRTOS
+
+| Aspect    | Bare Metal     | FreeRTOS   |
+| --------- | -------------- | ---------- |
+| Timing    | Implicit       | Explicit   |
+| Blocking  | Global failure | Local      |
+| Scaling   | Painful        | Structured |
+| Debugging | Guesswork      | Traceable  |
+| Safety    | Weak           | Stronger   |
+
+### Task Examples
+
+```cpp
+void sensor_task(void *arg) {
+    TickType_t last = xTaskGetTickCount();
+    while(1){
+        read_sensor();
+        xQueueSend(sensor_queue, &data, 0);
+        vTaskDelayUntil(&last, pdMS_TO_TICKS(10));
+    }
+}
+
+void processing_task(void *arg){
+    while(1){
+        xQueueReceive(sensor_queue, &data, portMAX_DELAY);
+        process_data();
+        xQueueSend(tx_queue, &result, 0);
+    }
+}
+```
+
+**Tips:**
+
+* Avoid blocking in sensor/control loops
+* Use `xQueueSend` / `xQueueReceive` for inter-task communication
+* Heartbeat task → periodic LED / status without blocking
+
+---
+
+## 4️⃣ System Design / Senior Thinking
+
+* **Pipeline:** Sensor → Processing → Control → Communication
+* Multi-threading with queues → avoid global locks
+* Fail-safe: blocked sensor should not stall control loop
+* Modular: plug-and-play tasks, testable individually
+* Debug: logging, traceable execution, real-time metrics
+
+**Scenario Qs:**
+
+* Handle intermittent CAN delays in multi-sensor fusion
+* Optimize path planning under limited CPU & latency
+* Design task priorities for real-time perception + MPC
+
+---
+
+## 5️⃣ Behavioral / Team Fit
+
+* STAR method: Situation → Task → Action → Result
+
+* Examples:
+
+  * Debugging intermittent failures in autonomous systems
+  * Handling tight deadlines in multi-threaded robotics software
+  * System-level trade-offs: latency vs compute vs memory
+
+* Motivational / fit:
+
+  * “Why TII / Autonomous Racing?” → Focus on cutting-edge research + Abu Dhabi center
+  * Leadership / collaboration → explain architecture choices clearly
+
+---
+
+## 6️⃣ Last-Minute Interview Tips
+
+* Think **aloud**, communicate reasoning clearly
+* Clarify problem constraints before coding
+* Handle **edge cases**: empty graph, blocked nodes, start = goal
+* Focus on **architecture decisions**, not just syntax
+* Use diagrams or pseudo-visualizations if asked to explain
+
+---
+
+## 7️⃣ Quick Visuals
+
+### Graph Example
+
+```
+Node layout:
+0 -1-> 1 -3-> 3
+0 -2-> 2 (blocked)
+3 -1-> 4
+```
+
+### RTOS Timeline
+
+```
+Sensor Task:   |read| wait |read| wait|
+Processing:        |process|
+Comm Task:              |send|
+Heartbeat: |--blink--| |--blink--|
+```
+
+### Pipeline
+
+```
+Sensor → Processing → Control → Communication → Logging/Telemetry
+```
+
+---
+
