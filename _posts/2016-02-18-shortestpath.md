@@ -282,6 +282,140 @@ int fastestRoute(
 }
 ```
 
+
+
+```
+
+
+========================================================
+                GRAPH TOPOLOGY
+========================================================
+          (0: Start)
+          /        \
+      w:4/          \w:2
+        /            \
+      (1)           [2: BLOCKED]
+        \              \
+      w:3\              \w:1
+          \              \
+          (3)----------(4: Goal)
+                 w:1
+========================================================
+
+-----------------------------------------------------------------------
+| Step | Node  | Unlock     | Dist | Action                              |
+-----------------------------------------------------------------------
+|    1 |     0 | [0: Avail] |    0 | Popped & Exploring Neighbors...     |
+|    2 |     1 | [0: Avail] |    4 | Updated normal path                 |
+|    3 |     2 | [1: Used]  |    2 | ⚡ UNLOCK FIRED! Bypassed block    |
+|    4 |     2 | [1: Used]  |    2 | Popped & Exploring Neighbors...     |
+|    5 |     4 | [1: Used]  |    3 | Updated normal path                 |
+|    6 |     4 | [1: Used]  |    3 | 🎯 GOAL REACHED! Early Exit.      |
+-----------------------------------------------------------------------
+
+Final Shortest Path Cost: 3
+=== DYNAMIC GRAPH TOPOLOGY ===
+Node 0           -> [N:1 W:4] [N:2 W:2] 
+Node 1           -> [N:3 W:3] 
+Node 2 [BLOCKED] -> [N:4 W:1] 
+Node 3           -> [N:4 W:1] [N:5 W:2] 
+Node 4 [BLOCKED] -> [N:5 W:5] 
+Node 5           -> (None)
+==============================
+
+>>> Press ENTER to process Step 1...
+
+[ACTION] Popped Node 0 (Dist: 0, State: [0: Avail])
+         -> Updated Node 1 (Normal Path). New Dist: 4
+         -> ⚡ UNLOCK FIRED on Node 2! New Dist: 2
+
+Current Shortest Known Distances:
+Node | [0: Unlock Avail] | [1: Unlock Used]
+-------------------------------------------
+   0 |                 0 |              INF
+   1 |                 4 |              INF
+   2 |               INF |                2
+   3 |               INF |              INF
+   4 |               INF |              INF
+   5 |               INF |              INF
+
+>>> Press ENTER to process Step 2...
+
+[ACTION] Popped Node 2 (Dist: 2, State: [1: Used])
+
+Current Shortest Known Distances:
+Node | [0: Unlock Avail] | [1: Unlock Used]
+-------------------------------------------
+   0 |                 0 |              INF
+   1 |                 4 |              INF
+   2 |               INF |                2
+   3 |               INF |              INF
+   4 |               INF |              INF
+   5 |               INF |              INF
+
+>>> Press ENTER to process Step 3...
+
+[ACTION] Popped Node 1 (Dist: 4, State: [0: Avail])
+         -> Updated Node 3 (Normal Path). New Dist: 7
+
+Current Shortest Known Distances:
+Node | [0: Unlock Avail] | [1: Unlock Used]
+-------------------------------------------
+   0 |                 0 |              INF
+   1 |                 4 |              INF
+   2 |               INF |                2
+   3 |                 7 |              INF
+   4 |               INF |              INF
+   5 |               INF |              INF
+
+>>> Press ENTER to process Step 4...
+
+[ACTION] Popped Node 3 (Dist: 7, State: [0: Avail])
+         -> ⚡ UNLOCK FIRED on Node 4! New Dist: 8
+         -> Updated Node 5 (Normal Path). New Dist: 9
+
+Current Shortest Known Distances:
+Node | [0: Unlock Avail] | [1: Unlock Used]
+-------------------------------------------
+   0 |                 0 |              INF
+   1 |                 4 |              INF
+   2 |               INF |                2
+   3 |                 7 |              INF
+   4 |               INF |                8
+   5 |                 9 |              INF
+
+>>> Press ENTER to process Step 5...
+
+[ACTION] Popped Node 4 (Dist: 8, State: [1: Used])
+         -> Updated Node 5 (Normal Path). New Dist: 13
+
+Current Shortest Known Distances:
+Node | [0: Unlock Avail] | [1: Unlock Used]
+-------------------------------------------
+   0 |                 0 |              INF
+   1 |                 4 |              INF
+   2 |               INF |                2
+   3 |                 7 |              INF
+   4 |               INF |                8
+   5 |                 9 |               13
+
+>>> Press ENTER to process Step 6...
+
+[ACTION] Popped Node 5 (Dist: 9, State: [0: Avail])
+
+🎯 GOAL REACHED! Shortest Path: 9
+Current Shortest Known Distances:
+Node | [0: Unlock Avail] | [1: Unlock Used]
+-------------------------------------------
+   0 |                 0 |              INF
+   1 |                 4 |              INF
+   2 |               INF |                2
+   3 |                 7 |              INF
+   4 |               INF |                8
+   5 |                 9 |               13
+
+```
+
 ---
 
 ## Engineering Insight
